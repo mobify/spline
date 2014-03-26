@@ -1,9 +1,10 @@
 {
   "name": "spline",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/mobify/spline",
   "authors": [
-    "Mobify"
+    "Mobify",
+    "Kyle Peatt <kpeatt@gmail.com>"
   ],
   "description": "A set of Sass utility mixins for Mobify's client services team",
   "main": "dist/_spline.scss",

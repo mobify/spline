@@ -18,7 +18,10 @@
     "utilities",
     "mobify"
   ],
-  "author": "Mobify",
+  "authors": [
+    "Mobify",
+    "Kyle Peatt <kpeatt@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mobify/spline/issues"
