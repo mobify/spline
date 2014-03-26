@@ -1,0 +1,11 @@
+// TEXT ELLIPSIS
+//
+// Add ellipses to the end of your text
+
+@mixin ellipsis($wrap: false) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $wrap = false {
+      white-space: nowrap;
+  }
+}

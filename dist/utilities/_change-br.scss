@@ -1,0 +1,22 @@
+// TURN <BR> INTO ANYTHING
+// -----------------------
+//
+// Usage:
+//
+//      .x-class-name {
+//          @include change-br;
+//      }
+//
+// Parameters
+//
+//     $content - default ' '; The content that replaces the <br>
+
+@mixin change-br($content: ' ') {
+    br {
+        content: '';
+
+        &:after {
+            content: $content;
+        }
+    }
+}
