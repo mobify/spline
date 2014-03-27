@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "ignore": [
-    ".gitignore",
+    "**/.*",
     "node_modules",
     "bower_components",
     "test",
