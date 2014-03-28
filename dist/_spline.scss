@@ -1,12 +1,22 @@
+// Settings
+// --------
+@import "settings/rem";
+
 // Helpers
+// --------
 
 // Functions
+// ---------
+@import "functions/strip-units";
 @import "functions/tint-shade";
+@import "functions/rem";
 
 // CSS3
+// ----
 @import "css3/border-radius";
 
 // Utilities
+// ---------
 @import "utilities/clearfix";
 @import "utilities/hide-text";
 @import "utilities/icon-fonts";

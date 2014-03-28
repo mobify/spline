@@ -1,0 +1,16 @@
+// Convert pixels to rems
+// eg. for a relational value of 12px write rem(12) when the base is 100%
+// if the base is another value say 150% write rem(12, 150%)
+
+@function rem($pxval, $base: $rem-base) {
+  @if not unitless($pxval) {
+      $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+      $base: strip-units($base);
+  }
+
+  $base: ($base / 100) * 16;
+
+  @return ($pxval / $base) * 1rem;
+}
