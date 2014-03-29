@@ -1,6 +1,9 @@
 // Settings
-// --------
 @import "settings/rem";
+
+// Variables
+// --------
+@import "variables/transition-timings";
 
 // Helpers
 // --------
@@ -21,5 +24,4 @@
 @import "utilities/hide-text";
 @import "utilities/icon-fonts";
 @import "utilities/tap-highlight";
-@import "utilities/timing-functions";
 @import "utilities/triangle";
