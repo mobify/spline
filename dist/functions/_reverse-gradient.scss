@@ -1,0 +1,64 @@
+// Reverse a gradient by passing in a linear-gradient() function
+
+@function convert-direction($direction) {
+    @if $direction == 'top' {
+        @return 'bottom';
+    } @else if $direction == 'bottom' {
+        @return 'top';
+    } @else if $direction == 'left' {
+        @return 'right';
+    } @else if $direction == 'right' {
+        @return 'left';
+    }
+}
+
+@function reverse-gradient($gradient) {
+    
+  // Remove 'linear-gradient(' from string
+  $first-bracket-idx: str-index($gradient, '(');
+  $last-bracket-idx: str-length($gradient) - 1;
+  $gradient: str-slice($gradient, $first-bracket-idx+1, $last-bracket-idx);
+  
+  $reverse-direction: '';
+  $values: '';
+
+    // Does the list have a direction specified?
+    $gradient: to-list($gradient);
+  
+        // Get the first value
+        $first-value: nth($gradient, 1);
+
+        @if str-index($first-value, 'to') {
+            $direction: to-list($first-value, ' ');
+                        
+            $first-direction: convert-direction(nth($direction, 2));
+            
+            $reverse-direction: nth($direction, 1) + ' ' + $first-direction;
+
+            @if length($direction) == 3 {
+                $second-direction: convert-direction(nth($direction, 3));
+                
+                $reverse-direction: $reverse-direction + ' ' + $second-direction;
+            }
+
+            $gradient: set-nth($gradient, 1, $reverse-direction);
+            
+            $index: 0;
+            @each $nth in $gradient {
+                @if $index > 0 {
+                    $values: $values + ',' + $nth;
+                }
+                @else if $index == 0 {
+                    $values: $nth;
+                }
+                $index: $index + 1;
+            }
+        }
+        @else {
+            $reverse-direction: 'to top';
+            
+            $values: join(unquote($reverse-direction), $gradient, comma);
+        }
+    
+  @return linear-gradient($values);
+}

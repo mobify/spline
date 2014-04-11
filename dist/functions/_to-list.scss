@@ -1,0 +1,18 @@
+// Convert a string of comma-separated values into a list
+
+@function to-list($string, $separator: ', ') {
+  $list: ();
+      
+  @while str-index($string, $separator) {
+    $index: 1;
+    $comma-idx: str-index($string, $separator);
+    $cut-string: str-slice($string, 0, $comma-idx - 1);
+    $list: join($cut-string, $list);
+
+    $string: str-slice($string, $comma-idx + 1);
+  }
+
+  $list: join($string, $list);
+
+  @return reverse-list($list);
+}
