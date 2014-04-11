@@ -1,6 +1,8 @@
 @import "../dist/spline";
 
-$gradient: linear-gradient(20deg, blue, red, green 100%);
+$gradient: linear-gradient(blue, red, green 100%);
+$direction-gradient: linear-gradient(to top right, blue, red, green 100%);
+$deg-gradient: linear-gradient(132deg, blue, red, purple);
 
 // Forward Gradient
 .gradient {
@@ -10,4 +12,24 @@ $gradient: linear-gradient(20deg, blue, red, green 100%);
 // Reverse Gradient
 .reverse-gradient {
     background: reverse-gradient($gradient);
+}
+
+// Forward Gradient
+.direction-gradient {
+    background: $direction-gradient;
+}
+
+// Reverse Gradient
+.reverse-direction-gradient {
+    background: reverse-gradient($direction-gradient);
+}
+
+// Forward Gradient
+.deg-gradient {
+    background: $deg-gradient;
+}
+
+// Reverse Gradient
+.reverse-deg-gradient {
+    background: reverse-gradient($deg-gradient);
 }
