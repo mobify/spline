@@ -25,5 +25,14 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mobify/spline/issues"
+  },
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-sass": "~0.7.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-autoprefixer": "~0.7.2"
   }
 }
