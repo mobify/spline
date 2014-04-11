@@ -8,14 +8,17 @@
 
 // Helpers
 // -------
+@import "helpers/convert-direction";
+@import "helpers/to-list";
+@import "helpers/reverse-list";
+@import "helpers/strip-units";
+@import "helpers/to-number";
+
 
 // Functions
 // ---------
-@import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/rem";
-@import "functions/reverse-list";
-@import "functions/to-list";
 @import "functions/reverse-gradient";
 
 // CSS3
