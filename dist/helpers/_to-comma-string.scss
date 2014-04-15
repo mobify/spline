@@ -1,0 +1,27 @@
+// Takes a list and returns a string that's been comma seperated
+// -------------------------------------------------------------------------------
+// @param $list [List] : list to be converted into comma seperated string
+// -------------------------------------------------------------------------------
+// @return [String]
+
+@function to-comma-string($list) { // to-comma-string
+    @if type-of($list) != "list" {
+        @warn "`to-comma-string` function expecting a list for $list; #{type-of($list)} given.";
+        @return false;
+    }
+    
+    $index: 0;
+    $result: '';
+    
+    @each $nth in $list {
+        @if $index > 0 {
+            $result: $result + ', ' + $nth;
+        }
+        @else if $index == 0 {
+            $result: $nth;
+        }
+        $index: $index + 1;
+    }
+    
+    @return $result;
+}

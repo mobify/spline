@@ -42,16 +42,7 @@
         $gradient: set-nth($gradient, 1, $reverse-direction);
 
         // Walk through our $gradient list and turn it back into a string
-        $index: 0;
-        @each $nth in $gradient {
-            @if $index > 0 {
-                $values: $values + ', ' + $nth;
-            }
-            @else if $index == 0 {
-                $values: $nth;
-            }
-            $index: $index + 1;
-        }
+        $values: to-comma-string($gradient);
     }
     // If it doesn't have 'to', it might be declared in degrees
     @else if str-index($first-value, 'deg') {
@@ -64,16 +55,7 @@
         $gradient: set-nth($gradient, 1, $deg);
 
         // Walk through our $gradient list and turn it back into a string
-        $index: 0;
-        @each $nth in $gradient {
-            @if $index > 0 {
-                $values: $values + ', ' + $nth;
-            }
-            @else if $index == 0 {
-                $values: $nth;
-            }
-            $index: $index + 1;
-        }
+        $values: to-comma-string($gradient);
     }
     // If it doesn't have a directional or a 'deg', it's shorthand for 'to bottom'
     // so let's just invert that
