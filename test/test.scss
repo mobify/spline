@@ -1,5 +1,33 @@
 @import "../dist/spline";
 
+
+// Test function `to-list`
+// -----------------------
+
+$string-1: 'up, down, right';
+$string-2: 'to bottom left';
+$string-3: 'top left, bottom right, foo bar';
+$string-4: 'foo,   bar,   baz';
+
+$list-1: to-list($string-1);
+$list-2: to-list($string-2, ' ');
+$list-3: to-list($string-3, ', ');
+$list-4: to-list($string-4, ',   ');
+
+$should-1: up down right;
+$should-2: to bottom left;
+$should-3: 'top left' 'bottom right' 'foo bar';
+$should-4: foo bar baz;
+
+@debug if($list-1 == $should-1, 'PASS: `', 'FAIL: `') + $list-1 + '` should equal `' + $should-1 + '`.';
+@debug if($list-2 == $should-2, 'PASS: `', 'FAIL: `') + $list-2 + '` should equal `' + $should-2 + '`.';
+@debug if($list-3 == $should-3, 'PASS: `', 'FAIL: `') + $list-3 + '` should equal `' + $should-3 + '`.';
+@debug if($list-4 == $should-4, 'PASS: `', 'FAIL: `') + $list-4 + '` should equal `' + $should-4 + '`.';
+
+
+// Test function `reverse-gradient`
+// --------------------------------
+
 $gradient: linear-gradient(blue, red, green 100%);
 $direction-gradient: linear-gradient(to top right, blue, red, green 100%);
 $deg-gradient: linear-gradient(132deg, blue, red, purple);
