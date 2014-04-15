@@ -23,10 +23,10 @@
     // If it does, it's a directional gradient
     @if str-index($first-value, 'to') {
         $direction: to-list($first-value, ' ');
-        
+
         // Take the second word and reverse the direction
         $first-direction: convert-direction(nth($direction, 2));
-        
+
         // Build a new string with the new direction
         $reverse-direction: nth($direction, 1) + ' ' + $first-direction;
 
@@ -34,18 +34,18 @@
         // and reverse/add this word back onto the reversed gradient
         @if length($direction) == 3 {
             $second-direction: convert-direction(nth($direction, 3));
-            
+
             $reverse-direction: $reverse-direction + ' ' + $second-direction;
         }
 
         // Replace the directional instruction with the reversed one
         $gradient: set-nth($gradient, 1, $reverse-direction);
-        
+
         // Walk through our $gradient list and turn it back into a string
         $index: 0;
         @each $nth in $gradient {
             @if $index > 0 {
-                $values: $values + ',' + $nth;
+                $values: $values + ', ' + $nth;
             }
             @else if $index == 0 {
                 $values: $nth;
@@ -56,18 +56,18 @@
     // If it doesn't have 'to', it might be declared in degrees
     @else if str-index($first-value, 'deg') {
         $deg: to-number($first-value);
-        
+
         // Add 180 to the degree to get the invert. It's okay if this number gets greater than 360
         $deg: $deg + 180;
-        
+
         // Replace the degree declaration with the new reversed one
         $gradient: set-nth($gradient, 1, $deg);
-        
+
         // Walk through our $gradient list and turn it back into a string
         $index: 0;
         @each $nth in $gradient {
             @if $index > 0 {
-                $values: $values + ',' + $nth;
+                $values: $values + ', ' + $nth;
             }
             @else if $index == 0 {
                 $values: $nth;
@@ -79,7 +79,7 @@
     // so let's just invert that
     @else {
         $reverse-direction: 'to top';
-        
+
         // Add the new reversed direction to the original gradient and stringify it
         $values: join(unquote($reverse-direction), $gradient, comma);
     }
