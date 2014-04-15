@@ -1,18 +1,26 @@
 // Convert a string of comma-separated values into a list
 
-@function to-list($string, $separator: ', ') {
+@function to-list($string, $separator: ',') {
+  @if type-of($string) != "string" {
+    @warn "`to-list` function expecting a string for $string; #{type-of($string)} given.";
+    @return false;
+  }
+
+  @if type-of($separator) != "string" {
+    @warn "`to-list` function expecting a string for $separator; #{type-of($separator)} given.";
+    @return false;
+  }
+
   $list: ();
       
   @while str-index($string, $separator) {
     $index: 1;
     $comma-idx: str-index($string, $separator);
-    $cut-string: str-slice($string, 0, $comma-idx - 1);
-    $list: join($cut-string, $list);
+    $cut-string: str-slice($string, 0, $comma-idx - str-length($separator));
+    $list: join($list, $cut-string);
 
-    $string: str-slice($string, $comma-idx + 1);
+    $string: str-slice($string, $comma-idx + str-length($separator));
   }
 
-  $list: join($string, $list);
-
-  @return reverse-list($list);
+  @return join($list, $string);
 }
