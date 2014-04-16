@@ -1,5 +1,28 @@
 @import "../dist/spline";
 
+// Base Test Page Styles
+// ---------------------
+
+body {
+    font-family: sans-serif;
+}
+
+.example {
+    margin: 20px 0;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #ccc;
+    
+    .block {
+        display: inline-block;
+    }
+}
+
+.block {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #333;
+}
+
 
 // Test function `to-list`
 // -----------------------
