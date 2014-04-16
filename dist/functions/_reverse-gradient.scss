@@ -42,7 +42,7 @@
         $reversed-gradient: set-nth($list-gradient, 1, $reverse-direction);
 
         // Walk through our $reversed-gradient list and turn it back into a string
-        $values: to-comma-string($reversed-gradient);
+        $values: to-string($reversed-gradient);
     }
     // If it doesn't have 'to', it might be declared in degrees
     @else if str-index($first-value, 'deg') {
@@ -55,7 +55,7 @@
         $reversed-gradient: set-nth($list-gradient, 1, $deg);
 
         // Walk through our $reversed-gradient list and turn it back into a string
-        $values: to-comma-string($reversed-gradient);
+        $values: to-string($reversed-gradient);
     }
     // If it doesn't have a directional or a 'deg', it's shorthand for 'to bottom'
     // so let's just invert that

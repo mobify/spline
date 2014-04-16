@@ -4,9 +4,14 @@
 // -------------------------------------------------------------------------------
 // @return [String]
 
-@function to-comma-string($list) { // to-comma-string
+@function to-string($list, $separator: ', ') { // to-comma-string
     @if type-of($list) != "list" {
-        @warn "`to-comma-string` function expecting a list for $list; #{type-of($list)} given.";
+        @warn "`to-string` function expecting a list for $list; #{type-of($list)} given.";
+        @return false;
+    }
+    
+    @if type-of($separator) != "string" {
+        @warn "`to-string` function expecting a string for $separator; #{type-of($separator)} given.";
         @return false;
     }
     
@@ -15,7 +20,7 @@
     
     @each $nth in $list {
         @if $index > 0 {
-            $result: $result + ', ' + $nth;
+            $result: $result + $separator + $nth;
         }
         @else if $index == 0 {
             $result: $nth;
