@@ -8,12 +8,18 @@
 
 // Helpers
 // -------
+@import "helpers/convert-direction";
+@import "helpers/to-list";
+@import "helpers/strip-units";
+@import "helpers/to-number";
+@import "helpers/to-string";
+
 
 // Functions
 // ---------
-@import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/rem";
+@import "functions/reverse-gradient";
 
 // CSS3
 // ----
