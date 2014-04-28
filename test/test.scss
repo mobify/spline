@@ -84,3 +84,29 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
 .reverse-deg-gradient {
     background: reverse-gradient($deg-gradient);
 }
+
+// Test function `clearfix`
+// --------------------------------
+
+.clearfix {
+    @include clearfix;
+    
+    border: 1px solid red;
+
+    .block {
+        float: left;
+        
+        margin: 20px;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    border: 1px solid red;
+
+    .block {
+        float: left;
+        
+        margin: 20px;
+    }
+}
