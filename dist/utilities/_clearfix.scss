@@ -13,6 +13,11 @@
 //    else in the document.
 // 2. Contain the the first child’s top margin. Ensures rendering is consistent
 //    with the other common clearfix method, `overflow: hidden`.
+//
+// Acknowledgements
+//
+// A new micro clearfix hack: [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/)
+// Beat *that* clearfix: [Thierry Koblentz](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
 
 @mixin clearfix {
     &::before,
@@ -25,8 +30,3 @@
         clear: both;
     }
 }
-
-// Acknowledgements
-//
-// A new micro clearfix hack: [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/)
-// Beat *that* clearfix: [Thierry Koblentz](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php)
