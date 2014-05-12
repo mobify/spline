@@ -1,0 +1,32 @@
+// Icon Base
+// =========
+
+@mixin icon-base($replace: false, $position: 'before', $size: inherit, $color: inherit, $margin: 0) {
+    
+    &::#{$position} {
+        display: inline-block;
+        
+        color: $color;
+        font: {
+            family: $icon-font;
+            size: $size;
+            style: normal;
+            weight: normal;
+        }
+        text-decoration: inherit;
+        vertical-align: middle;
+
+        // Apply appropriate margins whether it's before or after;
+        @if $position == 'before' {
+            margin-right: $margin;
+        }
+        @else if $position == 'after' {
+            margin-left: $margin;
+        }
+    }
+
+    // Replace the text with an icon, size in this instance is a pixel value
+    @if $replace {
+        @include icon-replace($size, $position, $color);
+    }
+}

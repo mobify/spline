@@ -1,0 +1,102 @@
+// Icon Fonts Settings
+// ===================
+
+// $icon-position
+// -------------
+//
+// Controls the position of the icon.
+//
+// Settings:
+//
+//    'before' -- Default setting. Places the icon before the text
+//    'after'  -- Places the icon after the text
+//
+// Example: @include icon(home, $icon-position: after);
+
+$icon-position: 'before' !default; // Default icon position. Can be 'before' or 'after'. 'before' by default
+
+
+// $icon-replace
+// ------------
+//
+// Controls whether the icon should replace the text.
+//
+// Settings:
+//
+//    'false' -- Default setting. Doesn't replace the text
+//    'true'  -- Replaces the text with the icon
+//
+// NOTE: YOU MUST SPECIFY A $COLOR IF YOU ARE REPLACING
+//
+// Example: @include icon(home, $replace: true, $color: red);
+
+$icon-replace: 'false' !default; // Default icon replace setting. Can be 'true' or 'false'. 'false' by default
+
+
+// $icon-size
+// ---------
+//
+// Controls the size of the icon.
+//
+// Settings:
+//
+//    'inherit'       -- Default setting.
+//    Any size value  -- Will size the icon accordingly to any value.
+//
+// Example: @include icon(home, $size: 16px);
+
+$icon-size: inherit !default; // Default icon size. Can be any size value. 'inherit' by default
+
+
+// $icon-color
+// ----------
+//
+// Controls the color of the icon.
+//
+// Settings:
+//
+//        'inherit'       -- Default setting. Inherits the color of the parent.
+//        Any color value -- Will color the icon according to the color value.
+//
+// Example: @include icon(home, $color: #ff0000);
+
+$icon-color: inherit !default; // Default icon color. Can be any color value. 'inherit' by default
+
+
+// $icon-margin
+// -------
+//
+// Controls the margin of the icon. Appears on left or right depending on position.
+//
+// Settings:
+//
+//        '0.25em'        -- Default setting..
+//        Any color value -- Will color the icon according to the color value.
+//
+// Example: @include icon(home, $margin: 1em);
+
+$icon-margin: 0.25em !default; // Default icon margin. Can be any size value. '0.25em' by default
+
+
+// $list-icons
+// -----------
+//
+// This is a debug setting that lists all of the times you use an icon in console
+
+$icon-debug: false !default; 
+
+
+// $icon-font
+// ----------
+//
+// Name the iconset you would like to use
+
+$icon-font: 'icon-font' !default;
+
+
+// $icon-path
+// ----------
+//
+// Set the path to the icon font files. Notice there is no slash at the end!
+
+$icon-path: '../fonts/icons/#{$icon-font}';

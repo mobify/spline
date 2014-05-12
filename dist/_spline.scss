@@ -1,13 +1,19 @@
 // Settings
 // --------
+
 @import "settings/rem";
+
 
 // Variables
 // ---------
+
+@import "variables/icon-font";
 @import "variables/transition-timings";
+
 
 // Helpers
 // -------
+
 @import "helpers/convert-direction";
 @import "helpers/to-list";
 @import "helpers/strip-units";
@@ -17,18 +23,26 @@
 
 // Functions
 // ---------
+
+@import "functions/icon-address";
 @import "functions/tint-shade";
 @import "functions/rem";
 @import "functions/reverse-gradient";
 
+
 // CSS3
 // ----
+
 @import "css3/border-radius";
+
 
 // Utilities
 // ---------
+
 @import "utilities/clearfix";
 @import "utilities/hide-text";
-@import "utilities/icon-fonts";
+@import "utilities/icon-base";
+@import "utilities/icon-replace";
 @import "utilities/tap-highlight";
 @import "utilities/triangle";
+@import "utilities/web-fonts";

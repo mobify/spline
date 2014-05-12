@@ -1,0 +1,31 @@
+// Icon Replace
+// ============
+//
+// This is used when we want to replace any text inside an icon font element
+
+@mixin icon-replace($position: 'before', $size: inherit, $color: inherit) {
+    position: relative;
+    
+    overflow: hidden;
+    
+    font-size: $size;
+    text-indent: 100%;
+    white-space: nowrap;
+
+    &::#{$position} {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        display: block;
+        margin: 0;
+        
+        color: $color;
+        font-size: inherit;
+        line-height: inherit;
+        text-align: center;
+        text-indent: 0;
+    }
+}
