@@ -11,21 +11,20 @@
 // 
 // Dependencies:
 //
-// $icon-list is required to be been previously defined, which is a map of all
-// available with which icon-address() will scan to return the desired icon code.
+// * $icon-font-list must be already declared
 
 
 // @function: Icon Code
 // --------------------
 
-@function icon-font-content($icon-name) {
+@function icon-font-content($icon-font-key) {
     // Return the icon font text value
-    @if (map-has-key($icon-list, $icon-name)) {
-        @return map-get($icon-list, $icon-name);
+    @if (map-has-key($icon-font-list, $icon-font-key)) {
+        @return map-get($icon-font-list, $icon-font-key);
     }
     
-    // The desired icon does not exist in $icon-list
+    // The desired icon does not exist in $icon-font-list
     @else {
-        @warn '$icon-name is not set. Refer to $icon-list for a list of available icons';
+        @warn '$icon-font-key is not set. Refer to $icon-font-list for a list of available icons';
     }
 }
