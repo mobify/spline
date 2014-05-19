@@ -1,6 +1,27 @@
 // Icon Fonts Settings
 // ===================
 
+// $icon-list
+// ----------
+
+$icon-list: (
+
+    question:    '\e000',
+    exclamation: '\e002',
+    information: '\e009',
+    
+    checkmark: '\e003',
+    phone:     '\e007',
+    
+    plus:  '\e006',
+    minus: '\e008',
+    
+    chevron-down:  '\e004',
+    chevron-right: '\e005'
+
+) !default;
+
+
 // $icon-position
 // -------------
 //
