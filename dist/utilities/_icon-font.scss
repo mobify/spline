@@ -1,9 +1,10 @@
 // Icon Font
 // =========
 //
-// To-do
+// Dependencies:
 //
-// - [ ] Identify dependencies
+// * This assumes a font icon set has been added using the web-font() mixin
+// * icon-font-replace(); is required if $replace is set to true
 
 @mixin icon-font($replace: false, $position: 'before', $size: inherit, $color: inherit, $margin: 0) {
     
