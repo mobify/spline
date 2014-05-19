@@ -3,6 +3,11 @@
 
 @mixin icon-base($replace: false, $position: 'before', $size: inherit, $color: inherit, $margin: 0) {
     
+    // Replace the text with an icon, size in this instance is a pixel value
+    @if $replace {
+        @include icon-replace($position, $size, $color);
+    }
+    
     &::#{$position} {
         display: inline-block;
         
@@ -23,10 +28,5 @@
         @else if $position == 'after' {
             margin-left: $margin;
         }
-    }
-
-    // Replace the text with an icon, size in this instance is a pixel value
-    @if $replace {
-        @include icon-replace($size, $position, $color);
     }
 }
