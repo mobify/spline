@@ -1,4 +1,4 @@
-// Icon Address
+// Icon Content
 // ============
 //
 // Going to pilot a new approach to the Icon Font mixin
@@ -6,7 +6,7 @@
 // Usage:
 //
 // .some-icon {
-//     content: icon-address('twitter');
+//     content: icon-content('twitter');
 // }
 // 
 // Dependencies:
@@ -18,7 +18,7 @@
 // @function: Icon Code
 // --------------------
 
-@function icon-address($icon-name) {
+@function icon-content($icon-name) {
     // Return the icon font text value
     @if (map-has-key($icon-list, $icon-name)) {
         @return map-get($icon-list, $icon-name);
