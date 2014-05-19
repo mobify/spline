@@ -1,5 +1,5 @@
-// Icon Content
-// ============
+// Icon Font Content
+// =================
 //
 // Going to pilot a new approach to the Icon Font mixin
 //
@@ -18,7 +18,7 @@
 // @function: Icon Code
 // --------------------
 
-@function icon-content($icon-name) {
+@function icon-font-content($icon-name) {
     // Return the icon font text value
     @if (map-has-key($icon-list, $icon-name)) {
         @return map-get($icon-list, $icon-name);
@@ -26,6 +26,6 @@
     
     // The desired icon does not exist in $icon-list
     @else {
-        @warn '$iconName is not set. Refer to $icon-list for a list of available icons';
+        @warn '$icon-name is not set. Refer to $icon-list for a list of available icons';
     }
 }

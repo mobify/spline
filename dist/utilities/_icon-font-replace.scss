@@ -1,9 +1,9 @@
-// Icon Replace
-// ============
+// Icon Font Replace
+// =================
 //
 // This is used when we want to replace any text inside an icon font element
 
-@mixin icon-replace($position: 'before', $size: inherit, $color: inherit) {
+@mixin icon-font-replace($position: 'before', $size: inherit, $color: inherit) {
     position: relative;
     
     overflow: hidden;

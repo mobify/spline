@@ -1,11 +1,15 @@
-// Icon Base
+// Icon Font
 // =========
+//
+// To-do
+//
+// - [ ] Identify dependencies
 
-@mixin icon-base($replace: false, $position: 'before', $size: inherit, $color: inherit, $margin: 0) {
+@mixin icon-font($replace: false, $position: 'before', $size: inherit, $color: inherit, $margin: 0) {
     
     // Replace the text with an icon, size in this instance is a pixel value
     @if $replace {
-        @include icon-replace($position, $size, $color);
+        @include icon-font-replace($position, $size, $color);
     }
     
     &::#{$position} {
