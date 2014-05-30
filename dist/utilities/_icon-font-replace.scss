@@ -3,16 +3,15 @@
 //
 // This is used when we want to replace any text inside an icon font element
 
-@mixin icon-font-replace($position: 'before', $size: inherit, $color: inherit) {
+@mixin icon-font-replace($position: 'before', $size: inherit, $color: inherit, $width: 1em) {
     @include hide-text();
 
     position: relative;
     
-    overflow: hidden;
+    display: inline-block;
+    width: $width;
     
     font-size: $size;
-    text-indent: 100%;
-    white-space: nowrap;
 
     &::#{$position} {
         position: absolute;
