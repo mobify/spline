@@ -4,6 +4,8 @@
 // This is used when we want to replace any text inside an icon font element
 
 @mixin icon-font-replace($position: 'before', $size: inherit, $color: inherit) {
+    @include hide-text();
+
     position: relative;
     
     overflow: hidden;
