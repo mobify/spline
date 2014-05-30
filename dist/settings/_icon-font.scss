@@ -35,4 +35,4 @@ $icon-font: 'icon-font' !default;
 //
 // Set the path to the icon font files. Notice there is no slash at the end!
 
-$icon-font-path: '../fonts/icons/#{$icon-font}';
+$icon-font-path: '../fonts/icons/#{$icon-font}' !default;
