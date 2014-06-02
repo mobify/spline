@@ -11,10 +11,6 @@
 //
 // * $icon-font-list must be already declared
 
-
-// @function: Icon Code
-// --------------------
-
 @function icon-font-content($icon-font-key) {
     // Return the icon font text value
     @if (map-has-key($icon-font-list, $icon-font-key)) {
