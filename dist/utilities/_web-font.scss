@@ -1,5 +1,9 @@
 // Web Font
 // ========
+//
+// Dependencies:
+//
+// * $icon-font-formats must be defined as a list of font file formats
 
 @mixin web-font($font-family, $path, $formats: $icon-font-formats) {
     $src-list: ();
