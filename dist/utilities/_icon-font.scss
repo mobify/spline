@@ -4,6 +4,7 @@
 // Dependencies:
 //
 // * This assumes a font icon set has been added using the web-font() mixin
+// * $icon-font must be defined
 
 @mixin icon-font($position: 'before', $size: inherit, $color: inherit, $margin: 0, $width: 1em) {
     
