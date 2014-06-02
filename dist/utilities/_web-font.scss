@@ -5,7 +5,7 @@
 //
 // * $icon-font-formats must be defined as a list of font file formats
 
-@mixin web-font($font-family, $path, $formats: $icon-font-formats) {
+@mixin web-font($font-family, $path, $formats: $icon-font-formats, $font-weight: normal, $font-style: normal) {
     $src-list: ();
     
     @each $format in $formats {
@@ -16,8 +16,8 @@
     
     @font-face {
         font-family: $font-family;
-        font-weight: normal;
-        font-style: normal;
+        font-weight: $font-weight;
+        font-style: $font-style;
         
         src: $src-list;
     }
