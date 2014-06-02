@@ -10,6 +10,10 @@ $icon-font: 'icon-font' !default;
 // Set the path to the icon font files. Notice there is no slash at the end!
 $icon-font-path: '../fonts/icons/#{$icon-font}' !default;
 
+// Icon Font formats is used in the web-font mixin to build out a list of source
+// urls for each format.
+$icon-font-formats: ('woff', 'ttf', 'svg') !default;
+
 // List of icons made available your $icon-font file. Use this icon list to
 // generate your icon component classes.
 $icon-font-list: (

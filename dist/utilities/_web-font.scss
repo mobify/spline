@@ -1,8 +1,7 @@
 // Web Font
 // ========
 
-@mixin web-font($font-family, $path) {
-    $formats: ('woff', 'ttf', 'svg');
+@mixin web-font($font-family, $path, $formats: $icon-font-formats) {
     $src-list: ();
     
     @each $format in $formats {
