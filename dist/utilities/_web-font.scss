@@ -11,7 +11,7 @@
     @each $format in $formats {
         $complete-path: '#{$path}/#{$font-family}.#{$format}';
         
-        $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'));
+        $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'), comma);
     }
     
     @font-face {
