@@ -42,7 +42,7 @@
     $color: rgba(0, 0, 0, 0.25),
     $overlay-position: before,
     $fast-tap-enabled: false,
-    $box-shadow-blur: $margin/2,
+    $box-shadow-blur: 5px,
     $active-selector: ':active'
 ) {
 
