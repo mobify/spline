@@ -2,6 +2,11 @@
 // =================
 //
 // This is used when we want to replace any text inside an icon font element
+//
+// Notes:
+//
+// 1. The width property is required to fix a rendering bug that happens when
+//    using the hide-text() mixin
 
 @mixin icon-font-replace($position: 'before', $width: 1em) {
     @include hide-text();
@@ -9,7 +14,7 @@
     position: relative;
     
     display: inline-block;
-    width: $width;
+    width: $width; // 1
 
     &::#{$position} {
         position: absolute;
