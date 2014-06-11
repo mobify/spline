@@ -1,0 +1,22 @@
+// Icon Font
+// =========
+//
+// Dependencies:
+//
+// * This assumes a font icon set has been added using the web-font() mixin
+// * $icon-font must be defined
+
+@mixin icon-font($position: 'before') {
+    
+    &::#{$position} {
+        display: inline-block;
+        
+        font: {
+            family: $icon-font;
+            style: normal;
+            weight: normal;
+        }
+        text-decoration: inherit;
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,24 @@
+// Web Font
+// ========
+//
+// Dependencies:
+//
+// * $icon-font-formats must be defined as a list of font file formats
+
+@mixin web-font($font-family, $path, $formats: $font-formats, $font-weight: normal, $font-style: normal) {
+    $src-list: ();
+    
+    @each $format in $formats {
+        $complete-path: '#{$path}/#{$font-family}.#{$format}';
+        
+        $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'), comma);
+    }
+    
+    @font-face {
+        font-family: $font-family;
+        font-weight: $font-weight;
+        font-style: $font-style;
+        
+        src: $src-list;
+    }
+}
