@@ -1,11 +1,12 @@
-// TEXT ELLIPSIS
+// Text Ellipsis
+// =============
 //
-// Add ellipses to the end of your text
+// Add ellipses to the end of a single line of text
+// Caution: this mixin forces your text to not wrap (necessary for ellipsis to work)
 
-@mixin ellipsis($wrap: false) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  @if $wrap = false {
-      white-space: nowrap;
-  }
+@mixin ellipsis() {
+    overflow: hidden;
+    
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

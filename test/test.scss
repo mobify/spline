@@ -111,6 +111,15 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+// Test function `ellipsis`
+// --------------------------------
+
+.ellipsis {
+    .block {
+        @include ellipsis;
+    }
+}
+
 // Test Icon Font mixin
 // --------------------------------
 
