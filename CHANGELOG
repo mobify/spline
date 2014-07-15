@@ -1,3 +1,7 @@
+0.3.1
+    - Fix syntax error with `ellipsis` mixin.
+    - Remove `no-wrap` option from `ellipsis` mixin.
+    - Re-add missing `change-br` mixin to the Spline import file.
 0.3.0
     - Split the old `icon-font` mixin into discrete files.
     - Add a new `web-font` mixin to make including web fonts easier. 
