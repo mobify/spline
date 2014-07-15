@@ -110,3 +110,48 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
         margin: 20px;
     }
 }
+
+// Test function `ellipsis`
+// --------------------------------
+
+.ellipsis {
+    .block {
+        @include ellipsis;
+    }
+}
+
+// Test Icon Font mixin
+// --------------------------------
+
+$icon-font: 'spline';
+$icon-font-path: 'fixtures/fonts';
+
+@include web-font($icon-font, $icon-font-path);
+
+.icon {
+    @include icon-font();
+    
+    @each $icon, $content in $icon-font-list {
+        &.icon--#{$icon} {
+            &::before {
+                content: icon-font-content($icon);
+            }
+        }
+    }
+}
+
+.icon-right {
+    @include icon-font($position: 'after');
+    
+    @each $icon, $content in $icon-font-list {
+        &.icon--#{$icon} {
+            &::after {
+                content: icon-font-content($icon);
+            }
+        }
+    }
+}
+
+.icon--replace {
+    @include icon-font-replace();
+}
