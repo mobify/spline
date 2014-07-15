@@ -1,0 +1,16 @@
+0.3.0
+    - Split the old `icon-font` mixin into discrete files.
+    - Add a new `web-font` mixin to make including web fonts easier. 
+0.2.2
+    - `tap-highlight` mixin no longer relies on the non-existent `$margin` variable.
+    - `clearfix` mixin now acts more consistently with how `overflow: hidden` works.
+0.2.1
+    - Updated clearfix mixin to match behaviour with `overflow: hidden`. Should now contain margins instead of collapsing them.
+0.2.0
+    - Add `reverse-gradient()` function.
+0.1.1
+    - Add `rem()` function
+0.1.0
+    - Initial release
+
+For a more detailed changelog, see: https://github.com/mobify/spline/releases
