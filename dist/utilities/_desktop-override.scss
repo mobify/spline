@@ -1,0 +1,52 @@
+// Desktop override mixin
+//
+// Allows overriding extreme specificity without using `!important` and hides
+// the complexity of doing so. Important:
+//
+// - Only use this on sites where desktop CSS is included.
+// - Does not override !important in desktop CSS or inline styles.
+//
+// @param {Number} $degree – The “force” of the override, a number 1 through 6;
+//     effectively equivalent to the number of id-level selectors you need
+//     to override.
+//
+// Usage
+//
+// @include desktop-override(4) {
+//     color: red; // overrides equivalent of `#id #id #id #id { color: blue; }`
+// }
+//
+// Markup: the following markup must be in place to use this mixin
+//
+// <div id="!m"></div>
+// <div id="!o"></div>
+// <div id="!b"></div>
+// <div id="!i"></div>
+// <div id="!f"></div>
+// <div id="!y"></div>
+// …
+// <div id="x-root">…</div>
+
+@mixin desktop-override($degree: 1) {
+    @if $degree > 6 {
+        @warn 'Maximum override degree is 6.';
+        $degree: 6;
+    }
+
+    // Our ids are prefixed with a bang character to help guarantee that they
+    // are unique on the page, but we need to escape the bang in our selectors,
+    // hence the backslash.
+    $id-selectors: ('#\!m', '#\!o', '#\!b', '#\!i', '#\!f', '#\!y');
+
+    // This will be built into the final selector for the selected degree.
+    $override-selector: '';
+
+    @for $i from 1 through $degree {
+        $combinator: if($i == 1, '', ' ~ ');
+        $override-selector: $override-selector + $combinator + nth($id-selectors, $i);
+    }
+
+    #{$override-selector} ~ #x-root {
+        @content;
+    }
+}
