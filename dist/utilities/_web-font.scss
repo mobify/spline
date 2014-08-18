@@ -3,22 +3,35 @@
 //
 // Dependencies:
 //
-// * $icon-font-formats must be defined as a list of font file formats
+// * $font-formats must be defined as a list of font file formats
+//   i.e. $formats: ('woff', 'ttf', 'svg')
 
-@mixin web-font($font-family, $path, $formats: $font-formats, $font-weight: normal, $font-style: normal) {
+@mixin web-font(
+    $font-family,
+    $path,
+    $formats: $font-formats,
+    $font-weight: normal,
+    $font-style: normal,
+    $cache-buster: ''
+) {
     $src-list: ();
-    
+
     @each $format in $formats {
         $complete-path: '#{$path}/#{$font-family}.#{$format}';
-        
+
+        // If a cache-buster is declared, append it to the end of the path
+        @if ($cache-buster != '') {
+            $complete-path: str-insert($complete-path, '?#{$cache-buster}', $path-length);
+        }
+
         $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'), comma);
     }
-    
+
     @font-face {
         font-family: $font-family;
         font-weight: $font-weight;
         font-style: $font-style;
-        
+
         src: $src-list;
     }
 }
