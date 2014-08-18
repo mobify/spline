@@ -25,6 +25,6 @@
 
     // The desired icon does not exist in $icon-list
     @else {
-        @warn '$icon-name is not set. Refer to $icon-list for a list of available icons';
+        @warn '$icon-name value ("#{$icon-name}") is not set. Refer to $icon-list for a list of available icons';
     }
 }
