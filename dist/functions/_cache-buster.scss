@@ -11,5 +11,5 @@
 // any other of the queries.
 
 @function cache-buster($seed: 9999999999, $separator: '?') {
-    @return $separator + random(seed);
+    @return $separator + random($seed);
 }
