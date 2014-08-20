@@ -3,10 +3,9 @@
 //
 // Dependencies:
 //
-// * $font-formats must be defined as a list of font file formats
-//   i.e. $formats: ('woff', 'ttf', 'svg')
-
-$web-font-cache-buster: random(99999999) !default;
+// * `$font-formats` must be defined as a list of font file formats
+//   i.e. `$formats: ('woff', 'ttf', 'svg')`
+// * `cache-buster()` function
 
 @mixin web-font(
     $font-family,
@@ -23,7 +22,7 @@ $web-font-cache-buster: random(99999999) !default;
 
         // If a cache-buster is declared, append it to the end of the path
         @if ($cache-buster) {
-            $complete-path: str-insert($complete-path, '?#{$web-font-cache-buster}', $path-length);
+            $complete-path: $complete-path + cache-buster();
         }
 
         $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'), comma);
