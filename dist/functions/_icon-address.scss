@@ -10,11 +10,11 @@
 // Dependencies:
 //
 // * `$icon-list` is required to be been previously defined, which is a map of
-//                 all available with which icon-address() will scan to return
-//                 the desired icon code.
+//                all available with which icon-address() will scan to return
+//                the desired icon code.
 
 
-// @function: Icon Code
+// @function: Icon Address
 // --------------------
 
 @function icon-address($icon-name) {

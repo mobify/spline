@@ -126,7 +126,7 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
 $icon-font: 'spline';
 $icon-font-path: 'fixtures/fonts';
 
-@include web-font($icon-font, $icon-font-path);
+@include web-font($icon-font, $icon-font-path, $cache-buster: true);
 
 .icon {
     @include icon-font();
