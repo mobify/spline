@@ -1,0 +1,15 @@
+// Cache Buster
+// ============
+//
+// This is used to help cache bust browser url requests, such as when importing
+// fonts with `@font-face`
+//
+// Note on Query Strings:
+//
+// If the url already has a query string on it, you may want to consider changing
+// the $separator to an ampersand `&` so the cache-buster isn't interferring with
+// any other of the queries.
+
+@function cache-buster($seed: 9999999999, $separator: '?') {
+    @return $separator + random(seed);
+}
