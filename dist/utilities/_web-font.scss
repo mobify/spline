@@ -11,6 +11,13 @@
 // @param $font-weight [String] : Font weight declaration
 // @param $font-style [String] : Font style declaration
 // @param $cache-buster [String] : Boolean
+//
+//
+// Dependencies
+// ------------
+//
+// * Spline functions
+//     * cache-buster()
 
 @mixin web-font(
         $font-family,
