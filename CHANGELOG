@@ -1,3 +1,5 @@
+0.4.1
+    - Fixed issue with `$font-formats` not providing the right format name for Truetype fonts.
 0.4.0
     - Rename `icon-font-content` function to `icon-address`.
     - Add a `cache-buster` function to generate a cache-busting string at the end of a URL.
