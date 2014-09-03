@@ -160,7 +160,7 @@ $icon-font-path: 'fixtures/fonts';
     @include icon-font-replace();
 }
 
-// Test @mixin style-override
+// Test Style Override mixin
 // ---
 
 #main-content #inner-content #content #main .column .form.field ul li.target {
