@@ -30,15 +30,15 @@ $style-override-head-selector: '#\!' !default;
     $selector-chain: '';
 
     // Build an id selector by chaining the same id onto itself once more than
-    // the specified degree. So if degree: 4, we get #id#id#id#id#id which will
-    // override it.
+    // the specified degree. So if degree: 4, we get #id#id#id#id#id.
 
     @for $i from 1 through $degree + 1 {
         $selector-chain: $selector-chain + $head-selector;
     }
 
     // Since <body> is a following sibling of <head>, we confer nested selectors
-    // anywhere in the <body> with the extra specificity.
+    // anywhere in the <body> with the extra specificity by wrapping them in
+    // this:
 
     #{$selector-chain} ~ body {
         @content;
