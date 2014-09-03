@@ -11,7 +11,7 @@ body {
     margin: 20px 0;
     padding: 0 0 20px;
     border-bottom: 1px solid #ccc;
-    
+
     .block {
         display: inline-block;
     }
@@ -90,12 +90,12 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
 
 .clearfix {
     @include clearfix;
-    
+
     border: 1px solid red;
 
     .block {
         float: left;
-        
+
         margin: 20px;
     }
 }
@@ -106,7 +106,7 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
 
     .block {
         float: left;
-        
+
         margin: 20px;
     }
 }
@@ -130,7 +130,7 @@ $icon-font-path: 'fixtures/fonts';
 
 .icon {
     @include icon-font();
-    
+
     @each $icon, $content in $icon-font-list {
         &.icon--#{$icon} {
             &::before {
@@ -142,7 +142,7 @@ $icon-font-path: 'fixtures/fonts';
 
 .icon-right {
     @include icon-font($position: 'after');
-    
+
     @each $icon, $content in $icon-font-list {
         &.icon--#{$icon} {
             &::after {
@@ -154,4 +154,17 @@ $icon-font-path: 'fixtures/fonts';
 
 .icon--replace {
     @include icon-font-replace();
+}
+
+// Test @mixin style-override
+// ---
+
+#main-content #inner-content #content #main .column .form.field ul li.target {
+    color: red;
+}
+
+@include style-override(4) {
+    .target:last-child {
+        color: green;
+    }
 }

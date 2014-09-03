@@ -1,12 +1,13 @@
 
-// Desktop override
+// Style override
 // ===
 //
 // Allows overriding extreme specificity without using `!important` and hides
 // the complexity of doing so. Important:
 //
-// - Only use this on sites where desktop CSS is included.
-// - Does not override !important in desktop CSS or inline styles.
+// - Only use this on sites where lots of existing CSS is included.
+// - Does not override !important or inline styles; those must be dealt with
+//   separately.
 //
 // @param $degree [Number] The “force” of the override; effectively equivalent
 //     to the number of id selectors you need to override.
@@ -15,7 +16,7 @@
 // Usage
 // ---
 //
-// @include desktop-override(4) {
+// @include style-override(4) {
 //     color: red; // overrides equivalent of `#id #id #id #id { color: blue; }`
 // }
 //
@@ -25,7 +26,7 @@
 //
 // **IMPORTANT** The <head> must have an id of `!`, so <head id="!">.
 
-@mixin desktop-override($degree: 1) {
+@mixin style-override($degree: 1) {
     // We apply id="!" to the <head> tag and repeatedly select on it to boost
     // the specificity of our selectors. The `!` must be escaped with a `\`.
     $id: '#\!';
