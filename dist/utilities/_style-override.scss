@@ -2,41 +2,45 @@
 // Style override
 // ===
 //
-// Allows overriding extreme specificity without using `!important` and hides
-// the complexity of doing so. Important:
-//
-// - Only use this on sites where lots of existing CSS is included.
-// - Does not override !important or inline styles; those must be dealt with
-//   separately.
-//
-// @param $degree [Number] The “force” of the override; effectively equivalent
-//     to the number of id selectors you need to override.
-//
-//
-// Usage
+// Allows overriding existing styles with extreme specificity while keeping
+// source code clean and readable. Only use this for overriding 3rd-party CSS
+// that cannot be changed. Does not override !important or inline styles; those
+// must be dealt with separately.
+
+
+// Configurable variables
+// ---
+
+// The default selector used to build the override. Must select the <head> tag.
+// The default value selects <head id="!"> which is short (since it’s prepended
+// to every wrapped selector) and obscure (to help guarantee uniqueness). Since
+// it’s a special character in CSS, the `!` must be escaped.
+
+$style-override-head-selector: '#\!' !default;
+
+
+// Style override
 // ---
 //
-// @include style-override(4) {
-//     color: red; // overrides equivalent of `#id #id #id #id { color: blue; }`
-// }
-//
-//
-// Markup
-// ---
-//
-// **IMPORTANT** The <head> must have an id of `!`, so <head id="!">.
+// @param $degree [Number]: The “force” of the override. Effectively the number
+//        of id-level selectors you need to override.
+// @param $head-selector [String]: An id selector that matches the <head> tag.
 
-@mixin style-override($degree: 1) {
-    // We apply id="!" to the <head> tag and repeatedly select on it to boost
-    // the specificity of our selectors. The `!` must be escaped with a `\`.
-    $id: '#\!';
-    $id-chain: '';
+@mixin style-override($degree: 1, $head-selector: $style-override-head-selector) {
+    $selector-chain: '';
 
-    @for $i from 0 through $degree {
-        $id-chain: $id-chain + $id;
+    // Build an id selector by chaining the same id onto itself once more than
+    // the specified degree. So if degree: 4, we get #id#id#id#id#id which will
+    // override it.
+
+    @for $i from 1 through $degree + 1 {
+        $selector-chain: $selector-chain + $head-selector;
     }
 
-    #{$id-chain} ~ body {
+    // Since <body> is a following sibling of <head>, we confer nested selectors
+    // anywhere in the <body> with the extra specificity.
+
+    #{$selector-chain} ~ body {
         @content;
     }
 }
