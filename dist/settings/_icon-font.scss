@@ -12,18 +12,18 @@ $icon-font-path: '../fonts/icons/#{$icon-font}' !default;
 
 // List of icons made available your $icon-font file. Use this icon list to
 // generate your icon component classes.
-$icon-font-list: (
+$icon-list: (
 
     question:    '\e000',
     exclamation: '\e001',
     information: '\e002',
-    
+
     checkmark: '\e003',
     phone:     '\e004',
-    
+
     plus:  '\e005',
     minus: '\e006',
-    
+
     chevron-down:  '\e007',
     chevron-right: '\e008'
 
