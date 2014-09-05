@@ -1,8 +1,10 @@
+// To Number
+// =========
+//
 // Cast a value to a number if possible or return 0
-// --------------------------------------------------------------------------------
-// @param [string] $value: complete source
-// --------------------------------------------------------------------------------
-// @return [number] number (0 if cast failed)
+//
+// @param [String] $value: complete source
+// @return [Number] number (0 if cast failed)
 
 @function to-number($value) {
   // In case everything's good
@@ -138,12 +140,12 @@
   $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax' 'deg';
   $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax  1deg ;
   $index: index($strings, $unit);
-  
+
   @if not $index {
     @warn "Unknown unit `#{inspect($unit)}`.";
     @return 0;
   }
-  
+
   @return $number * nth($units, $index);
 }
 
