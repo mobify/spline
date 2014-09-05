@@ -4,9 +4,10 @@
 // Takes a list and returns a string that's been comma seperated
 //
 // @param $list [List] : list to be converted into comma seperated string
+// @param $separator [String] : the preferred separator placed inbetween list items
 // @return [String]
 
-@function to-string($list, $separator: ', ') { // to-comma-string
+@function to-string($list, $separator: ', ') {
     @if type-of($list) != "list" {
         @warn "`to-string` function expecting a list for $list; #{type-of($list)} given.";
         @return false;
