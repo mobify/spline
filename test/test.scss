@@ -120,11 +120,62 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+// Test Web Font mixin
+// -------------------
+
+$custom-font: 'sourcesanspro';
+
+$custom-font-path: 'fixtures/fonts/#{$custom-font}';
+
+// Normal
+@include web-font(
+    $custom-font,
+    $custom-font-path,
+    $font-weight: normal,
+    $font-style: normal,
+    $cache-buster: true
+);
+
+// Italic
+@include web-font(
+    $custom-font,
+    $custom-font-path,
+    $font-weight: normal,
+    $font-style: italic,
+    $cache-buster: true
+);
+
+// Bold
+@include web-font(
+    $custom-font,
+    $custom-font-path,
+    $font-weight: bold,
+    $font-style: normal,
+    $cache-buster: true
+);
+
+// Light
+@include web-font(
+    $custom-font,
+    $custom-font-path,
+    $font-weight: 300,
+    $font-style: normal,
+    $cache-buster: true
+);
+
+.webfont {
+    font-family: $custom-font, arial, sans-serif;
+
+    .light {
+        font-weight: 300;
+    }
+}
+
 // Test Icon Font mixin
 // --------------------------------
 
 $icon-font: 'spline';
-$icon-font-path: 'fixtures/fonts';
+$icon-font-path: 'fixtures/fonts/icon';
 
 @include web-font(
     $icon-font,
