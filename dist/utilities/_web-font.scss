@@ -7,7 +7,7 @@
 // and font weight values to build out the file name.
 //
 // For example:
-// - Normal font: sourcesanspro.ext
+// - Normal font:      sourcesanspro.ext
 // - Italic font:      sourcesanspro-italic.ext
 // - Bold font:        sourcesanspro-bold.ext
 // - Light font:       sourcesanspro-300.ext
@@ -40,22 +40,22 @@
     ) {
         $src-list: ();
 
-        @each $file-type, $format  in $formats {
-            $file-extension: '';
+        @each $file-extension, $format  in $formats {
+            $type-style: '';
 
             // Check if the font weight is other than normal, if it is then add
-            // a file name extension with that value
+            // the type values to the file
             @if $font-weight != "normal" {
-                $file-extension: $file-extension + '-#{$font-weight}';
+                $type-style: $type-style + '-#{$font-weight}';
             }
 
             // Check if the font style is other than normal, if it is then add
-            // a file name extension with that value
+            // the type values to the file
             @if $font-style != "normal" {
-                $file-extension: $file-extension + '-#{$font-style}';
+                $type-style: $type-style + '-#{$font-style}';
             }
 
-            $complete-path: '#{$path}/#{$font-family}#{$file-extension}.#{$file-type}';
+            $complete-path: '#{$path}/#{$font-family}#{$type-style}.#{$file-extension}';
 
             // If a cache-buster is declared, append it to the end of the path
             @if ($cache-buster) {
