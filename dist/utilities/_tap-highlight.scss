@@ -5,37 +5,28 @@
 //
 // Usage:
 //
-//      .x-button {
-//          @include tap-highlight;
-//      }
+// ```scss
+// .x-button {
+//     @include tap-highlight;
+// }
+// ```
 //
-// Parameters
 //
-//     $color - Default rgba(0, 0, 0, 0); The color of the tap highlight
-//
-//     $method - Default 'highlight'; The method that determines how the
-//         tap highlight is styled. All possible values:
-//             * 'highlight'
-//             * 'custom'
-//             * 'overlay'
-//             * 'box-shadow'
-//
-//     $overlay-position - Default before; The pseudo element position that an
-//         'overlay' version of the tap highlight is placed. All possible values:
-//             * after
-//             * before
-//
-//     $fast-tap-enabled - Default false; Whether or not tap is enabled for this
-//         element. See fasttap.js for more details. All possible values:
-//             * true
-//             * false
-//
-//     $box-shadow-blur - The thickness of the box shadow's blur on 'box-shadow'
-//         tap highlights
-//
-//     $active-selector - Default ':active'; the class or pseudo class used to
-//         apply the tap highlight affect, and represents the tap highlight's
-//         active state.
+// @param $color [Color] : Default rgba(0, 0, 0, 0); The color of the tap highlight
+// @param $method [String] : Method determines how the tap highlight is styled.
+//        Possible options:
+//            * 'highlight'
+//            * 'custom'
+//            * 'overlay'
+//            * 'box-shadow'
+// @param $position [String] : The pseudo element before or after
+// @param $fast-tap-enabled [String] : Whether or not tap is enabled for this
+//        element. See fasttap.js for more details. All possible values:
+//            * true
+//            * false
+// @param $box-shadow-blur [Number] : Thickness of the highlight's box shadow blur
+// @param $active-selector [String] : The class or pseudo class used to apply the
+//        tap highlight affect, and represents the tap highlight's active state.
 
 @mixin tap-highlight(
     $method: 'highlight',
@@ -63,7 +54,7 @@
             // Fast Tap highlighting uses the :active state
             &#{$active-selector} {
                 background: $color;
-                
+
                 @content;
             }
 
@@ -75,11 +66,11 @@
             @content;
         }
     }
-    
+
     // $METHOD: CUSTOM
     //
     // Enables you to set your own active state styling for your tap highlight. Removes the tap highlight color.
-    
+
     @else if $method == 'custom' {
         // Remove the ordinary tap highlight
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
