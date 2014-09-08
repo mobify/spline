@@ -1,15 +1,17 @@
-// TURN <BR> INTO ANYTHING
-// -----------------------
+// Change BR
+// =========
+//
+// Use this utility to convert `<br>` tags into any arbitrary type of content.
 //
 // Usage:
 //
-//      .class-name {
-//          @include change-br;
-//      }
+// ```scss
+// .class-name {
+//     @include change-br;
+// }
+// ```
 //
-// Parameters
-//
-//     $content - default ' '; The content that replaces the <br>
+// @param $content [String] : The content that replaces the `<br>`
 
 @mixin change-br($content: ' ') {
     br {

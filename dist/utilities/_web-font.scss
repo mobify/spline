@@ -1,8 +1,7 @@
 // Web Font
 // ========
 //
-// Generates a font face declaration
-//
+// Generates a font face declaration.
 // This mixin expects fonts to be named a specific way. It uses the font style
 // and font weight values to build out the file name.
 //
@@ -13,22 +12,21 @@
 // - Light font:       sourcesanspro-300.ext
 //     - (Note that this uses the weight value not a 'light' string)
 // - Bold Italic font: sourcesanspro-bold-italic.ext
-
-// @param $font-family [String] : Font family name
-// @param $path [String] : Location of folder containing font files
-// @param $formats [Map] :
-//     key :    'File extension',
-//     value :  'Format name'
-// @param $font-weight [String] : Font weight declaration
-// @param $font-style [String] : Font style declaration
-// @param $cache-buster [String] : Boolean
-//
 //
 // Dependencies
 // ------------
 //
-// * Spline functions
-//     * cache-buster()
+// * Spline function: cache-buster()
+//
+//
+// @param $font-family [String] : Font family name
+// @param $path [String] : Location of folder containing font files
+// @param $formats [Map] :
+//          key :   'File extension',
+//          value : 'Format name'
+// @param $font-weight [String] : Font weight declaration
+// @param $font-style [String] : Font style declaration
+// @param $cache-buster [Boolean] : Use cache buster or not
 
 @mixin web-font(
         $font-family,

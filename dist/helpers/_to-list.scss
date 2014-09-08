@@ -1,9 +1,11 @@
+// To List
+// =======
+//
 // Convert a string containing a set of delimited values into a
 // space-separated list.
-// -----------------------------------------------------------------------------
+//
 // @param $string [String] : Delimited string
 // @param $separator [String] : String delimiter
-// -----------------------------------------------------------------------------
 // @return [List]
 
 @function to-list($string, $separator: ', ') {

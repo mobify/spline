@@ -1,37 +1,36 @@
-// TRIANGLE
-// --------
+// Triangle
+// ========
 //
 // This is triangle, there are two different types of triangle.
 //
-// The first type is Equilateral triangle, all three sides are equal.
-//     $type = 'triangle'
-//     $direction = 'up', 'down', 'right', or 'left'
-//
-// The second type is Isosceles triangle, two equal sides.
-//     $type = 'isosceles'
-//     $direction = 'up-left', 'up-right', 'down-right' or 'down-left'.
-//
-// Both types will require 4 arguments:
-//     $type = 'triangle' or 'isosceles'
-//     $direction = ('up', 'down', 'right', or 'left') or ('up-left', 'up-right', 'down-right' or 'down-left')
-//     $size = value
-//     $color = value
-//
 // Markup will generally look something like this:
 //
-//     <div class="triangle"></div>
-//     <div class="isosceles-right"></div>
+// ```html
+// <div class="triangle"></div>
+// <div class="isosceles-right"></div>
+// ```
 //
 // Usage:
 //
-//     .triangle {
-//         @include triangle($type: 'triangle', $direction: 'right', $size: 12px, $color: #000);
-//     }
+// ```scss
+// .triangle {
+//     @include triangle($type: 'triangle', $direction: 'right', $size: 12px, $color: #000);
+// }
 //
-//     .isosceles-right {
-//         @include triangle($type: 'isosceles', $direction: 'up-right', $size: 12px, $color: #000);
-//     }
+// .isosceles-right {
+//     @include triangle($type: 'isosceles', $direction: 'up-right', $size: 12px, $color: #000);
+// }
+// ```
 //
+// The first type is Equilateral triangle, all three sides are equal.
+//
+// @param $type [String] : Can be either 'triangle' or 'isosceles'
+// @param $direction [String] : The direction of the triangle. Valid options depends
+//        The chosen shape. If triangle was chosen, then your options are: up,
+//        down, right, or left. Else if isosceles: up-left, up-right, down-right
+//        or down-left
+// @param $size [Number] : value
+// @param $color [Color] : value
 
 @mixin triangle($type, $direction, $size, $color) {
     width: 0;

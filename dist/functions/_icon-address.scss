@@ -7,11 +7,18 @@
 //     content: icon-address('twitter');
 // }
 //
-// Dependencies:
+//
+// Dependencies
+// ------------
 //
 // * `$icon-list` is required to be been previously defined, which is a map of
 //                all available with which icon-address() will scan to return
 //                the desired icon code.
+//
+//
+// @param $icon-name [String] : This string (without quotes) refers to the icon
+//        in the $icon-list map, which we expect to map to a unicode address
+// @return [String]
 
 
 // @function: Icon Address
