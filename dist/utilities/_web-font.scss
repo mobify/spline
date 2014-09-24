@@ -30,7 +30,7 @@
 
 @mixin web-font(
         $font-family,
-        $path: '../fonts/{$font-family}',
+        $path: '../fonts/#{$font-family}',
         $formats: $font-formats,
         $font-weight: normal,
         $font-style: normal,
