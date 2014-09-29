@@ -47,6 +47,26 @@ $should-4: foo bar baz;
 @debug if($list-3 == $should-3, 'PASS: `', 'FAIL: `') + $list-3 + '` should equal `' + $should-3 + '`.';
 @debug if($list-4 == $should-4, 'PASS: `', 'FAIL: `') + $list-4 + '` should equal `' + $should-4 + '`.';
 
+// Test function `parent-exists`
+// -----------------------
+
+@if parent-exists() {
+    @debug 'FAIL: Parent should not exist';
+}
+@else {
+    @debug 'PASS: Parent should not exist';
+}
+
+.parent-exists-test-1 {
+    .parent-exists-child {
+        @if parent-exists() {
+            @debug 'PASS: Parent should exist';
+        }
+        @else {
+            @debug 'FAIL: Parent should exist';
+        }
+    }
+}
 
 // Test function `reverse-gradient`
 // --------------------------------
@@ -209,4 +229,29 @@ $icon-font-path: 'fixtures/fonts/icon';
 
 .icon--replace {
     @include icon-font-replace();
+}
+
+// Test Style Override mixin
+// ---
+
+#main-content #inner-content #content #main .column .form.field ul li.target {
+    color: red;
+}
+
+// Test parent-less declaration
+
+@include style-override(4) {
+    .target:last-child {
+        color: green;
+    }
+}
+
+// Test declaration inside of parent
+
+.parent-test {
+    @include style-override(4) {
+        .target:last-child {
+            color: blue;
+        }
+    }
 }
