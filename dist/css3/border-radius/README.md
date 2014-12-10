@@ -13,8 +13,6 @@ Often, you’ll want to only round one side of a box. These mixins provide a sho
 
 ##### $radii [string]
 
-> Default: ``
-
 Takes a pixel or percentage value string and applies that as the border radius value.
 
 #### Usage
