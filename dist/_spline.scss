@@ -47,10 +47,11 @@
 // Utilities
 // ---------
 
-@import "utilities/change-br";
-@import "utilities/ellipsis";
-@import "utilities/clearfix";
-@import "utilities/hide-text";
+@import "utilities/change-br/change-br";
+@import "utilities/ellipsis/ellipsis";
+@import "utilities/clearfix/clearfix";
+@import "utilities/hide-text/hide-text";
+@import "utilities/squish-text/squish-text";
 @import "utilities/icon-font";
 @import "utilities/icon-font-replace";
 @import "utilities/tap-highlight";

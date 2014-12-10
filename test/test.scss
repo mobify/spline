@@ -120,6 +120,30 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+// Test utility `hide-text`
+// --------------------------------
+
+.hide-text {
+    .block {
+        @include hide-text;
+    }
+}
+
+.hide-text-direction-left {
+    .block {
+        @include hide-text(left);
+    }
+}
+
+// Test utility `squish-text`
+// --------------------------------
+
+.squish-text {
+    .block {
+        @include squish-text;
+    }
+}
+
 // Test Web Font mixin
 // -------------------
 

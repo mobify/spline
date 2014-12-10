@@ -1,0 +1,14 @@
+// Squish Text
+// -----------
+//
+// This is an alternative text replacement mixin.
+//
+// Hides text in an element by squishing the text into oblivion. Use this if you
+// need to hide text contained in an inline element but still have it read by a
+// screen reader.
+
+@mixin squish-text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}

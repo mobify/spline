@@ -8,102 +8,10 @@ Spline is a mixin and function library for Sass. It’s a set of tools made to m
 
 ## Utilities
 
-### Clearfix
-
-Provides an easy way to contain floats without adding additional markup.
-
-Based on [Nicolas Gallagher's micro-clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) and [this one by Thierry Koblentz](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php).
-
-```scss
-@include clearfix;
-```
-
-#### Usage
-
-```scss
-.element {
-    @include clearfix;
-}
-```
-
-#### Output
-
-```scss
-.element::before,
-.element::after {
-    content: ' ';
-    display: table;
-}
-
-.element::after {
-    clear: both;
-}
-```
-
-### Text Ellipsis
-
-Add ellipses to the end of a single line of text. The element this is applied to will need to have a width set for this to work.
-
-> Caution: This mixin forces your text to not wrap (necessary for ellipsis to work).
-
-```scss
-@include ellipsis;
-```
-
-#### Usage
-
-```scss
-.element {
-    @include ellipsis;
-}
-```
-
-#### Output
-
-```scss
-.element {
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-```
-
-### Hide Text
-
-Hides text in an element so you can see the background, but still leaves it visible to screen readers.
-
-This is based on [Scott Kellum's Image Replacement technique](http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/) but uses 110% for better coverage.
-
-```scss
-@include hide-text($direction);
-```
-
-#### Parameters
-
-##### $direction [string]
-
-> Default: `right`
-
-Takes a value of either `right` or `left` to apply different types of text replacement. See the source for the different techniques.
-
-#### Usage
-
-```scss
-.element {
-    @include hide-text();
-}
-```
-
-#### Output
-
-```scss
-.element {
-    text-indent: 110%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-```
+- [Change Break Tag](dist/utilities/change-br)
+- [Clearfix](dist/utilities/clearfix)
+- [Text Ellipsis](dist/utilities/ellipsis)
+- [Hide Text](dist/utilities/hide-text)
 
 ### Icon Font
 

@@ -1,0 +1,28 @@
+// Hide Text
+// =========
+//
+// Hides text in an element so you can see the background, but still leaves it
+// visible to screen readers.
+//
+// @param $direction [String] : Indicates how the text should be moved out of
+//                              view. Takes either `left` or `right`.
+//
+// Notes:
+//
+// 1. Setting the text-indent to be slightly wider than the box prevents issues
+//    with inline-block elements
+
+
+@mixin hide-text($direction: right) {
+    @if $direction == right {
+        overflow: hidden;
+        text-indent: 110%; // 1
+        white-space: nowrap;
+    } @else if $direction == left {
+        $approximate-em-value: 12px / 1em;
+        $wider-than-any-screen: -9999em;
+        text-indent: $wider-than-any-screen * $approximate-em-value;
+        overflow: hidden;
+        text-align: left;
+    }
+}
