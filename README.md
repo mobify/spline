@@ -12,6 +12,7 @@ Spline is a mixin and function library for Sass. It’s a set of tools made to m
 - [Clearfix](dist/utilities/clearfix)
 - [Text Ellipsis](dist/utilities/ellipsis)
 - [Hide Text](dist/utilities/hide-text)
+- [Squish Text](dist/utilities/squish-text)
 
 ### Icon Font
 
