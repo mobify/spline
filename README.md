@@ -1,6 +1,6 @@
 # Spline
 
-Spline is a mixin and function library for Sass. It’s a set of tools made to make writing stylesheets faster and easier.
+Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier.
 
 ## CSS3
 
