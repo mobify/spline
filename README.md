@@ -2,109 +2,27 @@
 
 Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier.
 
-## CSS3
+Spline is written with an eye towards mobile browser support. Spline does not contain any browser prefixing — if you're looking for prefixing, we recommend you use [Autoprefixer](https://github.com/postcss/autoprefixer) instead.
+
+## Requirements
+
+- [Sass](http://sass-lang.com/) 3.4
+
+## Documentation
+
+### CSS3
 
 - [Border Radius](dist/css3/border-radius)
 
-## Utilities
+### Utilities
 
 - [Change Break Tag](dist/utilities/change-br)
 - [Clearfix](dist/utilities/clearfix)
 - [Text Ellipsis](dist/utilities/ellipsis)
 - [Hide Text](dist/utilities/hide-text)
 - [Squish Text](dist/utilities/squish-text)
-
-### Icon Font
-
-Makes it easier to consistently declare icon fonts in your project.
-
-```scss
-.element {
-    @include icon-font();
-}
-```
-
-> A custom font must have been defined using @font-face or web-font().
-
-> The `$icon-font` variable must be defined as the font-family to use for the `icon-font` mixin.
-
-#### Parameters
-
-##### $position [string]
-
-> Default: `before`
-
-Takes a value of either `before` or `after` to declare which pseudo-element to use.
-
-#### Usage
-
-```scss
-$icon-font: 'icon-font';
-
-.element {
-    @include icon-font;
-}
-```
-
-### Icon Font Replace
-
-Replaces text within an element with pseudo-element content. For use with Icon Fonts.
-
-```scss
-.element {
-    @include icon-font-replace();
-}
-```
-
-#### Parameters
-
-##### $position [string]
-
-> Default: `before`
-
-Takes a value of either `before` or `after` to declare which pseudo-element to use.
-
-##### $width [string]
-
-> Default: `1em`
-
-Takes a unit value to set the width of the pseudo-element. Should equal the width of the icon.
-
-#### Usage
-
-```scss
-.element {
-    @include icon-font-replace();
-}
-```
-
-#### Output
-
-```scss
-.element {
-    text-indent: 110%;
-    white-space: nowrap;
-    overflow: hidden;
-
-    position: relative;
-
-    display: inline-block;
-    width: 1em;
-}
-
-.element::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    text-align: center;
-    text-indent: 0;
-}
-```
+- [Icon Font](dist/utilities/icon-font)
+- [Icon Font Replace](dist/utilities/icon-font-replace)
 
 ### Tap Highlight
 
@@ -199,3 +117,11 @@ Draws a triangle using the borders of the element.
 > Default: `triangle`
 
 Takes either `triangle` or `equilateral`.
+
+## Browser Support
+
+## The Mobify CSS Triforce
+
+## Credits
+
+## License
