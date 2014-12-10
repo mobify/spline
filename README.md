@@ -22,13 +22,23 @@ Spline is distributed with the [Bower](http://bower.io) package manager.
 bower install spline --save
 ```
 
-2. Import Spline at the beginning of your Sass stylesheet
+1. Import Spline at the beginning of your Sass stylesheet
 
 ```scss
 @import "bower-components/spline/spline";
 ```
 
-If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
+Packages installed through Bower aren't made to be edited. If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
+
+## Updating
+
+Spline follows [Semantic Versioning](http://www.semver.org). In a nutshell, that means that upgrading to new point releases (eg. moving from 1.0 to 1.1) is safe. Upgrading to new major releases (from 1.0 to 2.0) will cause backwards-incompatible changes.
+
+To update Spline, run the following command:
+
+```
+bower update spline
+```
 
 ## Documentation
 
