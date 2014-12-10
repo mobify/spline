@@ -150,7 +150,7 @@ Other browsers may be supported but Spline is not actively developed on them. If
 
 ## The Mobify CSS Triforce ![Triforce](http://img4.wikia.nocookie.net/__cb20091113050618/zelda/images/1/1a/Obtained_Triforce_Piece.gif)
 
-Spline is part of the ![Triforce](http://img4.wikia.nocookie.net/__cb20091113050618/zelda/images/1/1a/Obtained_Triforce_Piece.gif)_Mobify CSS Triforce_: a collection of three UI Development projects built for making mobile e-commerce builds easier.
+Spline is part of the _Mobify CSS Triforce_: a collection of three UI Development projects built for making mobile e-commerce builds easier.
 
 - **Spline**: A mobile-first mixin and function library for Sass.
 - [**Vellum**](http://github.com/mobify/vellum): A set of default styles for mobile-first builds.
