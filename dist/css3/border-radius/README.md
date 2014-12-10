@@ -1,4 +1,4 @@
-### Border Radius (Shorthand)
+# Border Radius (Shorthand)
 
 Often, you’ll want to only round one side of a box. These mixins provide a shorthand for that use case.
 
@@ -9,13 +9,13 @@ Often, you’ll want to only round one side of a box. These mixins provide a sho
     @include border-right-radius($radii);
 ```
 
-#### Parameters
+## Parameters
 
-##### $radii [string]
+### $radii [string]
 
 Takes a pixel or percentage value string and applies that as the border radius value.
 
-#### Usage
+## Usage
 
 ```scss
 .element {
@@ -23,7 +23,7 @@ Takes a pixel or percentage value string and applies that as the border radius v
 }
 ```
 
-#### Output
+## Output
 
 ```scss
 .element {
