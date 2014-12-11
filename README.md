@@ -41,11 +41,9 @@ bower update spline
 
 ## Documentation
 
-### CSS3 Shorthand
-
-- [Border Radius](dist/css3/border-radius)
-
 ### Utilities
+
+The core set of mixins for the project.
 
 - [Change Break Tag](dist/utilities/change-br)
 - [Clearfix](dist/utilities/clearfix)
@@ -57,6 +55,18 @@ bower update spline
 - [Tap Highlight](dist/utilities/tap-highlight)
 - [Triangle](dist/utilities/triangle)
 - [Web Font](dist/utilities/web-font)
+
+### Functions
+
+Functions are methods of invoking Sass logic and functionality to return values. [Read this article to learn more](http://thesassway.com/advanced/pure-sass-functions).
+
+- [Cache Buster](dist/utilities/cache-buster)
+
+### CSS3 Shorthand
+
+Mixins that provide a shorthand way to write CSS3 functionality.
+
+- [Border Radius](dist/css3/border-radius)
 
 ## Browser Support
 
