@@ -63,6 +63,7 @@ Functions are methods of invoking Sass logic and functionality to return values.
 - [Cache Buster](dist/functions/cache-buster)
 - [Icon Address](dist/functions/icon-address)
 - [Rem Converter](dist/functions/rem)
+- [Reverse Gradient](dist/functions/reverse-gradient)
 
 ### CSS3 Shorthand
 
