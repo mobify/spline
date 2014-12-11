@@ -17,11 +17,9 @@ Spline is written with an eye towards mobile browser support. Spline does not co
 Spline is distributed with the [Bower](http://bower.io) package manager.
 
 1. Install the Bower package
-
 ```
 bower install spline --save
 ```
-
 1. Import Spline at the beginning of your Sass stylesheet
 
 ```scss
@@ -56,27 +54,8 @@ bower update spline
 - [Icon Font](dist/utilities/icon-font)
 - [Icon Font Replace](dist/utilities/icon-font-replace)
 - [Tap Highlight](dist/utilities/tap-highlight)
-
-### Triangle
-
-Draws a triangle using the borders of the element.
-
-```scss
-@include triangle(
-    'triangle',
-    'right',
-    '12px'
-    'blue'
-);
-```
-
-#### Parameters
-
-##### $type [string]
-
-> Default: `triangle`
-
-Takes either `triangle` or `equilateral`.
+- [Triangle](dist/utilities/triangle)
+- [Web Font](dist/utilities/web-font)
 
 ## Browser Support
 
