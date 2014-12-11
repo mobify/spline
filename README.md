@@ -58,12 +58,13 @@ The core set of mixins for the project.
 
 ### Functions
 
-Functions are methods of invoking Sass logic and functionality to return values. [Read this article to learn more](http://thesassway.com/advanced/pure-sass-functions).
+Functions are methods of invoking Sass logic and functionality to return values. [Read this article](http://thesassway.com/advanced/pure-sass-functions) to learn more.
 
 - [Cache Buster](dist/functions/cache-buster)
 - [Icon Address](dist/functions/icon-address)
 - [Rem Converter](dist/functions/rem)
 - [Reverse Gradient](dist/functions/reverse-gradient)
+- [Tint & Shade](dist/function/tint-shade)
 
 ### CSS3 Shorthand
 
