@@ -4,7 +4,7 @@ Makes it easier to consistently declare icon fonts in your project.
 
 Used in conjunction with:
 - [Web Font](/dist/utilities/web-font)
-- [Icon Font Replace](/dist/utilities/icon-font-replace)
+- [Icon Address](/dist/functions/icon-address)
 
 > A custom font must have been defined using @font-face or web-font().
 
