@@ -31,3 +31,17 @@ $icon-font: 'icon-font';
     @include icon-font;
 }
 ```
+
+## Output
+
+```scss
+.element::after {
+    display: inline-block;
+
+    font-family: $icon-font;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    vertical-align: middle;
+}
+```
