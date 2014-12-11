@@ -26,6 +26,7 @@
 @import "helpers/strip-units";
 @import "helpers/to-number";
 @import "helpers/to-string";
+@import "helpers/parent-exists";
 
 
 // Functions
@@ -34,7 +35,6 @@
 @import "functions/cache-buster/cache-buster";
 @import "functions/icon-address/icon-address";
 @import "functions/tint-shade/tint-shade";
-@import "functions/parent-exists/parent-exists";
 @import "functions/rem/rem";
 @import "functions/reverse-gradient/reverse-gradient";
 
