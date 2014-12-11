@@ -1,3 +1,7 @@
+1.0.0
+    - Requires Sass 3.4
+    - Added a desktop override mixin (see utilities/_style-override)
+    - Rewrote web-font mixin for better font-family support
 0.4.1
     - Fixed issue with `$font-formats` not providing the right format name for Truetype fonts.
 0.4.0

@@ -34,6 +34,7 @@
 @import "functions/cache-buster/cache-buster";
 @import "functions/icon-address/icon-address";
 @import "functions/tint-shade/tint-shade";
+@import "functions/parent-exists/parent-exists";
 @import "functions/rem/rem";
 @import "functions/reverse-gradient/reverse-gradient";
 
@@ -57,3 +58,4 @@
 @import "utilities/tap-highlight/tap-highlight";
 @import "utilities/triangle/triangle";
 @import "utilities/web-font/web-font";
+@import "utilities/style-override/style-override";
