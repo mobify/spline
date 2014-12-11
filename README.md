@@ -2,7 +2,13 @@
 
 **Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier.**
 
-Spline is written with an eye towards mobile browser support. Spline does not contain any browser prefixing — if you're looking for prefixing, we recommend you use [Autoprefixer](https://github.com/postcss/autoprefixer) instead.
+Spline makes it easy for you to:
+
+1. Write complex CSS without having to actually write complex CSS.
+1. Use best practices and common patterns easily without having to remember specific code across devices.
+1. Ensure consistency across your project.
+
+For a list of all the functionality included in Spline, please [view the Documentation](#documentation).
 
 - [**Documentation**](#documentation)
 - [**Changelog**](http://github.com/mobify/spline/releases)
@@ -80,6 +86,8 @@ Some default variables for use in your projects.
 - [Transition Timings](dist/variables/transition-timings)
 
 ## Browser Support
+
+Spline is written for mobile browsers. This means that Spline should support newer desktop browsers as well but old browser support is not a priority. Spline does not contain any browser prefixing. If you're looking for prefixing, we recommend you use [Autoprefixer](https://github.com/postcss/autoprefixer) in addition to Spline.
 
 - iOS 6+
 - Android Browser 2.3+
