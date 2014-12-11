@@ -24,9 +24,13 @@ Spline is distributed with the [Bower](http://bower.io) package manager.
 
 1. Install the Bower package
 
+    Paste this command into your command line in your project's root directory:
+
     ```
     bower install spline --save
     ```
+
+    > **Note:** You'll need to have [Bower installed](http://bower.io/#install-bower) to run this command.
 1. Import Spline at the beginning of your Sass stylesheet
 
     ```scss
@@ -39,7 +43,7 @@ Packages installed through Bower aren't made to be edited. If you need to edit o
 
 Spline follows [Semantic Versioning](http://www.semver.org). In a nutshell, that means that upgrading to new point releases (eg. moving from 1.0 to 1.1) is safe. Upgrading to new major releases (from 1.0 to 2.0) will cause backwards-incompatible changes.
 
-To update Spline, run the following command:
+To update Spline, paste the following command into your command line in your project's root:
 
 ```
 bower update spline
