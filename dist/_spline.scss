@@ -31,11 +31,11 @@
 // Functions
 // ---------
 
-@import "functions/cache-buster/cache-buster";
-@import "functions/icon-address/icon-address";
-@import "functions/tint-shade/tint-shade";
-@import "functions/rem/rem";
-@import "functions/reverse-gradient/reverse-gradient";
+@import "functions/cache-buster";
+@import "functions/icon-address";
+@import "functions/tint-shade";
+@import "functions/rem";
+@import "functions/reverse-gradient";
 
 
 // CSS3
@@ -56,4 +56,4 @@
 @import "utilities/icon-font-replace/icon-font-replace";
 @import "utilities/tap-highlight/tap-highlight";
 @import "utilities/triangle/triangle";
-@import "utilities/web-font/web-font";
+@import "utilities/web-font";

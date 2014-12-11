@@ -11,9 +11,7 @@ Used in conjunction with:
 > The `$icon-font` variable must be defined as the font-family to use for the `icon-font` mixin.
 
 ```scss
-.element {
-    @include icon-font();
-}
+@include icon-font();
 ```
 
 ## Parameters

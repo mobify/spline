@@ -3,9 +3,7 @@
 Replaces text within an element with pseudo-element content. For use with the [Icon Font mixin](/dist/utilities/icon-font).
 
 ```scss
-.element {
-    @include icon-font-replace();
-}
+@include icon-font-replace();
 ```
 
 ## Parameters

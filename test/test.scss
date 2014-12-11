@@ -85,7 +85,7 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     background: reverse-gradient($deg-gradient);
 }
 
-// Test function `clearfix`
+// Test utility `clearfix`
 // --------------------------------
 
 .clearfix {
@@ -111,7 +111,7 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
-// Test function `ellipsis`
+// Test utility `ellipsis`
 // --------------------------------
 
 .ellipsis {
@@ -144,7 +144,86 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
-// Test Web Font mixin
+// Test utility `triangle`
+// --------------------------------
+
+.triangle span {
+    display: inline-block;
+}
+
+.triangle-up {
+    @include triangle(
+        'triangle',
+        'up',
+        10px,
+        black
+    );
+}
+
+.triangle-down {
+    @include triangle(
+        'triangle',
+        'down',
+        10px,
+        black
+    );
+}
+
+.triangle-left {
+    @include triangle(
+        'triangle',
+        'left',
+        10px,
+        black
+    );
+}
+
+.triangle-right {
+    @include triangle(
+        'triangle',
+        'right',
+        10px,
+        black
+    );
+}
+
+.triangle-up-right {
+    @include triangle(
+        'isosceles',
+        'up-right',
+        10px,
+        black
+    );
+}
+
+.triangle-up-left {
+    @include triangle(
+        'isosceles',
+        'up-left',
+        10px,
+        black
+    );
+}
+
+.triangle-down-left {
+    @include triangle(
+        'isosceles',
+        'down-left',
+        10px,
+        black
+    );
+}
+
+.triangle-down-right {
+    @include triangle(
+        'isosceles',
+        'down-right',
+        10px,
+        black
+    );
+}
+
+// Test utility `web-font`
 // -------------------
 
 $custom-font: 'sourcesanspro';
