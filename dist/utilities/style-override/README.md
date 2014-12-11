@@ -20,7 +20,7 @@ The “force” of the override. Effectively the number of id-level selectors yo
 
 An id selector that matches the one on the `<head>` tag.
 
-> **Note:** This selector must select the <head> tag. The default value selects <head id="!"> which is short (since it’s prepended to every wrapped selector) and obscure (to help guarantee uniqueness). Since it’s a special character in CSS, the `!` must be escaped. Since the `\` is a special character in SCSS, the `\` for the `!` must be escaped as well.
+> **Note:** This selector must select the `<head>` tag. The default value selects <head id="!"> which is short (since it’s prepended to every wrapped selector) and obscure (to help guarantee uniqueness). Since it’s a special character in CSS, the `!` must be escaped. Since the `\` is a special character in SCSS, the `\` for the `!` must be escaped as well.
 
 ## Usage
 
