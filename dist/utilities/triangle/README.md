@@ -28,16 +28,16 @@ The direction of the triangle. Valid options depends on the chosen shape:
 #### Triangle
 
 - `'up'`
-- `'down`'
+- `'down'`
 - `'left'`
-- `'right`'
+- `'right'`
 
 #### Isosceles
 
 - `'up-left'`
-- `'up-right`'
+- `'up-right'`
 - `'down-left'`
-- `'down-right`'
+- `'down-right'`
 
 ### $size [Number]
 
