@@ -60,7 +60,7 @@ The core set of mixins for the project.
 
 Functions are methods of invoking Sass logic and functionality to return values. [Read this article to learn more](http://thesassway.com/advanced/pure-sass-functions).
 
-- [Cache Buster](dist/utilities/cache-buster)
+- [Cache Buster](dist/functions/cache-buster)
 
 ### CSS3 Shorthand
 
