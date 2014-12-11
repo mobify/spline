@@ -73,6 +73,12 @@ Mixins that provide a shorthand way to write CSS3 functionality.
 
 - [Border Radius](dist/css3/border-radius)
 
+### Variables
+
+Some default variables for use in your projects.
+
+- [Transition Timings](dist/variables/transition-timings)
+
 ## Browser Support
 
 - iOS 6+
