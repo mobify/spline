@@ -42,7 +42,7 @@ bower update spline
 
 ## Documentation
 
-### CSS3
+### CSS3 Shorthand
 
 - [Border Radius](dist/css3/border-radius)
 
