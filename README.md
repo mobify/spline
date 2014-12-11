@@ -17,14 +17,13 @@ Spline is written with an eye towards mobile browser support. Spline does not co
 Spline is distributed with the [Bower](http://bower.io) package manager.
 
 1. Install the Bower package
-```
-bower install spline --save
-```
+    ```
+    bower install spline --save
+    ```
 1. Import Spline at the beginning of your Sass stylesheet
-
-```scss
-@import "bower-components/spline/spline";
-```
+    ```scss
+    @import "bower-components/spline/spline";
+    ```
 
 Packages installed through Bower aren't made to be edited. If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
 
