@@ -15,7 +15,7 @@
 // Variables
 // ---------
 
-@import "variables/transition-timings";
+@import "variables/transition-timings/transition-timings";
 
 
 // Helpers
@@ -26,35 +26,36 @@
 @import "helpers/strip-units";
 @import "helpers/to-number";
 @import "helpers/to-string";
+@import "helpers/parent-exists";
 
 
 // Functions
 // ---------
 
-@import "functions/cache-buster";
-@import "functions/icon-address";
-@import "functions/tint-shade";
-@import "functions/parent-exists";
-@import "functions/rem";
-@import "functions/reverse-gradient";
+@import "functions/cache-buster/cache-buster";
+@import "functions/icon-address/icon-address";
+@import "functions/tint-shade/tint-shade";
+@import "functions/rem/rem";
+@import "functions/reverse-gradient/reverse-gradient";
 
 
 // CSS3
 // ----
 
-@import "css3/border-radius";
+@import "css3/border-radius/border-radius";
 
 
 // Utilities
 // ---------
 
-@import "utilities/change-br";
-@import "utilities/ellipsis";
-@import "utilities/clearfix";
-@import "utilities/hide-text";
-@import "utilities/icon-font";
-@import "utilities/icon-font-replace";
-@import "utilities/tap-highlight";
-@import "utilities/triangle";
-@import "utilities/web-font";
-@import "utilities/style-override";
+@import "utilities/change-br/change-br";
+@import "utilities/ellipsis/ellipsis";
+@import "utilities/clearfix/clearfix";
+@import "utilities/hide-text/hide-text";
+@import "utilities/squish-text/squish-text";
+@import "utilities/icon-font/icon-font";
+@import "utilities/icon-font-replace/icon-font-replace";
+@import "utilities/tap-highlight/tap-highlight";
+@import "utilities/triangle/triangle";
+@import "utilities/web-font/web-font";
+@import "utilities/style-override/style-override";

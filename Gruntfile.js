@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     autoprefixer: {
         options: {
-            browsers: ['last 3 iOS versions', 'Android 2.3', 'Android 4', 'last 2 Chrome versions']
+            browsers: ['last 4 versions', 'ie 8', 'ie 9', 'iOS >= 6.0', 'Android >= 2.3', 'last 4 ChromeAndroid versions']
         },
         multiple_files: {
             flatten: true,
@@ -16,7 +16,8 @@ module.exports = function(grunt) {
     sass: {
         dist: {
             options: {
-                style: 'nested'
+                style: 'nested',
+                sourcemap: 'none'
             },
             files: {
                 'test/test.css': 'test/test.scss'

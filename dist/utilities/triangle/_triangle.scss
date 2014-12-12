@@ -25,8 +25,8 @@
 // The first type is Equilateral triangle, all three sides are equal.
 //
 // @param $type [String] : Can be either 'triangle' or 'isosceles'
-// @param $direction [String] : The direction of the triangle. Valid options depends
-//        The chosen shape. If triangle was chosen, then your options are: up,
+// @param $direction [String] : The direction of the triangle. Valid options depends on
+//        the chosen shape. If triangle was chosen, then your options are: up,
 //        down, right, or left. Else if isosceles: up-left, up-right, down-right
 //        or down-left
 // @param $size [Number] : value
