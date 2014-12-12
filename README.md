@@ -3,8 +3,10 @@
 **Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier. Spline provides methods to manipulate text, use web & icon fonts, create CSS3 shapes, and much more.**
 
 - [**Examples**](#examples)
+- [**Requirements**](#requirements)
 - [**Installation**](#installation)
 - [**Documentation**](#documentation)
+- [**Browser Support**](#browser-support)
 - [**Changelog**](http://github.com/mobify/spline/releases)
 - [**Issues**](http://github.com/mobify/spline/issues)
 
@@ -25,7 +27,7 @@ You should use Spline if you want to:
 1. **Use best practices** and common patterns easily without having to remember specific code across devices.
 1. **Ensure consistency** across your projects.
 
-### Examples
+## Examples
 
 For a list of all the functionality included in Spline, please [view the Documentation](#documentation).
 
