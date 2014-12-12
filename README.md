@@ -19,10 +19,10 @@ You should use Spline if you want something _lightweight_ and _mobile focused_. 
 
 You should use Spline if you want to:
 
-1. Stay up to date with the latest and best ways to implement specific techniques.
-1. Write complex CSS without having to actually write complex CSS.
-1. Use best practices and common patterns easily without having to remember specific code across devices.
-1. Ensure consistency across your projects.
+1. **Stay up to date** with the latest and best ways to implement specific techniques.
+1. **Write complex CSS** without having to actually write complex CSS.
+1. **Use best practices** and common patterns easily without having to remember specific code across devices.
+1. **Ensure consistency** across your projects.
 
 ### Examples
 
