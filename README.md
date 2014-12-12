@@ -2,11 +2,14 @@
 
 **Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier. Spline provides methods to manipulate text, use web & icon fonts, create CSS3 shapes, and much more.**
 
-Spline makes it easy for you to:
+**Spline makes it easy for you to:**
 
 1. Write complex CSS without having to actually write complex CSS.
 1. Use best practices and common patterns easily without having to remember specific code across devices.
+1. Stay up to date with the latest and best ways to implement specific techniques.
 1. Ensure consistency across your project.
+
+You'll never have to Google how to clearfix or copy-paste an `@font-face` declaration ever again.
 
 For a list of all the functionality included in Spline, please [view the Documentation](#documentation).
 
