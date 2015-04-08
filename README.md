@@ -59,7 +59,7 @@ The core set of mixins for the project.
 - [Tap Highlight](dist/utilities/tap-highlight)
 - [Triangle](dist/utilities/triangle)
 - [Web Font](dist/utilities/web-font)
-- [Style Override](dist/utilities/style-override) (aka The Headbang Trick)
+- [Style Override](dist/utilities/style-override)
 
 ### Functions
 

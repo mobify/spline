@@ -6,6 +6,28 @@
 // source code clean and readable. Only use this for overriding 3rd-party CSS
 // that cannot be changed. Does not override !important or inline styles; those
 // must be dealt with separately.
+//
+// Usage:
+//
+// HTML
+//
+//     `<head id="__">`
+//
+// Sass
+//
+//     .t-pdp__price {
+//         @include desktop-override(2) {
+//             font-size: inherit;
+//             font-weight: normal;
+//         }
+//     }
+//
+// Compiled CSS (specificity: 0-3-1-1)
+//
+//     #__#__#__ ~ body .t-pdp__price {
+//         font-size: inherit;
+//         font-weight: normal;
+//     }
 
 
 // Configurable variables
