@@ -12,12 +12,10 @@
 // ---
 
 // The default selector used to build the override. Must select the <head> tag.
-// The default value selects <head id="!"> which is short (since it’s prepended
-// to every wrapped selector) and obscure (to help guarantee uniqueness). Since
-// it’s a special character in CSS, the `!` must be escaped. Since the '\' is a
-// special character in SCSS, the '\' for the '!' must be escaped.
+// The default value selects <head id="__"> which is short (since it will
+// bloat compiled css somewhat) and odd (to help ensure uniqueness).
 
-$style-override-head-selector: '#\\!' !default;
+$style-override-head-selector: '#__' !default;
 
 
 // Style override
