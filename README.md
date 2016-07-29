@@ -1,6 +1,6 @@
 # Spline
 
-**Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier. Spline provides methods to manipulate text, use web & icon fonts, create CSS3 shapes, and much more.**
+Spline is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier. Spline provides methods to manipulate text, use web & icon fonts, create CSS3 shapes, and much more.
 
 - [**Installation**](#installation)
 - [**Documentation**](#documentation)
@@ -14,24 +14,25 @@
 
 ## Installation
 
-Spline is distributed with the [Bower](http://bower.io) package manager.
+Spline is distributed with the [NPM](https://www.npmjs.com/) package manager.
 
-1. Install the Bower package
+1. Install the NPM package
 
     Paste this command into your command line in your project's root directory:
 
     ```
-    bower install spline --save
+    npm install spline --save-dev
     ```
 
-    > **Note:** You'll need to have [Bower installed](http://bower.io/#install-bower) to run this command.
-1. Import Spline at the beginning of your Sass stylesheet
+    > **Note:** You'll need to have [Node and NPM installed](https://docs.npmjs.com/getting-started/installing-node) to run this command.
+
+2. Import Spline at the beginning of your Sass stylesheet
 
     ```scss
-    @import "bower-components/spline/spline";
+    @import "node_modules/spline/spline";
     ```
 
-Packages installed through Bower aren't made to be edited. If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
+Packages installed through NPM aren't made to be edited. If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
 
 ## Updating
 
@@ -40,7 +41,7 @@ Spline follows [Semantic Versioning](http://www.semver.org). In a nutshell, that
 To update Spline, paste the following command into your command line in your project's root:
 
 ```
-bower update spline
+npm update spline
 ```
 
 ## Documentation
@@ -93,20 +94,20 @@ Spline is written for mobile browsers. This means that Spline should support new
 
 Other browsers may be supported but Spline is not actively developed on them. If you find any issues with specific browsers, please log them in our [Issues tracker](http://github.com/mobify/spline/issues).
 
-## The Mobify CSS Triforce ![Triforce](http://img4.wikia.nocookie.net/__cb20091113050618/zelda/images/1/1a/Obtained_Triforce_Piece.gif)
+## How To Test
 
-Spline is part of the _Mobify CSS Triforce_: a collection of three UI Development projects built for making mobile e-commerce builds easier.
-
-- **Spline**: A mobile-first mixin and function library for Sass.
-- [**Vellum**](http://github.com/mobify/vellum): A set of default styles for mobile-first builds.
-- [**Stencil**](http://github.com/mobify/stencil): A library of common UI patterns for mobile e-commerce builds.
+1. Run `npm install`
+2. Run `grunt`
+3. Ensure that all the `DEBUG` output in your terminal are all passing
+4. Open `test/index.html` in your browser
+5. Ensure all the tests descriptions are accurate compared to how the styles render
 
 ## Credits
 
-Spline was built with a whole lot of care by [Jeff Kamo](http://www.twitter.com/jeffkamo), [Kyle Peatt](http://twitter.com/kpeatt), and [Ryan Frederick](http://twitter.com/ry5n). It is maintained and funded on [Mobify](http://www.mobify.com)'s dime. If you've got things you'd like to see added or removed, submit a PR or tweet at us.
+Spline is maintained and funded on [Mobify](http://www.mobify.com)'s dime. If you've got things you'd like to see added or removed, submit a PR or tweet at [Jeff Kamo](http://www.twitter.com/jeffkamo). A special shout out to [Kyle Peatt](http://twitter.com/kpeatt), and [Ryan Frederick](http://twitter.com/ry5n) for their past contributions, with which Spline was made possible.
 
 We also owe a lot of thanks to [Thoughtbot's Bourbon](http://www.github.com/thoughtbot/Bourbon) and [Compass](http://compass-style.org/). Spline was inspired by both of these projects and draws a lot of its work from them.
 
 ## License
 
-*MIT License. Spline is Copyright © 2014 Mobify. It is free software and may be redistributed under the terms specified in the LICENSE file.*
+*MIT License. Spline is Copyright © 2014-2016 Mobify. It is free software and may be redistributed under the terms specified in the LICENSE file.*

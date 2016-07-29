@@ -1,8 +1,8 @@
 {
-  "name": "spline",
-  "version": "1.0.1",
-  "description": "A set of Sass utility mixins for Mobify's client services team",
-  "main": "dist/_spline.scss",
+  "name": "spline-scss",
+  "version": "2.0.0",
+  "description": "A set of Sass utility mixins and functions for Mobify's client services team",
+  "main": "dist/spline.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,20 +19,18 @@
     "mobify"
   ],
   "authors": [
-    "Mobify",
-    "Kyle Peatt <kpeatt@gmail.com>"
+    "Mobify"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mobify/spline/issues"
   },
-  "dependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-sass": "~0.8.1"
-  },
   "devDependencies": {
-    "grunt": "~0.4.4",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "~2.0.0",
+    "grunt-sass": "1.2.0",
     "load-grunt-tasks": "~0.4.0",
-    "grunt-autoprefixer": "~2.0.0"
+    "mobify-code-style": "2.5.1",
+    "node-sass-import-once": "1.2.0"
   }
 }
