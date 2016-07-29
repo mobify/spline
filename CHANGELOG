@@ -1,6 +1,7 @@
 2.0.0
     - Prepare Spline for distribution on NPM
     - Remove all references to Bower
+    - Add Github PR template
 1.0.0
     - Requires Sass 3.4
     - Added a desktop override mixin (see utilities/_style-override)
