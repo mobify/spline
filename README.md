@@ -97,10 +97,12 @@ Other browsers may be supported but Spline is not actively developed on them. If
 ## How To Test
 
 1. Run `npm install`
-2. Run `grunt`
-3. Ensure that all the `DEBUG` output in your terminal are all passing
-4. Open `test/index.html` in your browser
-5. Ensure all the tests descriptions are accurate compared to how the styles render
+2. Run `npm run lint`
+3. Ensure linter passes
+4. Run `grunt`
+5. Ensure that all the `DEBUG` output in your terminal are all passing
+6. Open `test/index.html` in your browser
+7. Ensure all the tests descriptions are accurate compared to how the styles render
 
 ## Credits
 
