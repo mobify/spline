@@ -4,7 +4,7 @@
   "description": "A set of Sass utility mixins and functions for Mobify's client services team",
   "main": "dist/spline.scss",
   "scripts": {
-    "lint": "sass-lint -c node_modules/mobify-code-style/css/sass-lint.yml **/*.scss -v"
+    "lint": "./node_modules/.bin/sass-lint -c node_modules/mobify-code-style/css/.sass-lint.yml '**/*.scss' -v"
   },
   "repository": {
     "type": "git",
