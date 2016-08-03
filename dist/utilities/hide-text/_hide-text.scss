@@ -16,13 +16,16 @@
 @mixin hide-text($direction: right) {
     @if $direction == right {
         overflow: hidden;
-        text-indent: 110%; // 1
+
         white-space: nowrap;
+        text-indent: 110%; // 1
     } @else if $direction == left {
         $approximate-em-value: 12px / 1em;
         $wider-than-any-screen: -9999em;
-        text-indent: $wider-than-any-screen * $approximate-em-value;
+
         overflow: hidden;
+
         text-align: left;
+        text-indent: $wider-than-any-screen * $approximate-em-value;
     }
 }

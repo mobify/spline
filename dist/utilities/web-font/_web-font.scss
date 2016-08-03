@@ -30,45 +30,43 @@
 // @param $cache-buster [Boolean] : Use cache buster or not
 
 @mixin web-font(
-        $font-family,
-        $path: '../fonts/#{$font-family}',
-        $formats: $font-formats,
-        $font-weight: normal,
-        $font-style: normal,
-        $cache-buster: false
-    ) {
-        $src-list: ();
+    $font-family,
+    $path: '../fonts/#{$font-family}',
+    $formats: $font-formats,
+    $font-weight: normal,
+    $font-style: normal,
+    $cache-buster: false
+) {
+    $src-list: ();
 
-        @each $file-extension, $format  in $formats {
-            $type-style: '';
+    @each $file-extension, $format  in $formats {
+        $type-style: '';
+        $complete-path: '#{$path}/#{$font-family}#{$type-style}.#{$file-extension}';
+        $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'), comma);
 
-            // Check if the font weight is other than normal, if it is then add
-            // the type values to the file
-            @if $font-weight != "normal" {
-                $type-style: $type-style + '-#{$font-weight}';
-            }
-
-            // Check if the font style is other than normal, if it is then add
-            // the type values to the file
-            @if $font-style != "normal" {
-                $type-style: $type-style + '-#{$font-style}';
-            }
-
-            $complete-path: '#{$path}/#{$font-family}#{$type-style}.#{$file-extension}';
-
-            // If a cache-buster is declared, append it to the end of the path
-            @if ($cache-buster) {
-                $complete-path: $complete-path + cache-buster();
-            }
-
-            $src-list: append($src-list, url('#{$complete-path}') format('#{$format}'), comma);
+        // Check if the font weight is other than normal, if it is then add
+        // the type values to the file
+        @if $font-weight != "normal" {
+            $type-style: $type-style + '-#{$font-weight}';
         }
 
-        @font-face {
-            font-family: $font-family;
-            font-weight: $font-weight;
-            font-style: $font-style;
-
-            src: $src-list;
+        // Check if the font style is other than normal, if it is then add
+        // the type values to the file
+        @if $font-style != "normal" {
+            $type-style: $type-style + '-#{$font-style}';
         }
+
+        // If a cache-buster is declared, append it to the end of the path
+        @if ($cache-buster) {
+            $complete-path: $complete-path + cache-buster();
+        }
+    }
+
+    @font-face {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: $font-weight;
+
+        src: $src-list;
+    }
 }

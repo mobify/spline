@@ -11,7 +11,7 @@
 // @param $percent [Number] : The percentage amount the color is to be tinted
 // @return [Color]
 
-@function tint($color, $percent){
+@function tint($color, $percent) {
     @return mix(white, $color, $percent);
 }
 
@@ -25,6 +25,6 @@
 // @param $percent [Number] : The percentage amount the color is to be shaded
 // @return [Color]
 
-@function shade($color, $percent){
+@function shade($color, $percent) {
     @return mix(black, $color, $percent);
 }

@@ -34,18 +34,15 @@
     $overlay-position: before,
     $box-shadow-blur: 5px
 ) {
-
-    // $METHOD: HIGHLIGHT
-    //
-    // This is the default highlight style!
-
     @if $method == 'highlight' {
-
+        // $METHOD: HIGHLIGHT
+        //
+        // This is the default highlight style!
+        //
         // Fast-tap requires it's own styling to simulate the correct
         // tap-highlight effect. Can't just apply both, otherwise you
         // get a double tap-highlight effect
         @if $fast-tap-enabled is true {
-
             // Remove the ordinary tap highlight
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
@@ -55,21 +52,16 @@
 
                 @content;
             }
-
         } @else {
-
             // Non-Fast Tap elements are highlighted with -wekbit-tap-highlight-color
             -webkit-tap-highlight-color: $color;
 
             @content;
         }
-    }
-
-    // $METHOD: CUSTOM
-    //
-    // Enables you to set your own active state styling for your tap highlight. Removes the tap highlight color.
-
-    @else if $method == 'custom' {
+    } @else if $method == 'custom' {
+        // $METHOD: CUSTOM
+        //
+        // Enables you to set your own active state styling for your tap highlight. Removes the tap highlight color.
         // Remove the ordinary tap highlight
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
@@ -77,25 +69,20 @@
         &#{$active-selector} {
             @content;
         }
-    }
+    } @else if $method == 'overlay' {
+        // $METHOD: OVERLAY
+        //
+        // Intended use of the Overlay version of the Tap Highlight is if the
+        // tappable element has children elements with solid background colors,
+        // or images.
+        //
+        // Use the overlay to simulate a background highlight effect!
+        //
+        // Note! This requires a pseudo element (before or after)
+        //
+        position: relative; // Allow the pseudo element below to be absolutely positioned
 
-    // $METHOD: OVERLAY
-    //
-    // Intended use of the Overlay version of the Tap Highlight is if the
-    // tappable element has children elements with solid background colors,
-    // or images.
-    //
-    // Use the overlay to simulate a background highlight effect!
-    //
-    // Note! This requires a pseudo element (before or after)
-
-    @else if $method == 'overlay' {
-
-        // Allow the pseudo element below to be absolutely positioned
-        position: relative;
-
-        // Remove the ordinary tap highlight
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Remove the ordinary tap highlight
 
         &#{$active-selector}::#{$overlay-position} {
             content: '';
@@ -113,28 +100,18 @@
 
             @content;
         }
-    }
-
-
-    // $METHOD: BOX-SHADOW
-    //
-    // The intended use for the Box Shadow highlight is for when you can't
-    // use either the the default highlight OR the overlay (perhaps the
-    // tappable element already uses both before and after pseudo elements)
-    // in which case, use the Box Shadow version!
-
-    @else if $method == 'box-shadow' {
-
-        // Remove the ordinary tap highlight
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    } @else if $method == 'box-shadow' {
+        // $METHOD: BOX-SHADOW
+        //
+        // The intended use for the Box Shadow highlight is for when you can't
+        // use either the the default highlight OR the overlay (perhaps the
+        // tappable element already uses both before and after pseudo elements)
+        // in which case, use the Box Shadow version!
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Remove the ordinary tap highlight
 
         // Fast Tap highlighting uses the :active state
         &#{$active-selector} {
-            @include box-shadow(
-                0 0 $box-shadow-blur $color,
-                inset 0 0 $box-shadow-blur $color
-            );
-
+            @include box-shadow(0 0 $box-shadow-blur $color, inset 0 0 $box-shadow-blur $color);
             @include border-radius;
 
             @content;

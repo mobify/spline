@@ -9,6 +9,8 @@
 // @return [List]
 
 @function to-list($string, $separator: ', ') {
+    // Empty list to be built up.
+    $list: ();
     @if type-of($string) != "string" {
         @warn "`to-list` function expecting a string for $string; #{type-of($string)} given.";
         @return false;
@@ -19,21 +21,14 @@
         @return false;
     }
 
-    // Empty list to be built up.
-    $list: ();
-
     // Until no more seprators are found…
     @while str-index($string, $separator) != null {
-
         // …get the position of the next separator.
         $sep-index: str-index($string, $separator);
-
         // Slice off a new string up to (but not including) the separator.
         $slice: str-slice($string, 1, $sep-index - 1);
-
         // Add the slice to the end of the growing list.
         $list: append($list, $slice);
-
         // Remove the sliced portion and separator from the front of the
         // original string so it’s ready to be processed again.
         $string: str-slice($string, $sep-index + str-length($separator));

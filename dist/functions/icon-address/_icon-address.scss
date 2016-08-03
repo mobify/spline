@@ -25,13 +25,11 @@
 // ---
 
 @function icon-address($icon-name) {
-    // Return the icon font text value
     @if (map-has-key($icon-list, $icon-name)) {
+        // Return the icon font text value
         @return map-get($icon-list, $icon-name);
-    }
-
-    // The desired icon does not exist in $icon-list
-    @else {
+    } @else {
+        // The desired icon does not exist in $icon-list, so error out
         @warn '$icon-name value ("#{$icon-name}") is not set. Refer to $icon-list for a list of available icons';
     }
 }

@@ -12,14 +12,13 @@
 // @return [Number]
 
 @function rem($pxval, $base: $rem-base) {
-  @if not unitless($pxval) {
-      $pxval: strip-units($pxval);
-  }
-  @if not unitless($base) {
-      $base: strip-units($base);
-  }
+    $base: ($base / 100) * 16;
+    @if not unitless($pxval) {
+        $pxval: strip-units($pxval);
+    }
+    @if not unitless($base) {
+        $base: strip-units($base);
+    }
 
-  $base: ($base / 100) * 16;
-
-  @return ($pxval / $base) * 1rem;
+    @return ($pxval / $base) * 1rem;
 }

@@ -38,15 +38,12 @@
 // @param $position [String] : The pseudo element before or after
 
 @mixin icon-font($position: 'before') {
-
     &::#{$position} {
         display: inline-block;
 
-        font: {
-            family: $icon-font;
-            style: normal;
-            weight: normal;
-        }
+        font-family: $icon-font;
+        font-style: normal;
+        font-weight: normal;
         text-transform: none;
         text-decoration: inherit;
         vertical-align: middle;
