@@ -1,5 +1,5 @@
 // Web Font
-// ========
+// ===
 //
 // Generates a font face declaration.
 // This mixin expects fonts to be named a specific way. It uses the font style
@@ -13,8 +13,9 @@
 //     - (Note that this uses the weight value not a 'light' string)
 // - Bold Italic font: sourcesanspro-bold-italic.ext
 //
+//
 // Dependencies
-// ------------
+// ---
 //
 // * Spline function: cache-buster()
 //

@@ -1,7 +1,10 @@
+// Spline Test
+// ===
+
 @import "../dist/spline";
 
 // Base Test Page Styles
-// ---------------------
+// ---
 
 body {
     font-family: sans-serif;
@@ -25,7 +28,7 @@ body {
 
 
 // Test function `to-list`
-// -----------------------
+// ---
 
 $string-1: 'up, down, right';
 $string-2: 'to bottom left';
@@ -47,8 +50,9 @@ $should-4: foo bar baz;
 @debug if($list-3 == $should-3, 'PASS: `', 'FAIL: `') + $list-3 + '` should equal `' + $should-3 + '`.';
 @debug if($list-4 == $should-4, 'PASS: `', 'FAIL: `') + $list-4 + '` should equal `' + $should-4 + '`.';
 
+
 // Test function `parent-exists`
-// -----------------------
+// ---
 
 @if parent-exists() {
     @debug 'FAIL: Parent should not exist';
@@ -68,8 +72,9 @@ $should-4: foo bar baz;
     }
 }
 
+
 // Test function `reverse-gradient`
-// --------------------------------
+// ---
 
 $gradient: linear-gradient(blue, red, green 100%);
 $direction-gradient: linear-gradient(to top right, blue, red, green 100%);
@@ -105,8 +110,9 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     background: reverse-gradient($deg-gradient);
 }
 
+
 // Test utility `clearfix`
-// --------------------------------
+// ---
 
 .clearfix {
     @include clearfix;
@@ -131,8 +137,9 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+
 // Test utility `ellipsis`
-// --------------------------------
+// ---
 
 .ellipsis {
     .block {
@@ -140,8 +147,9 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+
 // Test utility `hide-text`
-// --------------------------------
+// ---
 
 .hide-text {
     .block {
@@ -155,8 +163,9 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+
 // Test utility `squish-text`
-// --------------------------------
+// ---
 
 .squish-text {
     .block {
@@ -164,8 +173,9 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     }
 }
 
+
 // Test utility `triangle`
-// --------------------------------
+// ---
 
 .triangle span {
     display: inline-block;
@@ -243,8 +253,9 @@ $deg-gradient: linear-gradient(132deg, blue, red, purple);
     );
 }
 
+
 // Test utility `web-font`
-// -------------------
+// ---
 
 $custom-font: 'sourcesanspro';
 
@@ -294,8 +305,9 @@ $custom-font-path: 'fixtures/fonts/#{$custom-font}';
     }
 }
 
+
 // Test Icon Font mixin
-// --------------------------------
+// ---
 
 $icon-font: 'spline';
 $icon-font-path: 'fixtures/fonts/icon';
@@ -333,6 +345,7 @@ $icon-font-path: 'fixtures/fonts/icon';
 .icon--replace {
     @include icon-font-replace();
 }
+
 
 // Test Style Override mixin
 // ---

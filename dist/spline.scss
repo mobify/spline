@@ -1,11 +1,11 @@
 // Spline
-// ======
+// ===
 //
 // https://github.com/mobify/spline
 
 
 // Settings
-// --------
+// ---
 
 @import "settings/font";
 @import "settings/rem";
@@ -13,13 +13,13 @@
 
 
 // Variables
-// ---------
+// ---
 
 @import "variables/transition-timings/transition-timings";
 
 
 // Helpers
-// -------
+// ---
 
 @import "helpers/convert-direction";
 @import "helpers/to-list";
@@ -30,7 +30,7 @@
 
 
 // Functions
-// ---------
+// ---
 
 @import "functions/cache-buster/cache-buster";
 @import "functions/icon-address/icon-address";
@@ -40,7 +40,7 @@
 
 
 // Utilities
-// ---------
+// ---
 
 @import "utilities/change-br/change-br";
 @import "utilities/ellipsis/ellipsis";
