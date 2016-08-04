@@ -73,7 +73,7 @@
 
 @mixin border-radius(
     $important: false,
-    $border-radius: if(variable-exists(border-radius), $border-radius, null),
+    $border-radius: if(variable-exists(border-radius), $border-radius, null)
 ) {
     @if($important) {
         border-radius: $border-radius !important;
