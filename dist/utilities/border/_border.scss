@@ -1,0 +1,37 @@
+// Border
+// ===
+
+// Border (Width and Color)
+// ---
+
+@mixin border($border) {
+    border: $border;
+}
+
+@mixin border-0 {
+    border: 0;
+}
+
+@mixin border-top($border) {
+    border-top: $border;
+}
+
+@mixin border-start($border) {
+    border-right: $border;
+}
+
+@mixin border-bottom($border) {
+    border-bottom: $border;
+}
+
+@mixin border-end($border) {
+    border-left: $border;
+}
+
+
+// Border (Other)
+// ---
+
+@mixin border-radius($border-radius) {
+    border-radius: $border-radius;
+}

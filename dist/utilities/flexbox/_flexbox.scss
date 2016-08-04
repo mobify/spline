@@ -1,0 +1,137 @@
+// Flexbox
+// ===
+//
+// Flexbox and align a row of items with a lot of control. Provides a
+// declarative, robust cross-browser way of using flexbox.
+
+// Flexbox root
+// ---
+//
+// Includes gutters, for grid-like functionality.
+//
+// 1. Remove default styles present on common root elements.
+// 2. Ensure in iOS 5 and 6 that flex-direction isn't inherited from
+//    any flexbox parents that has flex-direction set to row-reverse
+
+@mixin flexbox {
+    display: flex;
+    flex-direction: row; // 2
+    margin: 0; // 1
+    padding: 0; // 1
+
+    list-style: none; // 1
+}
+
+@mixin flexbox-gutters($unit) {
+    margin-right: ($unit * -0.5);
+    margin-left: ($unit * -0.5);
+}
+
+@mixin flexbox-inner-gutters($unit) {
+    margin: 0 ($unit / 2);
+}
+
+
+// Align Items
+// ---
+
+@mixin align-top {
+    align-items: flex-start;
+}
+
+@mixin align-center {
+    align-items: center;
+}
+
+@mixin align-bottom {
+    align-items: flex-end;
+}
+
+
+// Justify Content
+// ---
+
+@mixin justify-start {
+    justify-content: flex-start;
+}
+
+@mixin justify-end {
+    justify-content: flex-end;
+}
+
+@mixin justify-between {
+    justify-content: space-between;
+}
+
+@mixin justify-center {
+    justify-content: center;
+}
+
+@mixin justify-around {
+    justify-content: space-around;
+}
+
+
+// Flex Direction
+// ---
+
+@mixin row-reverse {
+    flex-direction: row-reverse;
+}
+
+
+// Flex (Grow)
+// ---
+//
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
+@mixin flex {
+    display: block; // 1
+    flex: 1 1 auto;
+    width: 100%; // 2
+}
+
+
+// Flex (Shrink)
+// ---
+//
+// Shrink Flexbox items to a minimum size.
+//
+// 1. Ensure width collapses in old implementations.
+
+@mixin flex-shrink {
+    flex: initial;
+    width: auto; // 1
+}
+
+
+// Order
+// ---
+//
+// Re-arrange the display order of up to six items. Add additional modifiers in
+// your own stylesheet to re-order more.
+
+@mixin order-1 {
+    order: 1;
+}
+
+@mixin order-2 {
+    order: 2;
+}
+
+@mixin order-3 {
+    order: 3;
+}
+
+@mixin order-4 {
+    order: 4;
+}
+
+@mixin order-5 {
+    order: 5;
+}
+
+@mixin order-6 {
+    order: 6;
+}

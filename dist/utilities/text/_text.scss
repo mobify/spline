@@ -1,0 +1,70 @@
+// Text utils
+// ===
+
+// All Caps
+// ---
+//
+// Set text uppercase, letterspaced for legibility.
+
+@mixin text-all-caps {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+// Text Flow Alignment
+// ---
+//
+// Writing-direction independent text alignment. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
+
+@mixin text-align-start {
+    text-align: left !important;
+}
+
+@mixin text-align-center {
+    text-align: center !important;
+}
+
+@mixin text-align-end {
+    text-align: right !important;
+}
+
+
+// Vertical Alignment
+// ---
+//
+// Vertical aligment of text and replaced (inline-block) elements within a line.
+
+@mixin align-middle {
+    vertical-align: middle !important;
+}
+
+@mixin align-baseline {
+    vertical-align: baseline !important;
+}
+
+
+// Weights & Style
+// ---
+
+@mixin text-normal {
+    font-weight: normal;
+    font-weight: 400;
+}
+
+@mixin text-bold {
+    font-weight: bold;
+    font-weight: 700;
+}
+
+@mixin text-italic {
+    font-style: italic;
+}
+
+@mixin text-quient($neutral-50) {
+    color: $neutral-50;
+    font-size: 0.785em;
+
+    fill: $neutral-50;
+}

@@ -1,0 +1,160 @@
+// Padding
+// ===
+
+// Miscellanous
+// ---
+
+@mixin padding($unit) {
+    padding: $unit !important;
+}
+
+@mixin padding-0 {
+    padding: 0 !important;
+}
+
+@mixin padding-sm($unit) {
+    padding: ($unit / 2) !important;
+}
+
+@mixin padding-md($unit) {
+    padding: $unit * 1.5 !important;
+}
+
+@mixin padding-lg($unit) {
+    padding: $unit * 2 !important;
+}
+
+
+// Vertical Padding
+// ---
+//
+// Granular control over vertical spacing independent of a component. Includes
+// values based on global spacing.
+//
+// Suffixes:
+// 0:  none
+// sm: small
+// md: medium
+// lg: large
+
+@mixin padding-top($unit) {
+    padding-top: $unit !important;
+}
+
+@mixin padding-top-0 {
+    padding-top: 0 !important;
+}
+
+@mixin padding-top-sm($unit) {
+    padding-top: ($unit / 2) !important;
+}
+
+@mixin padding-top-md($unit) {
+    padding-top: $unit * 1.5 !important;
+}
+
+@mixin padding-top-lg($unit) {
+    padding-top: $unit * 2 !important;
+}
+
+@mixin padding-bottom($unit) {
+    padding-bottom: $unit !important;
+}
+
+@mixin padding-bottom-0 {
+    padding-bottom: 0 !important;
+}
+
+@mixin padding-bottom-sm($unit) {
+    padding-bottom: ($unit / 2) !important;
+}
+
+@mixin padding-bottom-md($unit) {
+    padding-bottom: $unit * 1.5 !important;
+}
+
+@mixin padding-bottom-lg($unit) {
+    margin-bottom: $unit * 2 !important;
+}
+
+
+// Horizontal Padding
+// ---
+//
+// Granular control over horizontal spacing independent of a component. Includes
+// values based on global spacing, and adds values based on relative typographic
+// sizes.
+//
+// Suffixes:
+//
+// 0:  none
+// th: thick space (about 1.5× a “normal” word space)
+// en: en space (half an em)
+// em: em space
+// sm: small
+// md: medium
+// lg: large
+
+@mixin padding-start($unit) {
+    padding-left: $unit !important;
+}
+
+@mixin padding-start-0 {
+    padding-left: 0 !important;
+}
+
+@mixin padding-start-th {
+    padding-left: 0.333em !important;
+}
+
+@mixin padding-start-en {
+    padding-left: 0.5em !important;
+}
+
+@mixin padding-start-em {
+    padding-left: 1em !important;
+}
+
+@mixin padding-start-sm {
+    padding-left: ($unit / 2) !important;
+}
+
+@mixin padding-start-md($unit) {
+    padding-left: $unit * 1.5 !important;
+}
+
+@mixin padding-start-lg($unit) {
+    padding-left: $unit * 2 !important;
+}
+
+@mixin padding-end($unit) {
+    padding-right: $unit !important;
+}
+
+@mixin padding-end-0 {
+    padding-right: 0 !important;
+}
+
+@mixin padding-end-th {
+    padding-right: 0.333em !important;
+}
+
+@mixin padding-end-en {
+    padding-right: 0.5em !important;
+}
+
+@mixin padding-end-em {
+    padding-right: 1em !important;
+}
+
+@mixin padding-end-sm {
+    padding-right: ($unit / 2) !important;
+}
+
+@mixin padding-end-md($unit) {
+    padding-right: $unit * 1.5 !important;
+}
+
+@mixin padding-end-lg($unit) {
+    padding-right: $unit * 2 !important;
+}

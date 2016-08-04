@@ -1,0 +1,148 @@
+// Margin
+// ===
+
+// Miscellanous
+// ---
+
+@mixin margin-0($unit) {
+    margin: 0 !important;
+}
+
+@mixin margin-center {
+    margin: 0 auto !important;
+}
+
+
+// Vertical Margins
+// ---
+//
+// Granular control over vertical spacing independent of a component. Includes
+// values based on global spacing.
+//
+// Suffixes:
+// 0:  none
+// sm: small
+// md: medium
+// lg: large
+
+@mixin margin-top($unit) {
+    margin-top: $unit !important;
+}
+
+@mixin margin-top-0 {
+    margin-top: 0 !important;
+}
+
+@mixin margin-top-sm($unit) {
+    margin-top: ($unit / 2) !important;
+}
+
+@mixin margin-top-md($unit) {
+    margin-top: $unit * 1.5 !important;
+}
+
+@mixin margin-top-lg($unit) {
+    margin-top: $unit * 2 !important;
+}
+
+@mixin margin-bottom($unit) {
+    margin-bottom: $unit !important;
+}
+
+@mixin margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
+@mixin margin-bottom-sm($unit) {
+    margin-bottom: ($unit / 2) !important;
+}
+
+@mixin margin-bottom-md($unit) {
+    margin-bottom: $unit * 1.5 !important;
+}
+
+@mixin margin-bottom-lg($unit) {
+    margin-bottom: $unit * 2 !important;
+}
+
+
+// Horizontal Margins
+// ---
+//
+// Granular control over horizontal spacing independent of a component. Includes
+// values based on global spacing, and adds values based on relative typographic
+// sizes.
+//
+// Suffixes:
+//
+// 0:  none
+// th: thick space (about 1.5× a “normal” word space)
+// en: en space (half an em)
+// em: em space
+// sm: small
+// md: medium
+// lg: large
+
+@mixin margin-start($unit) {
+    margin-left: $unit !important;
+}
+
+@mixin margin-start-0 {
+    margin-left: 0 !important;
+}
+
+@mixin margin-start-th {
+    margin-left: 0.333em !important;
+}
+
+@mixin margin-start-en {
+    margin-left: 0.5em !important;
+}
+
+@mixin margin-start-em {
+    margin-left: 1em !important;
+}
+
+@mixin margin-start-sm($unit) {
+    margin-left: ($unit / 2) !important;
+}
+
+@mixin margin-start-md($unit) {
+    margin-left: $unit * 1.5 !important;
+}
+
+@mixin margin-start-lg($unit) {
+    margin-left: $unit * 2 !important;
+}
+
+@mixin margin-end($unit) {
+    margin-right: $unit !important;
+}
+
+@mixin margin-end-0 {
+    margin-right: 0 !important;
+}
+
+@mixin margin-end-th {
+    margin-right: 0.333em !important;
+}
+
+@mixin margin-end-en {
+    margin-right: 0.5em !important;
+}
+
+@mixin margin-end-em {
+    margin-right: 1em !important;
+}
+
+@mixin margin-end-sm($unit) {
+    margin-right: ($unit / 2) !important;
+}
+
+@mixin margin-end-md($unit) {
+    margin-right: $unit * 1.5 !important;
+}
+
+@mixin margin-end-lg($unit) {
+    margin-right: $unit * 2 !important;
+}

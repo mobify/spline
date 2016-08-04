@@ -1,0 +1,66 @@
+// Layout utils
+// ===
+
+// Floats
+// ---
+//
+// Writing-direction independent floats.
+
+@mixin float-start {
+    float: left !important;
+}
+
+@mixin float-end {
+    float: right !important;
+}
+
+
+// Contain floats
+// ---
+//
+// Contain all floated children and their margins.
+//
+// 1. Avoid an Opera bug when the contenteditable attribute is included anywhere
+//    else in the document.
+// 2. Contain the the first child’s top margin. Ensures rendering is consistent
+//    with the other common clearfix method, `overflow: hidden`.
+
+@mixin clearfix {
+    &::before,
+    &::after {
+        content: ' '; // 1
+
+        display: table; // 2
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+
+// Positioning context
+// ---
+//
+// Create a new positioning context.
+
+@mixin position-context {
+    position: relative !important;
+}
+
+
+// Block Formatting Context
+// ---
+//
+// Create a new Block Formatting Context. BFCs won’t overlap adjacent floats and
+// will contain floated children and their margins.
+//
+// N.B. Will clip overflow.
+//
+// Attribution:
+//
+// - https://github.com/suitcss/utils-layout
+
+@mixin block-context {
+    overflow: hidden !important;
+}

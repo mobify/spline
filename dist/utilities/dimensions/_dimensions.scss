@@ -1,0 +1,60 @@
+// Dimension utils
+// ===
+//
+// Apply fluid widths to components or sub-components.
+
+
+// Fractional Widths
+// ---
+//
+// 1. Force elements to keep their explicit width when inside a flexbox to
+//    prevent them from growing or shrinking.
+
+@mixin width-1of6 {
+    flex: initial !important; // 1
+    width: (100%/6) !important;
+}
+
+@mixin width-1of4 {
+    flex: initial !important; // 1
+    width: 25% !important;
+}
+
+@mixin width-2of6 {
+    flex: initial !important; // 1
+    width: (100%/3) !important;
+}
+
+@mixin width-3of6 {
+    flex: initial !important; // 1
+    width: 50% !important;
+}
+
+@mixin width-4of6 {
+    flex: initial !important; // 1
+    width: 2 * (100%/3) !important;
+}
+
+@mixin width-3of4 {
+    flex: initial !important; // 1
+    width: 75% !important;
+}
+
+@mixin width-5of6 {
+    flex: initial !important; // 1
+    width: 5 * (100%/6) !important;
+}
+
+
+// Full Width
+// ---
+//
+// 1. Force elements to keep their explicit width when inside a flexbox to
+//    prevent them from growing or shrinking.
+// 2. Override some browser quirks, e.g. with <button>.
+
+@mixin width-full {
+    display: block !important;
+    flex: initial !important; // 1
+    width: 100% !important; // 2
+}
