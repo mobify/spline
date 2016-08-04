@@ -1,33 +1,51 @@
 # Layout
 
-## Clearfix
+Layout behavior for properties related to floats, position, etc.
 
-Provides an easy way to contain floats without adding additional markup.
 
-Based on [Nicolas Gallagher's micro-clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) and [this one by Thierry Koblentz](http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php).
+## `float-start`
 
-```scss
-@include clearfix;
-```
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
 
-### Usage
+Float an element to the "start", which is typically the left. On right-to-left
+websites, it's to the right.
 
-```scss
-.element {
-    @include clearfix;
-}
-```
 
-### Output
+## `float-end`
 
-```scss
-.element::before,
-.element::after {
-    content: ' ';
-    display: table;
-}
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
 
-.element::after {
-    clear: both;
-}
-```
+Float an element to the "start", which is typically the right. On right-to-left
+websites, it's to the left.
+
+
+## `clearfix`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Contain all floated children and their margins.
+
+
+## `position-context`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Create a new positioning context.
+
+
+## `block-context`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Create a new Block Formatting Context. BFCs won’t overlap adjacent floats and
+will contain floated children and their margins.

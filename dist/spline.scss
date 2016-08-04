@@ -42,14 +42,22 @@
 // Utilities
 // ---
 
+@import "utilities/border/border";
 @import "utilities/change-br/change-br";
+@import "utilities/color/color";
+@import "utilities/dimensions/dimensions";
 @import "utilities/ellipsis/ellipsis";
-@import "utilities/clearfix/clearfix";
+@import "utilities/flexbox/flexbox";
 @import "utilities/hide-text/hide-text";
-@import "utilities/squish-text/squish-text";
 @import "utilities/icon-font/icon-font";
 @import "utilities/icon-font-replace/icon-font-replace";
-@import "utilities/tap-highlight/tap-highlight";
-@import "utilities/triangle/triangle";
-@import "utilities/web-font/web-font";
+@import "utilities/layout/layout";
+@import "utilities/margin/margin";
+@import "utilities/padding/padding";
+@import "utilities/squish-text/squish-text";
 @import "utilities/style-override/style-override";
+@import "utilities/tap-highlight/tap-highlight";
+@import "utilities/text/text";
+@import "utilities/triangle/triangle";
+@import "utilities/visibility/visibility";
+@import "utilities/web-font/web-font";

@@ -6,12 +6,20 @@
 //
 // Writing-direction independent floats.
 
-@mixin float-start {
-    float: left !important;
+@mixin float-start($important: false) {
+    @if($important) {
+        float: left !important;
+    } @else {
+        float: left;
+    }
 }
 
-@mixin float-end {
-    float: right !important;
+@mixin float-end($important: false) {
+    @if($important) {
+        float: right !important;
+    } @else {
+        float: right;
+    }
 }
 
 
@@ -25,16 +33,29 @@
 // 2. Contain the the first child’s top margin. Ensures rendering is consistent
 //    with the other common clearfix method, `overflow: hidden`.
 
-@mixin clearfix {
-    &::before,
-    &::after {
-        content: ' '; // 1
+@mixin clearfix($important: false) {
+    @if($important) {
+        &::before,
+        &::after {
+            content: ' ' !important; // 1
 
-        display: table; // 2
-    }
+            display: table !important; // 2
+        }
 
-    &::after {
-        clear: both;
+        &::after {
+            clear: both !important;
+        }
+    } @else {
+        &::before,
+        &::after {
+            content: ' '; // 1
+
+            display: table; // 2
+        }
+
+        &::after {
+            clear: both;
+        }
     }
 }
 
@@ -44,8 +65,12 @@
 //
 // Create a new positioning context.
 
-@mixin position-context {
-    position: relative !important;
+@mixin position-context($important: false) {
+    @if($important) {
+        position: relative !important;
+    } @else {
+        position: relative;
+    }
 }
 
 
@@ -61,6 +86,10 @@
 //
 // - https://github.com/suitcss/utils-layout
 
-@mixin block-context {
-    overflow: hidden !important;
+@mixin block-context($important: false) {
+    @if($important) {
+        overflow: hidden !important;
+    } @else {
+        overflow: hidden;
+    }
 }

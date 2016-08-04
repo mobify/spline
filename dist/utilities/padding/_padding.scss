@@ -4,23 +4,35 @@
 // Miscellanous
 // ---
 
-@mixin padding($unit) {
+@mixin padding(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
     padding: $unit !important;
 }
 
-@mixin padding-0 {
+@mixin padding-0($important: false) {
     padding: 0 !important;
 }
 
-@mixin padding-sm($unit) {
+@mixin padding-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
     padding: ($unit / 2) !important;
 }
 
-@mixin padding-md($unit) {
+@mixin padding-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
     padding: $unit * 1.5 !important;
 }
 
-@mixin padding-lg($unit) {
+@mixin padding-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
     padding: $unit * 2 !important;
 }
 
@@ -37,44 +49,96 @@
 // md: medium
 // lg: large
 
-@mixin padding-top($unit) {
-    padding-top: $unit !important;
+@mixin base-padding-top($important, $unit) {
+    @if($important) {
+        padding-top: $unit !important;
+    } @else {
+        padding-top: $unit;
+    }
 }
 
-@mixin padding-top-0 {
-    padding-top: 0 !important;
+@mixin padding-top(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-top($important, $unit);
 }
 
-@mixin padding-top-sm($unit) {
-    padding-top: ($unit / 2) !important;
+@mixin padding-top-0($important: false) {
+    @include base-padding-top($important, 0);
 }
 
-@mixin padding-top-md($unit) {
-    padding-top: $unit * 1.5 !important;
+@mixin padding-top-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-top($important, $unit);
 }
 
-@mixin padding-top-lg($unit) {
-    padding-top: $unit * 2 !important;
+@mixin padding-top-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-top($important, $unit);
 }
 
-@mixin padding-bottom($unit) {
-    padding-bottom: $unit !important;
+@mixin padding-top-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-top($important, $unit);
 }
 
-@mixin padding-bottom-0 {
-    padding-bottom: 0 !important;
+@mixin base-padding-bottom($important, $unit) {
+    @if($important) {
+        padding-bottom: $unit !important;
+    } @else {
+        padding-bottom: $unit;
+    }
 }
 
-@mixin padding-bottom-sm($unit) {
-    padding-bottom: ($unit / 2) !important;
+@mixin padding-bottom(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-bottom($important, $unit);
 }
 
-@mixin padding-bottom-md($unit) {
-    padding-bottom: $unit * 1.5 !important;
+@mixin padding-bottom-0($important: false) {
+    @include base-padding-bottom($important, 0);
 }
 
-@mixin padding-bottom-lg($unit) {
-    margin-bottom: $unit * 2 !important;
+@mixin padding-bottom-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-bottom($important, $unit);
+}
+
+@mixin padding-bottom-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-bottom($important, $unit);
+}
+
+@mixin padding-bottom-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-bottom($important, $unit);
 }
 
 
@@ -95,66 +159,122 @@
 // md: medium
 // lg: large
 
-@mixin padding-start($unit) {
-    padding-left: $unit !important;
+@mixin base-padding-start($important, $unit) {
+    @if($important) {
+        padding-left: $unit !important;
+    } @else {
+        padding-left: $unit;
+    }
 }
 
-@mixin padding-start-0 {
-    padding-left: 0 !important;
+@mixin padding-start(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-start($important, $unit);
 }
 
-@mixin padding-start-th {
-    padding-left: 0.333em !important;
+@mixin padding-start-0($important: false) {
+    @include base-padding-start($important, 0);
 }
 
-@mixin padding-start-en {
+@mixin padding-start-th($important: false) {
+    @include base-padding-start($important, 0.333em);
+}
+
+@mixin padding-start-en($important: false) {
+    @include base-padding-start($important, 0.5em);
+
     padding-left: 0.5em !important;
 }
 
-@mixin padding-start-em {
+@mixin padding-start-em($important: false) {
+    @include base-padding-start($important, 1em);
+
     padding-left: 1em !important;
 }
 
-@mixin padding-start-sm {
-    padding-left: ($unit / 2) !important;
+@mixin padding-start-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-start($important, $unit);
 }
 
-@mixin padding-start-md($unit) {
-    padding-left: $unit * 1.5 !important;
+@mixin padding-start-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-start($important, $unit);
 }
 
-@mixin padding-start-lg($unit) {
-    padding-left: $unit * 2 !important;
+@mixin padding-start-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-start($important, $unit);
 }
 
-@mixin padding-end($unit) {
-    padding-right: $unit !important;
+@mixin base-padding-end($important, $unit) {
+    @if($important) {
+        padding-right: $unit !important;
+    } @else {
+        padding-right: $unit;
+    }
 }
 
-@mixin padding-end-0 {
-    padding-right: 0 !important;
+@mixin padding-end(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-end($important, $unit);
 }
 
-@mixin padding-end-th {
-    padding-right: 0.333em !important;
+@mixin padding-end-0($important: false) {
+    @include base-padding-end($important, 0);
 }
 
-@mixin padding-end-en {
-    padding-right: 0.5em !important;
+@mixin padding-end-th($important: false) {
+    @include base-padding-end($important, 0.333em);
 }
 
-@mixin padding-end-em {
-    padding-right: 1em !important;
+@mixin padding-end-en($important: false) {
+    @include base-padding-end($important, 0.5em);
 }
 
-@mixin padding-end-sm {
-    padding-right: ($unit / 2) !important;
+@mixin padding-end-em($important: false) {
+    @include base-padding-end($important, 1em);
 }
 
-@mixin padding-end-md($unit) {
-    padding-right: $unit * 1.5 !important;
+@mixin padding-end-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-end($important, $unit);
 }
 
-@mixin padding-end-lg($unit) {
-    padding-right: $unit * 2 !important;
+@mixin padding-end-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-end($important, $unit);
+}
+
+@mixin padding-end-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-end($important, $unit);
 }
