@@ -1,12 +1,16 @@
+// Parent Exists
+// ===
+//
 // Check if the current selector is nested
 //
 // @return [Boolean]
 
 @function parent-exists() {
-    @if & {
+    // Dev Note: extra line break after `@if` to deal with sass-lint bug
+    @if
+    & {
         @return true;
-    }
-    @else {
+    } @else {
         @return false;
     }
 }

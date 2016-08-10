@@ -1,0 +1,256 @@
+// Margin
+// ===
+
+// Miscellanous
+// ---
+
+@mixin margin-0($important: false) {
+    margin: 0 !important;
+}
+
+@mixin margin-center($important: false) {
+    margin: 0 auto !important;
+}
+
+
+// Vertical Margins
+// ---
+//
+// Granular control over vertical spacing independent of a component. Includes
+// values based on global spacing.
+//
+// Suffixes:
+// 0:  none
+// sm: small
+// md: medium
+// lg: large
+
+@mixin base-margin-top($important, $unit) {
+    @if($important) {
+        margin-top: $unit !important;
+    } @else {
+        margin-top: $unit;
+    }
+}
+
+@mixin margin-top(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-margin-top($important, $unit);
+}
+
+@mixin margin-top-0($important: false) {
+    @include base-margin-top($important, 0);
+}
+
+@mixin margin-top-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-margin-top($important, $unit);
+}
+
+@mixin margin-top-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-margin-top($important, $unit);
+}
+
+@mixin margin-top-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-margin-top($important, $unit);
+}
+
+@mixin base-margin-bottom($important, $unit) {
+    @if($important) {
+        margin-bottom: $unit !important;
+    } @else {
+        margin-bottom: $unit;
+    }
+}
+
+@mixin margin-bottom(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-margin-bottom($important, $unit);
+}
+
+@mixin margin-bottom-0($important: false) {
+    @include base-margin-bottom($important, 0);
+}
+
+@mixin margin-bottom-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-margin-bottom($important, $unit);
+}
+
+@mixin margin-bottom-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-margin-bottom($important, $unit);
+}
+
+@mixin margin-bottom-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-margin-bottom($important, $unit);
+}
+
+
+// Horizontal Margins
+// ---
+//
+// Granular control over horizontal spacing independent of a component. Includes
+// values based on global spacing, and adds values based on relative typographic
+// sizes.
+//
+// Suffixes:
+//
+// 0:  none
+// th: thick space (about 1.5× a “normal” word space)
+// en: en space (half an em)
+// em: em space
+// sm: small
+// md: medium
+// lg: large
+
+@mixin base-margin-start($important, $unit) {
+    @if($important) {
+        margin-left: $unit !important;
+    } @else {
+        margin-left: $unit;
+    }
+}
+
+@mixin margin-start(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-margin-start($important, $unit);
+}
+
+@mixin margin-start-0($important: false) {
+    @include base-margin-start($important, 0);
+}
+
+@mixin margin-start-th($important: false) {
+    @include base-margin-start($important, 0.333em);
+}
+
+@mixin margin-start-en($important: false) {
+    @include base-margin-start($important, 0.5em);
+
+    margin-left: 0.5em !important;
+}
+
+@mixin margin-start-em($important: false) {
+    @include base-margin-start($important, 1em);
+
+    margin-left: 1em !important;
+}
+
+@mixin margin-start-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-margin-start($important, $unit);
+}
+
+@mixin margin-start-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-margin-start($important, $unit);
+}
+
+@mixin margin-start-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-margin-start($important, $unit);
+}
+
+@mixin base-margin-end($important, $unit) {
+    @if($important) {
+        margin-right: $unit !important;
+    } @else {
+        margin-right: $unit;
+    }
+}
+
+@mixin margin-end(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-margin-end($important, $unit);
+}
+
+@mixin margin-end-0($important: false) {
+    @include base-margin-end($important, 0);
+}
+
+@mixin margin-end-th($important: false) {
+    @include base-margin-end($important, 0.333em);
+}
+
+@mixin margin-end-en($important: false) {
+    @include base-margin-end($important, 0.5em);
+}
+
+@mixin margin-end-em($important: false) {
+    @include base-margin-end($important, 1em);
+}
+
+@mixin margin-end-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-margin-end($important, $unit);
+}
+
+@mixin margin-end-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-margin-end($important, $unit);
+}
+
+@mixin margin-end-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-margin-end($important, $unit);
+}

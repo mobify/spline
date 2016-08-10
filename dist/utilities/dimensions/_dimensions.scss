@@ -1,0 +1,80 @@
+// Dimension utils
+// ===
+//
+// Apply fluid widths to components or sub-components.
+
+// Base Width
+// ---
+//
+// This is just a helper mixin to aid in creating the below mixins
+//
+// 1. Force elements to keep their explicit width when inside a flexbox to
+//    prevent them from growing or shrinking.
+
+@mixin base-width($important, $width) {
+    @if($important) {
+        flex: initial !important; // 1
+        width: $width !important;
+    } @else {
+        flex: initial; // 1
+        width: $width;
+    }
+}
+
+
+// Fractional Widths
+// ---
+
+@mixin width-1of6($important: false) {
+    $width: (100%/6);
+
+    @include base-width($important, $width);
+}
+
+@mixin width-1of4($important: false) {
+    @include base-width($important, 25%);
+}
+
+@mixin width-2of6($important: false) {
+    $width: (100%/3);
+
+    @include base-width($important, $width);
+}
+
+@mixin width-3of6($important: false) {
+    @include base-width($important, 50%);
+}
+
+@mixin width-4of6($important: false) {
+    $width: 2 * (100%/3);
+
+    @include base-width($important, $width);
+}
+
+@mixin width-3of4($important: false) {
+    @include base-width($important, 75%);
+}
+
+@mixin width-5of6($important: false) {
+    $width: 5 * (100%/6);
+
+    @include base-width($important, $width);
+}
+
+
+// Full Width
+// ---
+//
+// 1. Force elements to keep their explicit width when inside a flexbox to
+//    prevent them from growing or shrinking.
+// 2. Override some browser quirks, e.g. with <button>.
+
+@mixin width-full($important: false) {
+    @include base-width($important, 100%);
+
+    @if($important) {
+        display: block !important; // 2
+    } @else {
+        display: block; // 2
+    }
+}

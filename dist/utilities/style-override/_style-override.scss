@@ -1,4 +1,3 @@
-
 // Style override
 // ===
 //
@@ -45,8 +44,7 @@ $style-override-head-selector: '#\\!' !default;
         @at-root #{$selector-chain} ~ body & {
             @content;
         }
-    }
-    @else {
+    } @else {
         @at-root #{$selector-chain} ~ body {
             @content;
         }

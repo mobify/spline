@@ -1,5 +1,5 @@
 // To String
-// =========
+// ===
 //
 // Takes a list and returns a string that's been comma seperated
 //
@@ -8,6 +8,8 @@
 // @return [String]
 
 @function to-string($list, $separator: ', ') {
+    $index: 0;
+    $result: '';
     @if type-of($list) != "list" {
         @warn "`to-string` function expecting a list for $list; #{type-of($list)} given.";
         @return false;
@@ -18,17 +20,13 @@
         @return false;
     }
 
-    $index: 0;
-    $result: '';
-
     @each $nth in $list {
+        $index: $index + 1;
         @if $index > 0 {
             $result: $result + $separator + $nth;
-        }
-        @else if $index == 0 {
+        } @else if $index == 0 {
             $result: $nth;
         }
-        $index: $index + 1;
     }
 
     @return $result;

@@ -1,5 +1,5 @@
 // Squish Text
-// -----------
+// ===
 //
 // This is an alternative text replacement mixin.
 //
@@ -7,8 +7,10 @@
 // need to hide text contained in an inline element but still have it read by a
 // screen reader.
 
+$squishFont: 0/0 a;
+
 @mixin squish-text {
-    font: 0/0 a;
-    text-shadow: none;
     color: transparent;
+    font: $squishFont;
+    text-shadow: none;
 }

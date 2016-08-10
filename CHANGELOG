@@ -1,3 +1,11 @@
+2.0.0
+    - Prepare Spline for distribution on NPM
+    - Remove all references to Bower
+    - Add Github PR template
+    - Add linting
+    - Add CircleCI integration
+    - Add new utility mixins
+    - Remove outdated features (CSS3 mixins)
 1.0.0
     - Requires Sass 3.4
     - Added a desktop override mixin (see utilities/_style-override)

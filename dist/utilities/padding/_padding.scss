@@ -1,0 +1,280 @@
+// Padding
+// ===
+
+// Miscellanous
+// ---
+
+@mixin padding(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    padding: $unit !important;
+}
+
+@mixin padding-0($important: false) {
+    padding: 0 !important;
+}
+
+@mixin padding-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    padding: ($unit / 2) !important;
+}
+
+@mixin padding-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    padding: $unit * 1.5 !important;
+}
+
+@mixin padding-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    padding: $unit * 2 !important;
+}
+
+
+// Vertical Padding
+// ---
+//
+// Granular control over vertical spacing independent of a component. Includes
+// values based on global spacing.
+//
+// Suffixes:
+// 0:  none
+// sm: small
+// md: medium
+// lg: large
+
+@mixin base-padding-top($important, $unit) {
+    @if($important) {
+        padding-top: $unit !important;
+    } @else {
+        padding-top: $unit;
+    }
+}
+
+@mixin padding-top(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-top($important, $unit);
+}
+
+@mixin padding-top-0($important: false) {
+    @include base-padding-top($important, 0);
+}
+
+@mixin padding-top-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-top($important, $unit);
+}
+
+@mixin padding-top-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-top($important, $unit);
+}
+
+@mixin padding-top-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-top($important, $unit);
+}
+
+@mixin base-padding-bottom($important, $unit) {
+    @if($important) {
+        padding-bottom: $unit !important;
+    } @else {
+        padding-bottom: $unit;
+    }
+}
+
+@mixin padding-bottom(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-bottom($important, $unit);
+}
+
+@mixin padding-bottom-0($important: false) {
+    @include base-padding-bottom($important, 0);
+}
+
+@mixin padding-bottom-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-bottom($important, $unit);
+}
+
+@mixin padding-bottom-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-bottom($important, $unit);
+}
+
+@mixin padding-bottom-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-bottom($important, $unit);
+}
+
+
+// Horizontal Padding
+// ---
+//
+// Granular control over horizontal spacing independent of a component. Includes
+// values based on global spacing, and adds values based on relative typographic
+// sizes.
+//
+// Suffixes:
+//
+// 0:  none
+// th: thick space (about 1.5× a “normal” word space)
+// en: en space (half an em)
+// em: em space
+// sm: small
+// md: medium
+// lg: large
+
+@mixin base-padding-start($important, $unit) {
+    @if($important) {
+        padding-left: $unit !important;
+    } @else {
+        padding-left: $unit;
+    }
+}
+
+@mixin padding-start(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-start($important, $unit);
+}
+
+@mixin padding-start-0($important: false) {
+    @include base-padding-start($important, 0);
+}
+
+@mixin padding-start-th($important: false) {
+    @include base-padding-start($important, 0.333em);
+}
+
+@mixin padding-start-en($important: false) {
+    @include base-padding-start($important, 0.5em);
+
+    padding-left: 0.5em !important;
+}
+
+@mixin padding-start-em($important: false) {
+    @include base-padding-start($important, 1em);
+
+    padding-left: 1em !important;
+}
+
+@mixin padding-start-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-start($important, $unit);
+}
+
+@mixin padding-start-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-start($important, $unit);
+}
+
+@mixin padding-start-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-start($important, $unit);
+}
+
+@mixin base-padding-end($important, $unit) {
+    @if($important) {
+        padding-right: $unit !important;
+    } @else {
+        padding-right: $unit;
+    }
+}
+
+@mixin padding-end(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @include base-padding-end($important, $unit);
+}
+
+@mixin padding-end-0($important: false) {
+    @include base-padding-end($important, 0);
+}
+
+@mixin padding-end-th($important: false) {
+    @include base-padding-end($important, 0.333em);
+}
+
+@mixin padding-end-en($important: false) {
+    @include base-padding-end($important, 0.5em);
+}
+
+@mixin padding-end-em($important: false) {
+    @include base-padding-end($important, 1em);
+}
+
+@mixin padding-end-sm(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: ($unit / 2);
+
+    @include base-padding-end($important, $unit);
+}
+
+@mixin padding-end-md(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 1.5;
+
+    @include base-padding-end($important, $unit);
+}
+
+@mixin padding-end-lg(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    $unit: $unit * 2;
+
+    @include base-padding-end($important, $unit);
+}

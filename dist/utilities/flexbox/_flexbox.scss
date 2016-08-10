@@ -1,0 +1,204 @@
+// Flexbox
+// ===
+//
+// Flexbox and align a row of items with a lot of control. Provides a
+// declarative, robust cross-browser way of using flexbox.
+
+// Flexbox root
+// ---
+//
+// Includes gutters, for grid-like functionality.
+//
+// 1. Remove default styles present on common root elements.
+// 2. Ensure in iOS 5 and 6 that flex-direction isn't inherited from
+//    any flexbox parents that has flex-direction set to row-reverse
+
+@mixin flexbox($important: false) {
+    @if($important) {
+        display: flex !important;
+        flex-direction: row !important; // 2
+        margin: 0 !important; // 1
+        padding: 0 !important; // 1
+
+        list-style: none !important; // 1
+    } @else {
+        display: flex;
+        flex-direction: row; // 2
+        margin: 0; // 1
+        padding: 0; // 1
+
+        list-style: none; // 1
+    }
+}
+
+@mixin flexbox-gutters(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @if($important) {
+        margin-right: ($unit * -0.5) !important;
+        margin-left: ($unit * -0.5) !important;
+    } @else {
+        margin-right: ($unit * -0.5);
+        margin-left: ($unit * -0.5);
+    }
+}
+
+@mixin flexbox-inner-gutters(
+    $important: false,
+    $unit: if(variable-exists(unit), $unit, null)
+) {
+    @if($important) {
+        margin: 0 ($unit / 2) !important;
+    } @else {
+        margin: 0 ($unit / 2);
+    }
+}
+
+
+// Align Items
+// ---
+
+@mixin align-top($important: false) {
+    @if($important) {
+        align-items: flex-start !important;
+    } @else {
+        align-items: flex-start;
+    }
+}
+
+@mixin align-center($important: false) {
+    @if($important) {
+        align-items: center !important;
+    } @else {
+        align-items: center;
+    }
+}
+
+@mixin align-bottom($important: false) {
+    @if($important) {
+        align-items: flex-end !important;
+    } @else {
+        align-items: flex-end;
+    }
+}
+
+
+// Justify Content
+// ---
+
+@mixin base-justify-content($important, $justify) {
+    @if($important) {
+        justify-content: $justify !important;
+    } @else {
+        justify-content: $justify;
+    }
+}
+
+@mixin justify-start($important: false) {
+    @include base-justify-content($important, flex-start);
+}
+
+@mixin justify-end($important: false) {
+    @include base-justify-content($important, flex-end);
+}
+
+@mixin justify-between($important: false) {
+    @include base-justify-content($important, space-between);
+}
+
+@mixin justify-center($important: false) {
+    @include base-justify-content($important, center);
+}
+
+@mixin justify-around($important: false) {
+    @include base-justify-content($important, space-around);
+}
+
+
+// Flex Direction
+// ---
+
+@mixin row-reverse($important: false) {
+    @if($important) {
+        flex-direction: row-reverse !important;
+    } @else {
+        flex-direction: row-reverse;
+    }
+}
+
+
+// Flex (Grow)
+// ---
+//
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
+@mixin flex($important: false) {
+    @if($important) {
+        display: block !important; // 1
+        flex: 1 1 auto !important;
+        width: 100% !important; // 2
+    } @else {
+        display: block; // 1
+        flex: 1 1 auto;
+        width: 100%; // 2
+    }
+}
+
+
+// Flex (Shrink)
+// ---
+//
+// Shrink Flexbox items to a minimum size.
+//
+// 1. Ensure width collapses in old implementations.
+
+@mixin flex-shrink($important: false) {
+    @if($important) {
+        flex: initial !important;
+        width: auto !important; // 1
+    } @else {
+        flex: initial;
+        width: auto; // 1
+    }
+}
+
+
+// Order
+// ---
+//
+// Re-arrange the display order of up to six items. Add additional modifiers in
+// your own stylesheet to re-order more.
+
+@mixin base-order($important, $order) {
+    @if($important) {
+        order: $order !important;
+    } @else {
+        order: $order;
+    }
+}
+
+@mixin order-1($important: false) {
+    @include base-order($important, 1);
+}
+
+@mixin order-2($important: false) {
+    @include base-order($important, 2);
+}
+
+@mixin order-3($important: false) {
+    @include base-order($important, 3);
+}
+
+@mixin order-4($important: false) {
+    @include base-order($important, 4);
+}
+
+@mixin order-5($important: false) {
+    @include base-order($important, 5);
+}
+
+@mixin order-6($important: false) {
+    @include base-order($important, 6);
+}
