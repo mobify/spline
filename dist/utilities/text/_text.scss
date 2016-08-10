@@ -1,0 +1,131 @@
+// Text
+// ===
+
+// All Caps
+// ---
+//
+// Set text uppercase, letterspaced for legibility.
+
+@mixin text-all-caps($important: false) {
+    @if($important) {
+        letter-spacing: 1px !important;
+        text-transform: uppercase !important;
+    } @else {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+
+// Text Flow Alignment
+// ---
+//
+// Writing-direction independent text alignment. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
+
+@mixin text-align-start($important: false) {
+    @if($important) {
+        text-align: left !important;
+    } @else {
+        text-align: left;
+    }
+}
+
+@mixin text-align-center($important: false) {
+    @if($important) {
+        text-align: center !important;
+    } @else {
+        text-align: center;
+    }
+}
+
+@mixin text-align-end($important: false) {
+    @if($important) {
+        text-align: right !important;
+    } @else {
+        text-align: right;
+    }
+}
+
+
+// Vertical Alignment
+// ---
+//
+// Vertical aligment of text and replaced (inline-block) elements within a line.
+
+@mixin align-middle($important: false) {
+    @if($important) {
+        vertical-align: middle !important;
+    } @else {
+        vertical-align: middle;
+    }
+}
+
+@mixin align-baseline($important: false) {
+    @if($important) {
+        vertical-align: baseline !important;
+    } @else {
+        vertical-align: baseline;
+    }
+}
+
+
+// Weights & Style
+// ---
+
+@mixin text-normal($important: false) {
+    @if($important) {
+        font-weight: normal !important;
+        @if(true) {
+            // get around `no-duplicate-properties` lint error
+            font-weight: 400 !important;
+        }
+    } @else {
+        font-weight: normal;
+        @if(true) {
+            // get around `no-duplicate-properties` lint error
+            font-weight: 400;
+        }
+    }
+}
+
+@mixin text-bold($important: false) {
+    @if($important) {
+        font-weight: bold !important;
+        @if(true) {
+            // get around `no-duplicate-properties` lint error
+            font-weight: 700 !important;
+        }
+    } @else {
+        font-weight: bold;
+        @if(true) {
+            // get around `no-duplicate-properties` lint error
+            font-weight: 700;
+        }
+    }
+}
+
+@mixin text-italic($important: false) {
+    @if($important) {
+        font-style: italic !important;
+    } @else {
+        font-style: italic;
+    }
+}
+
+@mixin text-quiet(
+    $important: false,
+    $color: if(variable-exists(neutral-50), $neutral-50, null)
+) {
+    @if($important) {
+        color: $color !important;
+        font-size: 0.785em !important;
+
+        fill: $color !important;
+    } @else {
+        color: $color;
+        font-size: 0.785em;
+
+        fill: $color;
+    }
+}

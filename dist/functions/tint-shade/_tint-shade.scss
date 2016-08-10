@@ -1,9 +1,9 @@
 // Tint & Shade
-// ============
+// ===
 
 
 // Tint
-// ----
+// ---
 //
 // Add percentage of white to a color
 //
@@ -11,13 +11,13 @@
 // @param $percent [Number] : The percentage amount the color is to be tinted
 // @return [Color]
 
-@function tint($color, $percent){
-  @return mix(white, $color, $percent);
+@function tint($color, $percent) {
+    @return mix(white, $color, $percent);
 }
 
 
 // Shade
-// -----
+// ---
 //
 // Add percentage of black to a color
 //
@@ -25,6 +25,6 @@
 // @param $percent [Number] : The percentage amount the color is to be shaded
 // @return [Color]
 
-@function shade($color, $percent){
-  @return mix(black, $color, $percent);
+@function shade($color, $percent) {
+    @return mix(black, $color, $percent);
 }

@@ -1,5 +1,5 @@
 // Triangle
-// ========
+// ===
 //
 // This is triangle, there are two different types of triangle.
 //
@@ -35,15 +35,13 @@
 @mixin triangle($type, $direction, $size, $color) {
     width: 0;
     height: 0;
-
     border-color: $color;
 
     // triangle: equilateral triangle (all three sides are equal)
     @if $type == 'triangle' {
-
         // triangle face up
         @if $direction == 'up' {
-            border: {
+            border:  {
                 right: $size solid transparent;
                 bottom: $size solid $color;
                 left: $size solid transparent;
@@ -52,7 +50,7 @@
 
         // triangle face right
         @elseif $direction == 'right' {
-            border: {
+            border:  {
                 top: $size solid transparent;
                 bottom: $size solid transparent;
                 left: $size solid $color;
@@ -60,16 +58,16 @@
         }
         // triangle face up
         @elseif $direction == 'down' {
-            border: {
-                right: $size solid transparent;
+            border:  {
                 top: $size solid $color;
+                right: $size solid transparent;
                 left: $size solid transparent;
             }
         }
 
         // triangle face left
         @elseif $direction == 'left' {
-            border: {
+            border:  {
                 top: $size solid transparent;
                 right: $size solid $color;
                 bottom: $size solid transparent;
@@ -79,10 +77,9 @@
 
     // isosceles: isosceles triangle (two equal sides)
     @if $type == 'isosceles' {
-
         // isosceles triangle face up right
         @if $direction == 'up-right' {
-            border: {
+            border:  {
                 top: $size solid $color;
                 bottom: $size solid transparent;
                 left: $size solid transparent;
@@ -91,7 +88,7 @@
 
         // isosceles triangle face up left
         @if $direction == 'up-left' {
-            border: {
+            border:  {
                 top: $size solid $color;
                 right: $size solid transparent;
                 bottom: $size solid transparent;
@@ -100,7 +97,7 @@
 
         // isosceles triangle face down right
         @if $direction == 'down-right' {
-            border: {
+            border:  {
                 top: $size solid transparent;
                 bottom: $size solid $color;
                 left: $size solid transparent;
@@ -109,7 +106,7 @@
 
         // isosceles triangle face down-right
         @if $direction == 'down-left' {
-            border: {
+            border:  {
                 top: $size solid transparent;
                 right: $size solid transparent;
                 bottom: $size solid $color;
