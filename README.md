@@ -1,6 +1,6 @@
-# Spline-CSS
+# Spline-SCSS
 
-Spline-CSS, or just Spline, is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier. Spline provides methods to manipulate text, use web & icon fonts, create CSS3 shapes, and much more.
+Spline-SCSS, or just Spline, is a mixin and function library for Sass. It makes writing stylesheets for mobile-first builds faster and easier. Spline provides methods to manipulate text, use web & icon fonts, create CSS3 shapes, and much more.
 
 - [**Installation**](#installation)
 - [**Documentation**](#documentation)
@@ -21,7 +21,7 @@ Spline is distributed with the [NPM](https://www.npmjs.com/) package manager.
     Paste this command into your command line in your project's root directory:
 
     ```
-    npm install spline-css --save-dev
+    npm install spline-scss --save-dev
     ```
 
     > **Note:** You'll need to have [Node and NPM installed](https://docs.npmjs.com/getting-started/installing-node) to run this command.
@@ -29,7 +29,7 @@ Spline is distributed with the [NPM](https://www.npmjs.com/) package manager.
 2. Import Spline at the beginning of your Sass stylesheet
 
     ```scss
-    @import "node_modules/spline-css/spline";
+    @import "node_modules/spline-scss/spline";
     ```
 
 Packages installed through NPM aren't made to be edited. If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
@@ -41,7 +41,7 @@ Spline follows [Semantic Versioning](http://www.semver.org). In a nutshell, that
 To update Spline, paste the following command into your command line in your project's root:
 
 ```
-npm update spline-css
+npm update spline-scss
 ```
 
 ## Documentation
@@ -112,4 +112,4 @@ We also owe a lot of thanks to [Thoughtbot's Bourbon](http://www.github.com/thou
 
 ## License
 
-*MIT License. Spline-CSS is Copyright © 2014-2016 Mobify. It is free software and may be redistributed under the terms specified in the LICENSE file.*
+*MIT License. Spline-SCSS is Copyright © 2014-2016 Mobify. It is free software and may be redistributed under the terms specified in the LICENSE file.*
