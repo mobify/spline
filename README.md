@@ -41,7 +41,7 @@ Spline follows [Semantic Versioning](http://www.semver.org). In a nutshell, that
 To update Spline, paste the following command into your command line in your project's root:
 
 ```
-npm update spline
+npm update spline-css
 ```
 
 ## Documentation
