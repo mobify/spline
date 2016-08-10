@@ -50,17 +50,24 @@ npm update spline-scss
 
 The core set of mixins for the project.
 
-- [Change Break Tag](dist/utilities/change-br)
-- [Clearfix](dist/utilities/clearfix)
-- [Text Ellipsis](dist/utilities/ellipsis)
+- [Border](dist/utilities/border)
+- [Change BR](dist/utilities/change-br)
+- [Color](dist/utilities/color)
+- [Dimension](dist/utilities/dimensions)
+- [Ellipsis](dist/utilities/ellipsis)
+- [Flexbox](dist/utilities/flexbox)
 - [Hide Text](dist/utilities/hide-text)
-- [Squish Text](dist/utilities/squish-text)
 - [Icon Font](dist/utilities/icon-font)
 - [Icon Font Replace](dist/utilities/icon-font-replace)
-- [Tap Highlight](dist/utilities/tap-highlight)
-- [Triangle](dist/utilities/triangle)
-- [Web Font](dist/utilities/web-font)
+- [Margin](dist/utilities/margin)
+- [Padding](dist/utilities/padding)
+- [Squish Text](dist/utilities/squish-text)
 - [Style Override](dist/utilities/style-override) (aka The Headbang Trick)
+- [Tap Highlight](dist/utilities/tap-highlight)
+- [Text](dist/utilities/text)
+- [Triangle](dist/utilities/triangle)
+- [Visibility](dist/utilities/visibility)
+- [Web Font](dist/utilities/web-font)
 
 ### Functions
 
@@ -71,12 +78,6 @@ Functions are methods of invoking Sass logic and functionality to return values.
 - [Rem Converter](dist/functions/rem)
 - [Reverse Gradient](dist/functions/reverse-gradient)
 - [Tint & Shade](dist/function/tint-shade)
-
-### CSS3 Shorthand
-
-Mixins that provide a shorthand way to write CSS3 functionality.
-
-- [Border Radius](dist/css3/border-radius)
 
 ### Variables
 
