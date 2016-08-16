@@ -29,7 +29,7 @@ Spline is distributed with the [NPM](https://www.npmjs.com/) package manager.
 2. Import Spline at the beginning of your Sass stylesheet
 
     ```scss
-    @import "node_modules/spline-scss/spline";
+    @import "node_modules/spline-scss/dist/spline";
     ```
 
 Packages installed through NPM aren't made to be edited. If you need to edit or change anything within Spline, please consider [opening an issue or a PR](http://github.com/mobify/spline/issues) and having it added directly to the project itself.
