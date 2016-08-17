@@ -1,5 +1,6 @@
 2.1.0
     - Add text-capitalize
+    - Change tag version step in RELEASE.md
 2.0.1
     - Fix typos in colors utilities
     - Cleanup README.md to remove outdated content, and add new relevant content

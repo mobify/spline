@@ -8,7 +8,7 @@
 - [ ] Merge `release-vX.Y.Z` into `master` using the pull request, then delete the release branch.
 - [ ] [Publish to npm](https://docs.npmjs.com/cli/publish) from the `master` branch.
 - [ ] Draft a new Github release with the following settings:
-      * Tag version: `X.Y.Z` @ `release-vX.Y.Z`
+      * Tag version: `X.Y.Z` @ `master`
       * Release title: `X.Y.Z`
       * Description: Use highlights from the CHANGELOG.md (only pick out the most significant changes)
 - [ ] Merge `master` into `develop` (no need for review on PR, just merge).
