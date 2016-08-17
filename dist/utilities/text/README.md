@@ -8,6 +8,14 @@
 
 Capitalize all text.
 
+## `text-capitalize`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Capitalize first letter of string.
+
 
 ## `text-align-start`
 
