@@ -17,6 +17,20 @@
 }
 
 
+// Capitalize Text
+// ---
+//
+// Capitalize first letter of string.
+
+@mixin text-capitalize($important: false) {
+    @if($important) {
+        text-transform: capitalize !important;
+    } @else {
+        text-transform: capitalize;
+    }
+}
+
+
 // Text Flow Alignment
 // ---
 //
