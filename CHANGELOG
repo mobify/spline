@@ -1,3 +1,8 @@
+To be released
+    - Fix typos in colors utilities
+    - Cleanup README.md to remove outdated content, and add new relevant content
+    - Ignore npm log files
+    - Add release instructions in RELEASE.md
 2.0.0
     - Prepare Spline for distribution on NPM
     - Remove all references to Bower

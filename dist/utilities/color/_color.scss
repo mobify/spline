@@ -69,15 +69,15 @@
 // ---
 
 @mixin color-brand(
-    $important: fal,
-    $color: if(variable-exists(brand-color), $brand-color, null)se
+    $important: false,
+    $color: if(variable-exists(brand-color), $brand-color, null)
 ) {
     @include base-color($important, $color);
 }
 
 @mixin color-accent(
-    $important: fals,
-    $color: if(variable-exists(accent-color), $accent-color, null)e
+    $important: false,
+    $color: if(variable-exists(accent-color), $accent-color, null)
 ) {
     @include base-color($important, $color);
 }
@@ -90,8 +90,8 @@
 }
 
 @mixin color-error(
-    $important: fal,
-    $color: if(variable-exists(error-color), $error-color, null)se
+    $important: false,
+    $color: if(variable-exists(error-color), $error-color, null)
 ) {
     @include base-color($important, $color);
 }
