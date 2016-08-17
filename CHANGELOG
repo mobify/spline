@@ -1,4 +1,4 @@
-To be released
+2.0.1
     - Fix typos in colors utilities
     - Cleanup README.md to remove outdated content, and add new relevant content
     - Ignore npm log files
