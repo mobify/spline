@@ -53,7 +53,7 @@ The core set of mixins for the project.
 - [Border](dist/utilities/border)
 - [Change BR](dist/utilities/change-br)
 - [Color](dist/utilities/color)
-- [Dimension](dist/utilities/dimensions)
+- [Dimensions](dist/utilities/dimensions)
 - [Ellipsis](dist/utilities/ellipsis)
 - [Flexbox](dist/utilities/flexbox)
 - [Hide Text](dist/utilities/hide-text)
