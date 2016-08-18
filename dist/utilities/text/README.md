@@ -16,6 +16,14 @@ Capitalize all text.
 
 Capitalize first letter of string.
 
+## `text-lowercase`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Lowercase all text in string.
+
 
 ## `text-align-start`
 
