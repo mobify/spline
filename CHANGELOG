@@ -1,3 +1,7 @@
+2.2.0
+    - Add text-lowercase mixin
+    - Add width-full-block mixin
+    - Update width-full mixin
 2.1.0
     - Add text-capitalize
     - Change tag version step in RELEASE.md

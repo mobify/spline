@@ -31,6 +31,20 @@
 }
 
 
+// Lowercase Text
+// ---
+//
+// Lowercase all text in string.
+
+@mixin text-lowercase($important: false) {
+    @if($important) {
+        text-transform: lowercase !important;
+    } @else {
+        text-transform: lowercase;
+    }
+}
+
+
 // Text Flow Alignment
 // ---
 //
