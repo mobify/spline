@@ -64,17 +64,22 @@
 
 // Full Width
 // ---
-//
-// 1. Force elements to keep their explicit width when inside a flexbox to
-//    prevent them from growing or shrinking.
-// 2. Override some browser quirks, e.g. with <button>.
 
 @mixin width-full($important: false) {
     @include base-width($important, 100%);
+}
+
+
+// Full Block
+// ---
+//
+
+@mixin width-full-block($important: false) {
+    @include base-width($important, 100%);
 
     @if($important) {
-        display: block !important; // 2
+        display: block !important;
     } @else {
-        display: block; // 2
+        display: block;
     }
 }
