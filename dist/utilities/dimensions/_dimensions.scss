@@ -72,6 +72,8 @@
 
 // Full Block
 // ---
+//
+// Set width to 100% with display block.
 
 @mixin width-full-block($important: false) {
     @include base-width($important, 100%);
