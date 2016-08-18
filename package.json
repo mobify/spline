@@ -1,6 +1,6 @@
 {
   "name": "spline-scss",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A set of Sass utility mixins and functions for Mobify's client services team",
   "main": "dist/spline.scss",
   "scripts": {
