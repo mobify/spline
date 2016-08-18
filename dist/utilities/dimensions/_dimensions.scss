@@ -72,7 +72,6 @@
 
 // Full Block
 // ---
-//
 
 @mixin width-full-block($important: false) {
     @include base-width($important, 100%);
