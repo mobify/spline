@@ -73,3 +73,12 @@ Set the width to 83.333%.
 | `$important` | `boolean` | (optional) Default: false |
 
 Set the width to 100%.
+
+
+## `width-full-block`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Set width to 100% with display block.
