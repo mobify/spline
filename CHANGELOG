@@ -1,3 +1,6 @@
+To be released
+    - Add flex-shrink
+    - Update flex-intial
 2.2.0
     - Add text-lowercase mixin
     - Add width-full-block mixin
