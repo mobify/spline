@@ -173,7 +173,7 @@
 //
 // 1. Ensure width collapses in old implementations.
 
-@mixin flex-initial($important: false) {
+@mixin flex-shrink($important: false) {
     @if($important) {
         flex: 0 0 auto !important;
         width: auto !important; // 1
