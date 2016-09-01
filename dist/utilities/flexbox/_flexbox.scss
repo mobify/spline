@@ -147,19 +147,38 @@
 }
 
 
+// Flex (Initial)
+// ---
+//
+// Set Flexbox items to a minimum size.
+//
+// 1. Ensure width collapses in old implementations.
+// 2. flex: initial; == flex: 0 1 auto;
+
+@mixin flex-initial($important: false) {
+    @if($important) {
+        flex: initial !important; // 2
+        width: auto !important; // 1
+    } @else {
+        flex: initial; // 2
+        width: auto; // 1
+    }
+}
+
+
 // Flex (Shrink)
 // ---
 //
-// Shrink Flexbox items to a minimum size.
+// Shrink Flexbox items to a their contents size.
 //
 // 1. Ensure width collapses in old implementations.
 
-@mixin flex-shrink($important: false) {
+@mixin flex-initial($important: false) {
     @if($important) {
-        flex: initial !important;
+        flex: 0 0 auto !important;
         width: auto !important; // 1
     } @else {
-        flex: initial;
+        flex: 0 0 auto;
         width: auto; // 1
     }
 }

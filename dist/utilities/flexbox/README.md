@@ -135,14 +135,23 @@ Allow a flex child to grow and shrink as needed. This means the flex child
 does so according to the following setting: `flex: 1 1 auto`.
 
 
+## `flex-initial`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Ensure the flex children do collapse to their contents size. This means the flex
+child behaves according to the following setting: `flex: 0 1 auto`.
+
+
 ## `flex-shrink`
 
 | Parameters | Type | Example |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
 
-Ensure the flex children do NOT grow or shrink. This means the flex child
-behaves according to th following setting: `flex: 0 0 auto`.
+Ensure the flex children do NOT grow or shrink.
 
 
 ## `order-1`
