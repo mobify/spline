@@ -1,4 +1,7 @@
 2.2.0
+    - Add background-color mixin
+    - Deprecate `base-bg-color`, `bg-color-neutral-30`, `bg-color-error`, and `bg-color-light-error` mixins
+2.2.0
     - Add text-lowercase mixin
     - Add width-full-block mixin
     - Update width-full mixin
