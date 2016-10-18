@@ -91,3 +91,44 @@
 ) {
     @include base-background-color($important, $color);
 }
+
+
+// Warning Mixins
+// ---
+
+@mixin base-bg-color($important, $color) {
+    @warn "We have new `background-color` mixin, please use `base-background-color()`.";
+
+    @if($important) {
+        background-color: $color !important;
+    } @else {
+        background-color: $color;
+    }
+}
+
+@mixin bg-color-neutral-30(
+    $important: false,
+    $color: if(variable-exists(color-neutral-30), $color-neutral-30, null)
+) {
+    @warn "We have new `background-color` mixin, please use `background-color-neutral-30()`.";
+
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-error(
+    $important: false,
+    $color: if(variable-exists(error-color), $error-color, null)
+) {
+    @warn "We have new `background-color` mixin, please use `background-color-error-color()`.";
+
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-light-error(
+    $important: false,
+    $color: if(variable-exists(light-error-color), $light-error-color, null)
+) {
+    @warn "We have new `background-color` mixin, please use `background-color-light-error()`.";
+
+    @include base-bg-color($important, $color);
+}
