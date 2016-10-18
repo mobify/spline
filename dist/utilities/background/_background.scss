@@ -1,0 +1,134 @@
+// Background
+// ===
+
+// Base Background Color
+// ---
+//
+// These are just a helper mixins to aid in creating all the below mixins
+
+@mixin base-background-color($important, $color) {
+    @if($important) {
+        background-color: $color !important;
+    } @else {
+        background-color: $color;
+    }
+}
+
+
+// Neutrals Background Color
+// ---
+
+@mixin background-color-neutral-30(
+    $important: false,
+    $color: if(variable-exists(neutral-30), $neutral-30, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+@mixin background-color-neutral-40(
+    $important: false,
+    $color: if(variable-exists(neutral-40), $neutral-40, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+@mixin background-color-neutral-50(
+    $important: false,
+    $color: if(variable-exists(neutral-50), $neutral-50, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+@mixin background-color-neutral-60(
+    $important: false,
+    $color: if(variable-exists(neutral-60), $neutral-60, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+@mixin background-color-neutral-70(
+    $important: false,
+    $color: if(variable-exists(neutral-70), $neutral-70, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+
+// Accent Background Color
+
+@mixin background-color-accent(
+    $important: false,
+    $color: if(variable-exists(accent-color), $accent-color, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+
+// Brand Background Color
+@mixin background-color-brand(
+    $important: false,
+    $color: if(variable-exists(brand-color), $brand-color, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+
+// Error Background Color
+
+@mixin background-color-error(
+    $important: false,
+    $color: if(variable-exists(error-color), $error-color, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+
+// Success colors
+
+@mixin background-color-success(
+    $important: false,
+    $color: if(variable-exists(success-color), $success-color, null)
+) {
+    @include base-background-color($important, $color);
+}
+
+
+// Warning Mixins
+// ---
+
+@mixin base-bg-color($important, $color) {
+    @warn "We have new `background-color` mixin, please use `base-background-color()`.";
+
+    @if($important) {
+        background-color: $color !important;
+    } @else {
+        background-color: $color;
+    }
+}
+
+@mixin bg-color-neutral-30(
+    $important: false,
+    $color: if(variable-exists(color-neutral-30), $color-neutral-30, null)
+) {
+    @warn "We have new `background-color` mixin, please use `background-color-neutral-30()`.";
+
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-error(
+    $important: false,
+    $color: if(variable-exists(error-color), $error-color, null)
+) {
+    @warn "We have new `background-color` mixin, please use `background-color-error-color()`.";
+
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-light-error(
+    $important: false,
+    $color: if(variable-exists(light-error-color), $light-error-color, null)
+) {
+    @warn "We have new `background-color` mixin, please use `background-color-light-error()`.";
+
+    @include base-bg-color($important, $color);
+}

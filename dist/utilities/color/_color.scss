@@ -18,13 +18,6 @@
     }
 }
 
-@mixin base-bg-color($important, $color) {
-    @if($important) {
-        background-color: $color !important;
-    } @else {
-        background-color: $color;
-    }
-}
 
 // Neutral Colors
 // ---
@@ -94,29 +87,4 @@
     $color: if(variable-exists(error-color), $error-color, null)
 ) {
     @include base-color($important, $color);
-}
-
-
-// Background Colors
-// ---
-
-@mixin bg-color-neutral-30(
-    $important: false,
-    $color: if(variable-exists(neutral-30), $neutral-30, null)
-) {
-    @include base-bg-color($important, $color);
-}
-
-@mixin bg-color-error(
-    $important: false,
-    $color: if(variable-exists(error-color), $error-color, null)
-) {
-    @include base-bg-color($important, $color);
-}
-
-@mixin bg-color-light-error(
-    $important: false,
-    $color: if(variable-exists(light-error-color), $light-error-color, null)
-) {
-    @include base-bg-color($important, $color);
 }
