@@ -54,5 +54,5 @@
         $values: join(unquote($reverse-direction), $list-gradient, comma);
     }
 
-    @return linear-gradient(unquote($values));
+    @return linear-gradient($values);
 }
