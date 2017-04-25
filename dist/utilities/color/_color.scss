@@ -213,11 +213,43 @@
 }
 
 
+// Other Background Colors
+// ---
 
+@mixin bg-color-brand(
+    $important: false,
+    $color: if(variable-exists(brand-color), $brand-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
 
+@mixin bg-color-accent(
+    $important: false,
+    $color: if(variable-exists(accent-color), $accent-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
 
+@mixin bg-color-primary-action(
+    $important: false,
+    $color: if(variable-exists(primary-action-color), $primary-action-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
 
+@mixin bg-color-secondary-action(
+    $important: false,
+    $color: if(variable-exists(secondary-action-color), $secondary-action-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
 
+@mixin bg-color-success(
+    $important: false,
+    $color: if(variable-exists(success-color), $success-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
 
 @mixin bg-color-error(
     $important: false,
@@ -226,9 +258,9 @@
     @include base-bg-color($important, $color);
 }
 
-@mixin bg-color-light-error(
+@mixin bg-color-sale(
     $important: false,
-    $color: if(variable-exists(light-error-color), $light-error-color, null)
+    $color: if(variable-exists(sale-color), $sale-color, null)
 ) {
     @include base-bg-color($important, $color);
 }
