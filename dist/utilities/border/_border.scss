@@ -6,21 +6,12 @@
 
 @mixin border(
     $important: false,
-    $border: if($border, null)
+    $border-color: if(variable-exists(border-color), $border-color, null)
 ) {
-    // if $border exist
-    @if($border) {
-        @if($important) {
-            border: $border !important;
-        } @else {
-            border: $border;
-        }
-    } @else { // else
-        @if($important) {
-            border: 1px solid $border !important;
-        } @else {
-            border: 1px solid $border;
-        }
+    @if($important) {
+        border: 1px solid $border-color !important;
+    } @else {
+        border: 1px solid $border-color;
     }
 }
 
@@ -34,45 +25,45 @@
 
 @mixin border-top(
     $important: false,
-    $border: if(variable-exists(border), $border, null)
+    $border-color: if(variable-exists(border-color), $border-color, null)
 ) {
     @if($important) {
-        border-top: $border !important;
+        border-top: 1px solid $border-color !important;
     } @else {
-        border-top: $border;
+        border-top: 1px solid $border-color;
     }
 }
 
 @mixin border-start(
     $important: false,
-    $border: if(variable-exists(border), $border, null)
+    $border-color: if(variable-exists(border-color), $border-color, null)
 ) {
     @if($important) {
-        border-left: $border !important;
+        border-left: 1px solid $border-color !important;
     } @else {
-        border-left: $border;
+        border-left: 1px solid $border-color;
     }
 }
 
 @mixin border-bottom(
     $important: false,
-    $border: if(variable-exists(border), $border, null)
+    $border-color: if(variable-exists(border-color), $border-color, null)
 ) {
     @if($important) {
-        border-bottom: $border !important;
+        border-bottom: 1px solid $border-color !important;
     } @else {
-        border-bottom: $border;
+        border-bottom: 1px solid $border-color;
     }
 }
 
 @mixin border-end(
     $important: false,
-    $border: if(variable-exists(border), $border, null)
+    $border-color: if(variable-exists(border-color), $border-color, null)
 ) {
     @if($important) {
-        border-right: $border !important;
+        border-right: 1px solid $border-color !important;
     } @else {
-        border-right: $border;
+        border-right: 1px solid $border-color;
     }
 }
 
