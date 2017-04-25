@@ -6,15 +6,16 @@
 
 @mixin border(
     $important: false,
-    $border: if(variable-exists(border), $border, null)
+    $border: if($border, null)
 ) {
-    @if($border == $border) {
+    // if $border exist
+    @if($border) {
         @if($important) {
             border: $border !important;
         } @else {
             border: $border;
         }
-    } @else {
+    } @else { // else
         @if($important) {
             border: 1px solid $border !important;
         } @else {
