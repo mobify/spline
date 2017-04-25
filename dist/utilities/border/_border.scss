@@ -8,10 +8,18 @@
     $important: false,
     $border: if(variable-exists(border), $border, null)
 ) {
-    @if($important) {
-        border: $border !important;
+    @if($border == $border) {
+        @if($important) {
+            border: $border !important;
+        } @else {
+            border: $border;
+        }
     } @else {
-        border: $border;
+        @if($important) {
+            border: 1px solid $border !important;
+        } @else {
+            border: 1px solid $border;
+        }
     }
 }
 
