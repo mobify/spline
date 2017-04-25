@@ -11,7 +11,7 @@
 //
 // 1. Remove default styles present on common root elements.
 // 2. Ensure in iOS 5 and 6 that flex-direction isn't inherited from
-//    any flexbox parents that has flex-direction set to row-reverse
+//    any flexbox parents that has flex-direction set to direction-row-reverse
 
 @mixin flexbox($important: false) {
     @if($important) {
@@ -119,12 +119,28 @@
 // Flex Direction
 // ---
 
-@mixin row-reverse($important: false) {
+@mixin base-flex-direction($important, $direction) {
     @if($important) {
-        flex-direction: row-reverse !important;
+        flex-direction: $direction !important;
     } @else {
-        flex-direction: row-reverse;
+        flex-direction: $direction;
     }
+}
+
+@mixin direction-column($important: false) {
+    @include base-flex-direction($important, column)
+}
+
+@mixin direction-column-reverse($important: false) {
+    @include base-flex-direction($important, column-reverse)
+}
+
+@mixin direction-row($important: false) {
+    @include base-flex-direction($important, row)
+}
+
+@mixin direction-row-reverse($important: false) {
+    @include base-flex-direction($important, row-reverse)
 }
 
 
@@ -161,6 +177,20 @@
     } @else {
         flex: initial;
         width: auto; // 1
+    }
+}
+
+
+// Flex (None)
+// ---
+//
+// Neither grow nor shrink!
+
+@mixin flex-none($important: false) {
+    @if($important) {
+        flex: 0 0 auto !important;
+    } @else {
+        flex: 0 0 auto;
     }
 }
 

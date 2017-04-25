@@ -115,14 +115,40 @@ Align, horizontally, flex children so they space out evenly apart from each
 other, including the space between the first, last and edges of the
 flex container.
 
-
-## `row-reverse`
+## `direction-column`
 
 | Parameters | Type | Example |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
 
-Reverse the horizontal order of the flex children.
+It establishes the main-axis of a flex container, direction from left to right.
+
+
+## `direction-column-reverse`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+It establishes the main-axis of a flex container, direction from right to left.
+
+
+## `direction-row`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+It establishes the main-axis of a flex container, direction from top to bottom.
+
+
+## `direction-row-reverse`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+It establishes the main-axis of a flex container, direction from bottom to top.
 
 
 ## `flex`
@@ -141,8 +167,16 @@ does so according to the following setting: `flex: 1 1 auto`.
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
 
-Ensure the flex children do NOT grow or shrink. This means the flex child
-behaves according to th following setting: `flex: 0 0 auto`.
+Shrink the flex children to a minimum size.
+
+
+## `flex-none`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Either grow nor shrink the flex children.
 
 
 ## `order-1`
