@@ -16,7 +16,8 @@
 //
 // @param $important [Boolean] : add !important style to box-shadow
 // @param $inset [Boolean] : is box shadow inset or not?
-// @param $box-shadow [Boolean] : use $box-shadow variable
+// @param $box-shadow [String] : use $box-shadow variable
+// @param $inset-box-shadow [String] : use $inset-box-shadow variable
 // @param $horizontal [String] : horizontal placement of shadow
 // @param $vertical [String] : vertical placement of shadow
 // @param $blur [String] : blur depth of shadow
