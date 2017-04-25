@@ -37,7 +37,7 @@
     @if($important) {
         @if($inset) {
             @if($inset-box-shadow) {
-                box-shadow: inset $inset-box-shadow !important;
+                box-shadow: $inset-box-shadow !important;
             } @else {
                 box-shadow: inset $horizontal $vertical $blur $distance $color !important;
             }
@@ -51,7 +51,7 @@
     } @else {
         @if($inset) {
             @if($inset-box-shadow) {
-                box-shadow: inset $inset-box-shadow;
+                box-shadow: $inset-box-shadow;
             } @else {
                 box-shadow: inset $horizontal $vertical $blur $distance $color;
             }
