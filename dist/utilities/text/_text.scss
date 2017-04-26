@@ -8,10 +8,8 @@
 
 @mixin text-all-caps($important: false) {
     @if($important) {
-        letter-spacing: 1px !important;
         text-transform: uppercase !important;
     } @else {
-        letter-spacing: 1px;
         text-transform: uppercase;
     }
 }
