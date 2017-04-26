@@ -130,7 +130,7 @@
 
 @mixin text-regular(
     $important: false,
-    $weight: if(variable-exists(font-weight-regular), $font-weight-regular, null)
+    $weight: if(variable-exists(font-weight-regular), $font-weight-regular, normal)
 ) {
     @include base-text-weight($important, $weight);
 }
@@ -151,7 +151,14 @@
 
 @mixin text-bold(
     $important: false,
-    $weight: if(variable-exists(font-weight-bold), $font-weight-bold, null)
+    $weight: if(variable-exists(font-weight-bold), $font-weight-bold, bold)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-normal(
+    $important: false,
+    $weight: if(variable-exists(font-weight-regular), $font-weight-regular, normal)
 ) {
     @include base-text-weight($important, $weight);
 }
