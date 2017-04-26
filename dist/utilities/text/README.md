@@ -70,13 +70,52 @@ Align text, vertically, to the middle.
 Align text, vertically, to the baseline.
 
 
-## `text-normal`
+## `text-thin`
 
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `100` |
 
-Set font weight to normal.
+
+## `text-extra-light`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `200` |
+
+
+## `text-light`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `300` |
+
+
+## `text-regular`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `400` |
+
+
+## `text-medium`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `500` |
+
+
+## `text-semi-bold`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `600` |
 
 
 ## `text-bold`
@@ -84,8 +123,7 @@ Set font weight to normal.
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-
-Set font weight to bold.
+| `$color` | `string` | (optional) Default: Default: `700` |
 
 
 ## `text-italic`
@@ -102,6 +140,7 @@ Set font style to italic.
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
+| `$font-size` | `string` | (optional) Example: `12px` |
 | `$color` | `string` | (optional) Example: `#888` |
 
 Style the text "quietly", which usually means "dim" or some form of light grey,
