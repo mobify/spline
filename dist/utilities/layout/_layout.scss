@@ -60,16 +60,128 @@
 }
 
 
-// Positioning context
+// Positioning Relative
 // ---
-//
-// Create a new positioning context.
 
-@mixin position-context($important: false) {
+@mixin position-relative($important: false) {
     @if($important) {
         position: relative !important;
     } @else {
         position: relative;
+    }
+}
+
+
+// Positioning Relative
+// ---
+
+@mixin position-absolute($important: false) {
+    @if($important) {
+        position: absolute !important;
+    } @else {
+        position: absolute;
+    }
+}
+
+
+// Positioning Fixed
+// ---
+
+@mixin position-fixed($important: false) {
+    @if($important) {
+        position: fixed !important;
+    } @else {
+        position: fixed;
+    }
+}
+
+
+// Positioning coordinate
+// ---
+
+@mixin position-top($important: false) {
+    @if($important) {
+        top: 0 !important;
+    } @else {
+        top: 0;
+    }
+}
+
+@mixin position-right($important: false) {
+    @if($important) {
+        right: 0 !important;
+    } @else {
+        right: 0;
+    }
+}
+
+@mixin position-bottom($important: false) {
+    @if($important) {
+        bottom: 0 !important;
+    } @else {
+        bottom: 0;
+    }
+}
+
+@mixin position-left($important: false) {
+    @if($important) {
+        left: 0 !important;
+    } @else {
+        left: 0;
+    }
+}
+
+@mixin position-full($important: false) {
+    @if($important) {
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+    } @else {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+// Bleed
+// ---
+
+@mixin base-bleed($important: false, $unit: if(variable-exists(unit), $unit, null), $direction: 'top') {
+    @if($important) {
+        @if $direction == 'top' {
+            margin-top: -$unit !important;
+        }
+
+        @if $direction == 'end' {
+            margin-right: -$unit !important;
+        }
+
+        @if $direction == 'bottom' {
+            margin-bottom: -$unit !important;
+        }
+
+        @if $direction == 'start' {
+            margin-left: -$unit !important;
+        }
+    } @else {
+        @if $direction == 'top' {
+            margin-top: -$unit;
+        }
+
+        @if $direction == 'end' {
+            margin-right: -$unit;
+        }
+
+        @if $direction == 'bottom' {
+            margin-bottom: -$unit;
+        }
+
+        @if $direction == 'start' {
+            margin-left: -$unit;
+        }
     }
 }
 
