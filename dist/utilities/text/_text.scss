@@ -6,7 +6,7 @@
 //
 // Set text uppercase, letterspaced for legibility.
 
-@mixin text-all-caps($important: false) {
+@mixin text-uppercase($important: false) {
     @if($important) {
         text-transform: uppercase !important;
     } @else {

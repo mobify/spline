@@ -1,6 +1,6 @@
 # Text
 
-## `text-all-caps`
+## `text-uppercase`
 
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
