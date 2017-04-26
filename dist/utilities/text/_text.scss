@@ -188,3 +188,58 @@
         fill: $color;
     }
 }
+
+
+// Size
+// ---
+
+@mixin base-text-size($important, $size) {
+    @if($important) {
+        font-size: $size !important;
+    } @else {
+        font-size: $size;
+    }
+}
+
+@mixin text-size-smaller(
+    $important: false,
+    $size: if(variable-exists(smaller-font-size), $smaller-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+
+@mixin text-size-small(
+    $important: false,
+    $size: if(variable-exists(small-font-size), $small-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-normal(
+    $important: false,
+    $size: if(variable-exists(font-size), $font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-big(
+    $important: false,
+    $size: if(variable-exists(big-font-size), $big-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-bigger(
+    $important: false,
+    $size: if(variable-exists(bigger-font-size), $bigger-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-huge(
+    $important: false,
+    $size: if(variable-exists(huge-font-size), $huge-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}

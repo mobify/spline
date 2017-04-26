@@ -145,3 +145,51 @@ Set font style to italic.
 
 Style the text "quietly", which usually means "dim" or some form of light grey,
 and a smaller font size.
+
+
+## `text-size-smaller`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `8px` |
+
+
+## `text-size-small`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `12px` |
+
+
+## `text-size-normal`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `14px` |
+
+
+## `text-size-big`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `20px` |
+
+
+## `text-size-bigger`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `24px` |
+
+
+## `text-size-huge`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$color` | `string` | (optional) Default: Default: `28px` |
