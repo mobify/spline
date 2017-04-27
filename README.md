@@ -51,14 +51,18 @@ npm update spline-scss
 The core set of mixins for the project.
 
 - [Border](dist/utilities/border)
+- [Box Shadow](dist/utilities/box-shadow)
 - [Change BR](dist/utilities/change-br)
 - [Color](dist/utilities/color)
 - [Dimensions](dist/utilities/dimensions)
+- [Display](dist/utilities/display)
 - [Ellipsis](dist/utilities/ellipsis)
 - [Flexbox](dist/utilities/flexbox)
+- [Heading Level](dist/utilities/heading-level)
 - [Hide Text](dist/utilities/hide-text)
 - [Icon Font](dist/utilities/icon-font)
 - [Icon Font Replace](dist/utilities/icon-font-replace)
+- [Layout](dist/utilities/layout)
 - [Margin](dist/utilities/margin)
 - [Padding](dist/utilities/padding)
 - [Squish Text](dist/utilities/squish-text)
@@ -68,6 +72,7 @@ The core set of mixins for the project.
 - [Triangle](dist/utilities/triangle)
 - [Visibility](dist/utilities/visibility)
 - [Web Font](dist/utilities/web-font)
+- [Z Index](dist/utilities/z-index)
 
 ### Functions
 
