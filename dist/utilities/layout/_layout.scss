@@ -149,7 +149,7 @@
 // Bleed
 // ---
 
-@mixin base-bleed($important: false, $unit: if(variable-exists(unit), $unit, null), $direction: 'top') {
+@mixin bleed($important: false, $unit: if(variable-exists(unit), $unit, null), $direction: 'top') {
     @if($important) {
         @if $direction == 'top' {
             margin-top: -$unit !important;
