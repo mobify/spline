@@ -1,98 +1,36 @@
 // Text
 // ===
 
-// All Caps
+// Font Family
 // ---
-//
-// Set text uppercase, letterspaced for legibility.
 
-@mixin text-uppercase($important: false) {
+@mixin base-font-family($important, $font) {
     @if($important) {
-        text-transform: uppercase !important;
+        font-family: $font !important;
     } @else {
-        text-transform: uppercase;
+        font-size: $font;
     }
 }
 
-
-// Capitalize Text
-// ---
-//
-// Capitalize first letter of string.
-
-@mixin text-capitalize($important: false) {
-    @if($important) {
-        text-transform: capitalize !important;
-    } @else {
-        text-transform: capitalize;
-    }
+@mixin text-font-family(
+    $important: false,
+    $font: if(variable-exists(font-family), $font-family, null)
+) {
+    @include base-font-family($important, $font);
 }
 
-
-// Lowercase Text
-// ---
-//
-// Lowercase all text in string.
-
-@mixin text-lowercase($important: false) {
-    @if($important) {
-        text-transform: lowercase !important;
-    } @else {
-        text-transform: lowercase;
-    }
+@mixin text-header-font-family(
+    $important: false,
+    $font: if(variable-exists(header-font-family), $header-font-family, null)
+) {
+    @include base-font-family($important, $font);
 }
 
-
-// Text Flow Alignment
-// ---
-//
-// Writing-direction independent text alignment. For RTL stylesheets, re-define
-// these styles with the opposite direction. Templates need not be changed.
-
-@mixin text-align-start($important: false) {
-    @if($important) {
-        text-align: left !important;
-    } @else {
-        text-align: left;
-    }
-}
-
-@mixin text-align-center($important: false) {
-    @if($important) {
-        text-align: center !important;
-    } @else {
-        text-align: center;
-    }
-}
-
-@mixin text-align-end($important: false) {
-    @if($important) {
-        text-align: right !important;
-    } @else {
-        text-align: right;
-    }
-}
-
-
-// Vertical Alignment
-// ---
-//
-// Vertical aligment of text and replaced (inline-block) elements within a line.
-
-@mixin align-middle($important: false) {
-    @if($important) {
-        vertical-align: middle !important;
-    } @else {
-        vertical-align: middle;
-    }
-}
-
-@mixin align-baseline($important: false) {
-    @if($important) {
-        vertical-align: baseline !important;
-    } @else {
-        vertical-align: baseline;
-    }
+@mixin text-loaded-header-font-family(
+    $important: false,
+    $font: if(variable-exists(loaded-header-font-family), $loaded-header-font-family, null)
+) {
+    @include base-font-family($important, $font);
 }
 
 
@@ -242,4 +180,123 @@
     $size: if(variable-exists(huge-font-size), $huge-font-size, null)
 ) {
     @include base-text-size($important, $size);
+}
+
+
+// Line Height
+// ---
+
+@mixin line-height($important: false, $value: normal) {
+    @if($important) {
+        line-height: $value !important;
+    } @else {
+        line-height: $value;
+    }
+}
+
+
+// Letter Spacing
+// ---
+
+@mixin letter-spacing($important: false, $value: normal) {
+    @if($important) {
+        letter-spacing: $value !important;
+    } @else {
+        letter-spacing: $value;
+    }
+}
+
+
+// Text Flow Alignment
+// ---
+//
+// Writing-direction independent text alignment. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
+
+@mixin text-align-start($important: false) {
+    @if($important) {
+        text-align: left !important;
+    } @else {
+        text-align: left;
+    }
+}
+
+@mixin text-align-center($important: false) {
+    @if($important) {
+        text-align: center !important;
+    } @else {
+        text-align: center;
+    }
+}
+
+@mixin text-align-end($important: false) {
+    @if($important) {
+        text-align: right !important;
+    } @else {
+        text-align: right;
+    }
+}
+
+
+// All Caps
+// ---
+//
+// Set text uppercase, letterspaced for legibility.
+
+@mixin text-uppercase($important: false) {
+    @if($important) {
+        text-transform: uppercase !important;
+    } @else {
+        text-transform: uppercase;
+    }
+}
+
+
+// Capitalize Text
+// ---
+//
+// Capitalize first letter of string.
+
+@mixin text-capitalize($important: false) {
+    @if($important) {
+        text-transform: capitalize !important;
+    } @else {
+        text-transform: capitalize;
+    }
+}
+
+
+// Lowercase Text
+// ---
+//
+// Lowercase all text in string.
+
+@mixin text-lowercase($important: false) {
+    @if($important) {
+        text-transform: lowercase !important;
+    } @else {
+        text-transform: lowercase;
+    }
+}
+
+
+// Vertical Alignment
+// ---
+//
+// Vertical aligment of text and replaced (inline-block) elements within a line.
+
+@mixin align-middle($important: false) {
+    @if($important) {
+        vertical-align: middle !important;
+    } @else {
+        vertical-align: middle;
+    }
+}
+
+@mixin align-baseline($important: false) {
+    @if($important) {
+        vertical-align: baseline !important;
+    } @else {
+        vertical-align: baseline;
+    }
 }

@@ -1,73 +1,27 @@
 # Text
 
-## `text-uppercase`
+## `text-font-family`
 
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
+| `$font` | `string` | (optional) Default: Default: `'San Francisco', 'Roboto', 'Fira Sans', 'Segoe UI', sans-serif` |
 
-Capitalize all text.
 
-## `text-capitalize`
-
-| Parameters | Type | Details |
-| ---------- | ---- | ------- |
-| `$important` | `boolean` | (optional) Default: false |
-
-Capitalize first letter of string.
-
-## `text-lowercase`
+## `text-header-font-family`
 
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-
-Lowercase all text in string.
-
-
-## `text-align-start`
-
-| Parameters | Type | Details |
-| ---------- | ---- | ------- |
-| `$important` | `boolean` | (optional) Default: false |
-
-Align text to the "start", which is typically the left side. For right-to-left languages, it should be the right.
+| `$font` | `string` | (optional) Default: Default: `'Avenir Next Condensed', 'Roboto Condensed', 'Helvetica Neue', 'Roboto', sans-serif` |
 
 
-## `text-align-center`
+## `text-loaded-header-font-family`
 
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-
-Align text to the center.
-
-
-## `text-align-end`
-
-| Parameters | Type | Details |
-| ---------- | ---- | ------- |
-| `$important` | `boolean` | (optional) Default: false |
-
-Align text to the "end", which is typically the right side. For right-to-left languages, it should be the left.
-
-
-## `align-middle`
-
-| Parameters | Type | Details |
-| ---------- | ---- | ------- |
-| `$important` | `boolean` | (optional) Default: false |
-
-Align text, vertically, to the middle.
-
-
-## `align-baseline`
-
-| Parameters | Type | Details |
-| ---------- | ---- | ------- |
-| `$important` | `boolean` | (optional) Default: false |
-
-Align text, vertically, to the baseline.
+| `$font` | `string` | (optional) Default: Default: `'Oswald', $header-font-family` |
 
 
 ## `text-thin`
@@ -193,3 +147,91 @@ and a smaller font size.
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
 | `$color` | `string` | (optional) Default: Default: `28px` |
+
+
+## `line-height`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$value` | `string` | (optional) Default: Default: `normal` |
+
+
+## `letter-spacing`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$value` | `string` | (optional) Default: Default: `normal` |
+
+
+## `text-align-start`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Align text to the "start", which is typically the left side. For right-to-left languages, it should be the right.
+
+
+## `text-align-center`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Align text to the center.
+
+
+## `text-align-end`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Align text to the "end", which is typically the right side. For right-to-left languages, it should be the left.
+
+
+## `text-uppercase`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Capitalize all text.
+
+
+## `text-capitalize`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Capitalize first letter of string.
+
+
+## `text-lowercase`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Lowercase all text in string.
+
+
+## `align-middle`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Align text, vertically, to the middle.
+
+
+## `align-baseline`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Align text, vertically, to the baseline.
