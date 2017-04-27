@@ -80,6 +80,14 @@
 | `$color` | `string` | (optional) Default: Default: `700` |
 
 
+## `text-normal`
+
+| Parameters | Type | Details |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$weight` | `string` | (optional) Default: Default: `normal` |
+
+
 ## `text-italic`
 
 | Parameters | Type | Details |
