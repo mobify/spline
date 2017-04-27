@@ -149,7 +149,7 @@
 // Bleed
 // ---
 
-@mixin bleed(
+@mixin base-bleed(
     $important: false,
     $unit: if(variable-exists(unit), $unit, null),
     $direction: 'top'
