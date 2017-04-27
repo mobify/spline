@@ -104,7 +104,7 @@ Position left of element.
 Position full of element.
 
 
-## `base-bleed`
+## `bleed`
 
 | Parameters | Type | Example |
 | ---------- | ---- | ------- |
