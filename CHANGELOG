@@ -1,3 +1,24 @@
+2.3.0
+    - **BREAKING CHANGES**
+        - Depreciate `bg-color-light-error` mixin
+        - Depreciate `row-reverse` mixin, renamed to `direction-row-reverse`
+        - Depreciate `position-context` mixin, renamed to `position-relative`
+        - Depreciate `text-all-caps` mixin, renamed to `text-uppercase`
+    - **Change mixins**
+        - `border` mixin, now use `$border-color` variable to allow to change border colors
+        - `text-normal` mixin, small tweak to use `base-text-weight` mixin.
+        - `text-quiet` mixin, small tweak to use `$font-size` value rather than `0.785em`
+        - `text-bold` mixin, small tweak to use `base-text-weight` mixin
+    - **New mixins**
+        - background color mixins: `bg-color-neutral-00`, `bg-color-neutral-10`, `bg-color-neutral-15`, `bg-color-neutral-20`, `bg-color-neutral-40`, `bg-color-neutral-50`, `bg-color-neutral-60`, `bg-color-neutral-70`, `bg-color-brand`, `bg-color-accent`, `bg-color-primary-action`, `bg-color-secondary-action`, and `bg-color-success`
+        - box shadow mixin: `box-shadow`
+        - color mixins: `color-neutral-00`, `color-neutral-10`, `color-neutral-15`, `color-neutral-20`, `color-primary-action`, `color-secondary-action`, `color-sale`
+        - display mixins: `display`, `display-inline-block`, `display-inline`, `display-none`
+        - flexbox mixins: `direction-column`, `direction-column-reverse`, `direction-row`, `direction-row-reverse`, `flex-none`
+        - heading mixins: `heading-level-1`, `heading-level-2`, `heading-level-3`, `heading-level-4`, `heading-level-5`, `heading-level-6`
+        - layout mixins: `position-relative`, `position-absolute`, `position-fixed`, `position-top`, `position-right`, `position-bottom`, `position-left`, `position-full`, `base-bleed`
+        - text mixins: `base-font-family`, `text-font-family`, `text-header-font-family`, `text-loaded-header-font-family`, `base-text-weight`, `text-thin`, `text-extra-light`, `text-light`, `text-regular`, `text-medium`, `text-semi-bold`, `base-text-size`, `text-size-smaller`, `text-size-small`, `text-size-normal`, `text-size-big`, `text-size-bigger`, `text-size-huge`, `line-height`, `letter-spacing`, `text-uppercase`
+        - z-index mixin: `z-index`
 2.2.0
     - Add text-lowercase mixin
     - Add width-full-block mixin
