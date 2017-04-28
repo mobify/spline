@@ -8,7 +8,7 @@ Border mixins are used to add (or remove) simple border styles.
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-| `$border` | `string` or `list` | (optional) Example: `1px solid #bbb` |
+| `$border` | `string` or `list` | (optional) Example: `1px solid #d5d5d5` |
 
 Adds a border on all sides.
 
@@ -27,7 +27,7 @@ Sets all borders to `0`
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-| `$border` | `string` or `list` | (optional) Example: `1px solid #bbb` |
+| `$border` | `string` or `list` | (optional) Example: `1px solid #d5d5d5` |
 
 Adds a border to the top.
 
@@ -37,7 +37,7 @@ Adds a border to the top.
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-| `$border` | `string` or `list` | (optional) Example: `1px solid #bbb` |
+| `$border` | `string` or `list` | (optional) Example: `1px solid #d5d5d5` |
 
 Adds a border to the "start", which is usually the left. If a right-to-left
 stylesheet is used, "start" should mean right.
@@ -48,7 +48,7 @@ stylesheet is used, "start" should mean right.
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-| `$border` | `string` or `list` | (optional) Example: `1px solid #bbb` |
+| `$border` | `string` or `list` | (optional) Example: `1px solid #d5d5d5` |
 
 Adds a border to the bottom.
 
@@ -58,7 +58,7 @@ Adds a border to the bottom.
 | Parameters | Type | Details |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
-| `$border` | `string` or `list` | (optional) Example: `1px solid #bbb` |
+| `$border` | `string` or `list` | (optional) Example: `1px solid #d5d5d5` |
 
 Adds a border to the "end", which is usually the right. If a right-to-left
 stylesheet is used, "end" should mean left.

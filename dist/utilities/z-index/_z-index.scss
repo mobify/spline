@@ -1,0 +1,10 @@
+// Z-index
+// ===
+
+@mixin z-index($important: false, $value: 1) {
+    @if($important) {
+        z-index: $value !important;
+    } @else {
+        z-index: $value;
+    }
+}

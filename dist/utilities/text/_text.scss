@@ -1,46 +1,208 @@
 // Text
 // ===
 
-// All Caps
+// Font Family
 // ---
-//
-// Set text uppercase, letterspaced for legibility.
 
-@mixin text-all-caps($important: false) {
+@mixin base-font-family($important, $font) {
     @if($important) {
-        letter-spacing: 1px !important;
-        text-transform: uppercase !important;
+        font-family: $font !important;
     } @else {
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        font-size: $font;
+    }
+}
+
+@mixin text-font-family(
+    $important: false,
+    $font: if(variable-exists(font-family), $font-family, null)
+) {
+    @include base-font-family($important, $font);
+}
+
+@mixin text-header-font-family(
+    $important: false,
+    $font: if(variable-exists(header-font-family), $header-font-family, null)
+) {
+    @include base-font-family($important, $font);
+}
+
+@mixin text-loaded-header-font-family(
+    $important: false,
+    $font: if(variable-exists(loaded-header-font-family), $loaded-header-font-family, null)
+) {
+    @include base-font-family($important, $font);
+}
+
+
+// Weights & Style
+// ---
+
+@mixin base-text-weight($important, $weight) {
+    @if($important) {
+        font-weight: $weight !important;
+    } @else {
+        font-weight: $weight;
+    }
+}
+
+@mixin text-thin(
+    $important: false,
+    $weight: if(variable-exists(font-weight-thin), $font-weight-thin, null)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-extra-light(
+    $important: false,
+    $weight: if(variable-exists(font-weight-extra-light), $font-weight-extra-light, null)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-light(
+    $important: false,
+    $weight: if(variable-exists(font-weight-regular), $font-weight-light, null)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-regular(
+    $important: false,
+    $weight: if(variable-exists(font-weight-regular), $font-weight-regular, normal)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-medium(
+    $important: false,
+    $weight: if(variable-exists(font-weight-medium), $font-weight-medium, null)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-semi-bold(
+    $important: false,
+    $weight: if(variable-exists(font-weight-semi-bold), $font-weight-semi-bold, null)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-bold(
+    $important: false,
+    $weight: if(variable-exists(font-weight-bold), $font-weight-bold, bold)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-normal(
+    $important: false,
+    $weight: if(variable-exists(font-weight-regular), $font-weight-regular, normal)
+) {
+    @include base-text-weight($important, $weight);
+}
+
+@mixin text-italic($important: false) {
+    @if($important) {
+        font-style: italic !important;
+    } @else {
+        font-style: italic;
+    }
+}
+
+@mixin text-quiet(
+    $important: false,
+    $font-size: if(variable-exists(small-font-size), $small-font-size, null),
+    $color: if(variable-exists(neutral-50), $neutral-50, null)
+) {
+    @if($important) {
+        color: $color !important;
+        font-size: $font-size !important;
+
+        fill: $color !important;
+    } @else {
+        color: $color;
+        font-size: $font-size;
+
+        fill: $color;
     }
 }
 
 
-// Capitalize Text
+// Size
 // ---
-//
-// Capitalize first letter of string.
 
-@mixin text-capitalize($important: false) {
+@mixin base-text-size($important, $size) {
     @if($important) {
-        text-transform: capitalize !important;
+        font-size: $size !important;
     } @else {
-        text-transform: capitalize;
+        font-size: $size;
+    }
+}
+
+@mixin text-size-smaller(
+    $important: false,
+    $size: if(variable-exists(smaller-font-size), $smaller-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+
+@mixin text-size-small(
+    $important: false,
+    $size: if(variable-exists(small-font-size), $small-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-normal(
+    $important: false,
+    $size: if(variable-exists(font-size), $font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-big(
+    $important: false,
+    $size: if(variable-exists(big-font-size), $big-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-bigger(
+    $important: false,
+    $size: if(variable-exists(bigger-font-size), $bigger-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+@mixin text-size-huge(
+    $important: false,
+    $size: if(variable-exists(huge-font-size), $huge-font-size, null)
+) {
+    @include base-text-size($important, $size);
+}
+
+
+// Line Height
+// ---
+
+@mixin line-height($important: false, $value: normal) {
+    @if($important) {
+        line-height: $value !important;
+    } @else {
+        line-height: $value;
     }
 }
 
 
-// Lowercase Text
+// Letter Spacing
 // ---
-//
-// Lowercase all text in string.
 
-@mixin text-lowercase($important: false) {
+@mixin letter-spacing($important: false, $value: normal) {
     @if($important) {
-        text-transform: lowercase !important;
+        letter-spacing: $value !important;
     } @else {
-        text-transform: lowercase;
+        letter-spacing: $value;
     }
 }
 
@@ -76,6 +238,48 @@
 }
 
 
+// All Caps
+// ---
+//
+// Set text uppercase, letterspaced for legibility.
+
+@mixin text-uppercase($important: false) {
+    @if($important) {
+        text-transform: uppercase !important;
+    } @else {
+        text-transform: uppercase;
+    }
+}
+
+
+// Capitalize Text
+// ---
+//
+// Capitalize first letter of string.
+
+@mixin text-capitalize($important: false) {
+    @if($important) {
+        text-transform: capitalize !important;
+    } @else {
+        text-transform: capitalize;
+    }
+}
+
+
+// Lowercase Text
+// ---
+//
+// Lowercase all text in string.
+
+@mixin text-lowercase($important: false) {
+    @if($important) {
+        text-transform: lowercase !important;
+    } @else {
+        text-transform: lowercase;
+    }
+}
+
+
 // Vertical Alignment
 // ---
 //
@@ -94,66 +298,5 @@
         vertical-align: baseline !important;
     } @else {
         vertical-align: baseline;
-    }
-}
-
-
-// Weights & Style
-// ---
-
-@mixin text-normal($important: false) {
-    @if($important) {
-        font-weight: normal !important;
-        @if(true) {
-            // get around `no-duplicate-properties` lint error
-            font-weight: 400 !important;
-        }
-    } @else {
-        font-weight: normal;
-        @if(true) {
-            // get around `no-duplicate-properties` lint error
-            font-weight: 400;
-        }
-    }
-}
-
-@mixin text-bold($important: false) {
-    @if($important) {
-        font-weight: bold !important;
-        @if(true) {
-            // get around `no-duplicate-properties` lint error
-            font-weight: 700 !important;
-        }
-    } @else {
-        font-weight: bold;
-        @if(true) {
-            // get around `no-duplicate-properties` lint error
-            font-weight: 700;
-        }
-    }
-}
-
-@mixin text-italic($important: false) {
-    @if($important) {
-        font-style: italic !important;
-    } @else {
-        font-style: italic;
-    }
-}
-
-@mixin text-quiet(
-    $important: false,
-    $color: if(variable-exists(neutral-50), $neutral-50, null)
-) {
-    @if($important) {
-        color: $color !important;
-        font-size: 0.785em !important;
-
-        fill: $color !important;
-    } @else {
-        color: $color;
-        font-size: 0.785em;
-
-        fill: $color;
     }
 }

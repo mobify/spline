@@ -29,6 +29,34 @@
 // Neutral Colors
 // ---
 
+@mixin color-neutral-00(
+    $important: false,
+    $color: if(variable-exists(neutral-00), $neutral-00, null)
+) {
+    @include base-color($important, $color);
+}
+
+@mixin color-neutral-10(
+    $important: false,
+    $color: if(variable-exists(neutral-10), $neutral-10, null)
+) {
+    @include base-color($important, $color);
+}
+
+@mixin color-neutral-15(
+    $important: false,
+    $color: if(variable-exists(neutral-15), $neutral-15, null)
+) {
+    @include base-color($important, $color);
+}
+
+@mixin color-neutral-20(
+    $important: false,
+    $color: if(variable-exists(neutral-20), $neutral-20, null)
+) {
+    @include base-color($important, $color);
+}
+
 @mixin color-neutral-30(
     $important: false,
     $color: if(variable-exists(neutral-30), $neutral-30, null)
@@ -82,6 +110,20 @@
     @include base-color($important, $color);
 }
 
+@mixin color-primary-action(
+    $important: false,
+    $color: if(variable-exists(primary-action-color), $primary-action-color, null)
+) {
+    @include base-color($important, $color);
+}
+
+@mixin color-secondary-action(
+    $important: false,
+    $color: if(variable-exists(secondary-action-color), $secondary-action-color, null)
+) {
+    @include base-color($important, $color);
+}
+
 @mixin color-success(
     $important: false,
     $color: if(variable-exists(success-color), $success-color, null)
@@ -96,13 +138,115 @@
     @include base-color($important, $color);
 }
 
+@mixin color-sale(
+    $important: false,
+    $color: if(variable-exists(sale-color), $sale-color, null)
+) {
+    @include base-color($important, $color);
+}
 
-// Background Colors
+
+// Neutral Background Colors
 // ---
+
+@mixin bg-color-neutral-00(
+    $important: false,
+    $color: if(variable-exists(neutral-00), $neutral-00, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-10(
+    $important: false,
+    $color: if(variable-exists(neutral-10), $neutral-10, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-15(
+    $important: false,
+    $color: if(variable-exists(neutral-15), $neutral-15, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-20(
+    $important: false,
+    $color: if(variable-exists(neutral-20), $neutral-20, null)
+) {
+    @include base-bg-color($important, $color);
+}
 
 @mixin bg-color-neutral-30(
     $important: false,
     $color: if(variable-exists(neutral-30), $neutral-30, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-40(
+    $important: false,
+    $color: if(variable-exists(neutral-40), $neutral-40, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-50(
+    $important: false,
+    $color: if(variable-exists(neutral-50), $neutral-50, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-60(
+    $important: false,
+    $color: if(variable-exists(neutral-60), $neutral-60, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-neutral-70(
+    $important: false,
+    $color: if(variable-exists(neutral-70), $neutral-70, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+
+// Other Background Colors
+// ---
+
+@mixin bg-color-brand(
+    $important: false,
+    $color: if(variable-exists(brand-color), $brand-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-accent(
+    $important: false,
+    $color: if(variable-exists(accent-color), $accent-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-primary-action(
+    $important: false,
+    $color: if(variable-exists(primary-action-color), $primary-action-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-secondary-action(
+    $important: false,
+    $color: if(variable-exists(secondary-action-color), $secondary-action-color, null)
+) {
+    @include base-bg-color($important, $color);
+}
+
+@mixin bg-color-success(
+    $important: false,
+    $color: if(variable-exists(success-color), $success-color, null)
 ) {
     @include base-bg-color($important, $color);
 }
@@ -114,9 +258,9 @@
     @include base-bg-color($important, $color);
 }
 
-@mixin bg-color-light-error(
+@mixin bg-color-sale(
     $important: false,
-    $color: if(variable-exists(light-error-color), $light-error-color, null)
+    $color: if(variable-exists(sale-color), $sale-color, null)
 ) {
     @include base-bg-color($important, $color);
 }

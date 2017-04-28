@@ -43,11 +43,13 @@
 // ---
 
 @import "utilities/border/border";
+@import "utilities/box-shadow/box-shadow";
 @import "utilities/change-br/change-br";
 @import "utilities/color/color";
 @import "utilities/dimensions/dimensions";
 @import "utilities/ellipsis/ellipsis";
 @import "utilities/flexbox/flexbox";
+@import "utilities/heading-level/heading-level";
 @import "utilities/hide-text/hide-text";
 @import "utilities/icon-font/icon-font";
 @import "utilities/icon-font-replace/icon-font-replace";
@@ -61,3 +63,4 @@
 @import "utilities/triangle/triangle";
 @import "utilities/visibility/visibility";
 @import "utilities/web-font/web-font";
+@import "utilities/z-index/z-index";

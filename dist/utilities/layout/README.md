@@ -32,13 +32,87 @@ websites, it's to the left.
 Contain all floated children and their margins.
 
 
-## `position-context`
+## `position-relative`
 
 | Parameters | Type | Example |
 | ---------- | ---- | ------- |
 | `$important` | `boolean` | (optional) Default: false |
 
-Create a new positioning context.
+Position relative of element.
+
+
+## `position-absolute`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position absolute of element.
+
+
+## `position-fixed`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position fixed of element.
+
+
+## `position-top`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position top of element.
+
+
+## `position-right`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position right of element.
+
+
+## `position-bottom`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position bottom of element.
+
+
+## `position-left`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position left of element.
+
+
+## `position-full`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+
+Position full of element.
+
+
+## `bleed`
+
+| Parameters | Type | Example |
+| ---------- | ---- | ------- |
+| `$important` | `boolean` | (optional) Default: false |
+| `$unit` | `string` | (optional) Example: `8px` |
+| `$direction` | `string` | (optional) Default: `top` |
+
+Position full of element.
 
 
 ## `block-context`

@@ -1,0 +1,89 @@
+// Heading Level
+// ===
+//
+// Style the heading levels for heading hierarchy.
+//
+
+@mixin heading-level-1(
+    $important: false,
+    $h1-font-size: if(variable-exists(h1-font-size), $h1-font-size, null),
+    $h1-line-height: if(variable-exists(h1-line-height), $h1-line-height, null)
+) {
+    @if($important) {
+        font-size: $h1-font-size !important;
+        line-height: $h1-line-height !important;
+    } @else {
+        font-size: $h1-font-size;
+        line-height: $h1-line-height;
+    }
+}
+
+@mixin heading-level-2(
+    $important: false,
+    $h2-font-size: if(variable-exists(h2-font-size), $h2-font-size, null),
+    $h2-line-height: if(variable-exists(h2-line-height), $h2-line-height, null)
+) {
+    @if($important) {
+        font-size: $h2-font-size !important;
+        line-height: $h2-line-height !important;
+    } @else {
+        font-size: $h2-font-size;
+        line-height: $h2-line-height;
+    }
+}
+
+@mixin heading-level-3(
+    $important: false,
+    $h3-font-size: if(variable-exists(h3-font-size), $h3-font-size, null),
+    $h3-line-height: if(variable-exists(h3-line-height), $h3-line-height, null)
+) {
+    @if($important) {
+        font-size: $h3-font-size !important;
+        line-height: $h3-line-height !important;
+    } @else {
+        font-size: $h3-font-size;
+        line-height: $h3-line-height;
+    }
+}
+
+@mixin heading-level-4(
+    $important: false,
+    $h4-font-size: if(variable-exists(h4-font-size), $h4-font-size, null),
+    $h4-line-height: if(variable-exists(h4-line-height), $h4-line-height, null)
+) {
+    @if($important) {
+        font-size: $h4-font-size !important;
+        line-height: $h4-line-height !important;
+    } @else {
+        font-size: $h4-font-size;
+        line-height: $h4-line-height;
+    }
+}
+
+@mixin heading-level-5(
+    $important: false,
+    $h5-font-size: if(variable-exists(h5-font-size), $h5-font-size, null),
+    $h5-line-height: if(variable-exists(h5-line-height), $h5-line-height, null)
+) {
+    @if($important) {
+        font-size: $h5-font-size !important;
+        line-height: $h5-line-height !important;
+    } @else {
+        font-size: $h5-font-size;
+        line-height: $h5-line-height;
+    }
+}
+
+@mixin heading-level-6(
+    $important: false,
+    $h6-font-size: if(variable-exists(h6-font-size), $h6-font-size, null),
+    $h6-line-height: if(variable-exists(h6-line-height), $h6-line-height, null)
+) {
+    @if($important) {
+        font-size: $h6-font-size !important;
+        line-height: $h6-line-height !important;
+    } @else {
+        font-size: $h6-font-size;
+        line-height: $h6-line-height;
+    }
+}

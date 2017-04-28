@@ -1,0 +1,50 @@
+// Display
+// ===
+
+
+// Display: Block
+// ---
+
+@mixin display-block($important: false) {
+    @if($important) {
+        display: block !important;
+    } @else {
+        display: block;
+    }
+}
+
+
+// Display: Inline Block
+// ---
+
+@mixin display-inline-block($important: false) {
+    @if($important) {
+        display: inline-block !important;
+    } @else {
+        display: inline-block;
+    }
+}
+
+
+// Display: Inline
+// ---
+
+@mixin display-inline($important: false) {
+    @if($important) {
+        display: inline !important;
+    } @else {
+        display: inline;
+    }
+}
+
+
+// Display: None
+// ---
+
+@mixin display-none($important: false) {
+    @if($important) {
+        display: none !important;
+    } @else {
+        display: none;
+    }
+}
