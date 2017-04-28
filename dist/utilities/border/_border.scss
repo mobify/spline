@@ -28,9 +28,9 @@
     $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-top: 1px solid $border !important;
+        border-top: $border !important;
     } @else {
-        border-top: 1px solid $border;
+        border-top: $border;
     }
 }
 
@@ -39,9 +39,9 @@
     $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-left: 1px solid $border !important;
+        border-left: $border !important;
     } @else {
-        border-left: 1px solid $border;
+        border-left: $border;
     }
 }
 
@@ -50,9 +50,9 @@
     $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-bottom: 1px solid $border !important;
+        border-bottom: $border !important;
     } @else {
-        border-bottom: 1px solid $border;
+        border-bottom: $border;
     }
 }
 
@@ -61,9 +61,9 @@
     $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-right: 1px solid $border !important;
+        border-right: $border !important;
     } @else {
-        border-right: 1px solid $border;
+        border-right: $border;
     }
 }
 
