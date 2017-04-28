@@ -6,12 +6,12 @@
 
 @mixin border(
     $important: false,
-    $border-color: if(variable-exists(border-color), $border-color, null)
+    $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border: 1px solid $border-color !important;
+        border: $border !important;
     } @else {
-        border: 1px solid $border-color;
+        border: $border;
     }
 }
 
@@ -25,45 +25,45 @@
 
 @mixin border-top(
     $important: false,
-    $border-color: if(variable-exists(border-color), $border-color, null)
+    $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-top: 1px solid $border-color !important;
+        border-top: 1px solid $border !important;
     } @else {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border;
     }
 }
 
 @mixin border-start(
     $important: false,
-    $border-color: if(variable-exists(border-color), $border-color, null)
+    $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-left: 1px solid $border-color !important;
+        border-left: 1px solid $border !important;
     } @else {
-        border-left: 1px solid $border-color;
+        border-left: 1px solid $border;
     }
 }
 
 @mixin border-bottom(
     $important: false,
-    $border-color: if(variable-exists(border-color), $border-color, null)
+    $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-bottom: 1px solid $border-color !important;
+        border-bottom: 1px solid $border !important;
     } @else {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border;
     }
 }
 
 @mixin border-end(
     $important: false,
-    $border-color: if(variable-exists(border-color), $border-color, null)
+    $border: if(variable-exists(border), $border, null)
 ) {
     @if($important) {
-        border-right: 1px solid $border-color !important;
+        border-right: 1px solid $border !important;
     } @else {
-        border-right: 1px solid $border-color;
+        border-right: 1px solid $border;
     }
 }
 
